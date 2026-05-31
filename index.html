@@ -6,79 +6,56 @@
     <title>Flave R Soul Records</title>
     <style>
         body {
-            background-color: #0b0c10;
+            background-color: #07080a;
             color: #ffffff;
             font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            margin: 0;
-            padding: 20px;
             text-align: center;
         }
-        .container {
-            max-width: 600px;
+        /* Minimalist Vinyl Record Logo Graphic */
+        .vinyl-logo {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #000 20%, #1a1a1a 21%, #000 40%, #ff3838 41%, #ff3838 45%, #000 46%);
+            border-radius: 50%;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #111;
+        }
+        .vinyl-center {
+            width: 40px;
+            height: 40px;
+            background-color: #07080a;
+            border-radius: 50%;
+            border: 1px solid #fff;
         }
         h1 {
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            letter-spacing: 4px;
             text-transform: uppercase;
-        }
-        p {
-            color: #c5c6c7;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-        .links-gate {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .btn {
-            background-color: transparent;
+            margin: 0;
+            font-weight: 900;
             color: #ffffff;
-            border: 2px solid #ffffff;
-            padding: 15px 20px;
-            font-size: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .btn-spotify:hover { background-color: #1DB954; border-color: #1DB954; color: #000; }
-        .btn-soundcloud:hover { background-color: #ff5500; border-color: #ff5500; color: #fff; }
-        .footer {
-            margin-top: 60px;
-            font-size: 0.8rem;
-            color: #45f3ff;
-            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Flave R Soul Records</h1>
-        <p>Independent bedroom productions, deep house grooves, rock editions, and soulful melodies.</p>
-
-        <div class="links-gate">
-            <a href="https://soundcloud.com" class="btn btn-soundcloud">Private Remix Archives</a>
-        </div>
-
-        <div class="footer">
-            REGISTRANT IDENTIFIER: GXL3V
-        </div>
+    <!-- Logo Graphic -->
+    <div class="vinyl-logo">
+        <div class="vinyl-center"></div>
     </div>
+    
+    <!-- Label Name -->
+    <h1>Flave R Soul Records</h1>
 
 </body>
 </html>
-
