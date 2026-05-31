@@ -6,46 +6,101 @@
     <title>Flave R Soul Records</title>
     <style>
         body {
-            background-color: #ffffff !important; /* Pure crisp white background */
+            background-color: #ffffff !important; /* Pure crisp white backdrop */
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column; /* Stacks logo above text */
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
             min-height: 100vh;
+            box-sizing: border-box;
         }
-        .logo-container {
-            width: 75vw;
-            max-width: 320px;
-            height: 75vw;
-            max-height: 320px;
-            /* Dual-fallback logic: Tries uppercase first, then lowercase automatically */
-            background-image: url('FlaveRSoulLogo001.JPEG'), url('FlaveRSoulLogo001.jpg');
-            background-size: contain;
+
+        /* Main Intro Container */
+        .landing-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Clickable Hero Logo Link */
+        .logo-link {
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .logo-link:hover {
+            transform: scale(1.03);
+        }
+
+        /* Central Gold Hero Asset */
+        .hero-disc {
+            width: 280px;
+            height: 280px;
+            background-image: url('gold.jpeg'); /* Lowercase filename to match github precisely */
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            margin-bottom: 25px;
+            border-radius: 50%;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
+
+        /* Elegant Entry Button */
+        .enter-button {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-decoration: none;
+            padding: 12px 35px;
+            border: 1px solid #000000;
+            border-radius: 2px;
+            background: transparent;
+            transition: all 0.3s ease;
+            margin-bottom: 60px;
+            cursor: pointer;
+        }
+        .enter-button:hover {
+            background-color: #000000;
+            color: #ffffff;
+            letter-spacing: 7px;
+        }
+
+        /* Brand Footer Text */
         .copyright-text {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            color: #000000 !important; /* Absolute pure black text */
-            text-align: center;
-            font-size: calc(14px + 1vw); 
+            color: #000000;
+            font-size: 1rem;
             letter-spacing: 0.5px;
-            padding: 0 20px;
-            margin: 0;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <!-- Centered Logo Graphic with built-in case safety -->
-    <div class="logo-container"></div>
+    <div class="landing-container">
+        
+        <!-- Hero Entry Graphic -->
+        <a href="foyer.html" class="logo-link">
+            <div class="hero-disc"></div>
+        </a>
 
-    <!-- Pure Black Dynamic Copyright Line -->
-    <p class="copyright-text">&copy; 2026 Flave R Soul Records. All rights reserved</p>
+        <!-- Premium Entry Link -->
+        <a href="foyer.html" class="enter-button">Enter</a>
+
+        <!-- Copyright Footer Text -->
+        <div class="copyright-text">
+            © 2026 Flave R Soul Records. All rights reserved
+        </div>
+
+    </div>
 
 </body>
 </html>
