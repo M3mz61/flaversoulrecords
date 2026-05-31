@@ -16,7 +16,6 @@
             box-sizing: border-box;
         }
 
-        /* Header Group Container */
         .header-group {
             text-align: center;
             margin-bottom: 50px;
@@ -41,11 +40,10 @@
             margin: 0;
         }
 
-        /* Centered Graphic Element */
         .showcase-disc {
             width: 280px;
             height: 280px;
-            background-image: url("gold.jpeg"); /* Set to match your gold disc file */
+            background-image: url("gold.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -54,13 +52,13 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
-        /* Tracklist Section */
         .tracklist-container {
             width: 100%;
             max-width: 600px;
             display: flex;
             flex-direction: column;
             gap: 20px;
+            margin-bottom: 50px;
         }
         .track-entry {
             display: flex;
@@ -89,47 +87,74 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        .track-artist {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #333333;
+            margin-bottom: 8px;
+        }
         .track-meta {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.75rem;
             color: #999999;
             letter-spacing: 0.5px;
         }
+
+        .foyer-button {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 1px solid #000000;
+            border-radius: 2px;
+            background: transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .foyer-button:hover {
+            background-color: #000000;
+            color: #ffffff;
+            letter-spacing: 4px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Room Header -->
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
         <h2 class="sub-title">The Gold Room — Catalog</h2>
     </div>
 
-    <!-- Centered Disc Graphic Container -->
     <div class="showcase-disc"></div>
 
-    <!-- Track Layout Container -->
     <div class="tracklist-container">
         
-        <!-- Track Entry 1 -->
         <div class="track-entry">
             <div class="track-header">
-                <span class="track-name">Gold Track Title One</span>
-                <span class="track-version">Original Mix</span>
+                <span class="track-name">Living Without Your Love</span>
+                <span class="track-version">Radio Edit</span>
             </div>
-            <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
+            <div class="track-artist">featuring Lizzie France — By Memz</div>
+            <span class="track-meta">ISRC: GXL3V2600001 • Release Year: 2026</span>
         </div>
 
-        <!-- Track Entry 2 -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">Gold Track Title Two</span>
-                <span class="track-version">Radio Edit</span>
+                <span class="track-version">Remix</span>
             </div>
+            <div class="track-artist">By Memz</div>
             <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
         </div>
 
     </div>
+
+    <a href="foyer.html" class="foyer-button">Return to Foyer</a>
 
 </body>
 </html>
