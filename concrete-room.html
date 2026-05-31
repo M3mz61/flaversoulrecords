@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Room — Flave R Soul Records</title>
+    <style>
+        body {
+            background-color: #ffffff !important;
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
 
+        /* Header Group Container */
+        .header-group {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .main-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2.2rem;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+        .sub-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: normal;
+            color: #555555;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Centered Graphic Element */
+        .showcase-disc {
+            width: 280px;
+            height: 280px;
+            background-image: url("concrete.jpeg"); /* Matches your concrete asset filename exactly */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            margin-bottom: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        /* Tracklist Section */
+        .tracklist-container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .track-entry {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        .track-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .track-name {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #000000;
+        }
+        .track-version {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.8rem;
+            color: #777777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .track-meta {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.75rem;
+            color: #999999;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-group">
+        <h1 class="main-title">Flave R Soul Records</h1>
+        <h2 class="sub-title">The Concrete Room — Catalog</h2>
+    </div>
+
+    <div class="showcase-disc"></div>
+
+    <div class="tracklist-container">
+        
+        <div class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Concrete Track Title One</span>
+                <span class="track-version">Original Mix</span>
+            </div>
+            <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
+        </div>
+
+        <div class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Concrete Track Title Two</span>
+                <span class="track-version">Club Mix</span>
+            </div>
+            <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
