@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foyer — Flave R Soul Records</title>
+    <style>
+        body {
+            background-color: #ffffff !important; /* Matches your crisp main background */
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            text-align: center;
+        }
+        /* Gallery Wall Layout grid */
+        .gallery-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            width: 100%;
+            max-width: 900px;
+            justify-items: center;
+            align-content: center;
+        }
+        /* Individual Award Frame */
+        .room-frame {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .room-frame:hover {
+            transform: translateY(-8px); /* Subtle physical lift on hover */
+        }
+        /* Base disc style that mirrors your exact logo dimensions */
+        .disc-icon {
+            width: 180px;
+            height: 180px;
+            background-image: url('FlaveRSoulLogo001.JPG');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: filter 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        /* Pure CSS Color Tint Injectors for the Hallway Discs */
+        .disc-gold {
+            filter: sepia(0.8) hue-rotate(5deg) saturate(2.5) brightness(0.95);
+        }
+        .room-frame:hover .disc-gold {
+            box-shadow: 0 15px 30px rgba(212,175,55,0.4);
+        }
+        .disc-silver {
+            filter: grayscale(1) brightness(1.1) contrast(1.1);
+        }
+        .room-frame:hover .disc-silver {
+            box-shadow: 0 15px 30px rgba(192,192,192,0.4);
+        }
+        .disc-platinum {
+            filter: invert(0.1) sepia(0.1) hue-rotate(180deg) saturate(0.8) brightness(1.2);
+        }
+        .room-frame:hover .disc-platinum {
+            box-shadow: 0 15px 30px rgba(79,195,247,0.3);
+        }
+        /* Minimalist Label Text underneath the plaques */
+        .room-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            color: #000000;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .room-status {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.75rem;
+            color: #888888;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>The Foyer</h1>
+
+    <div class="gallery-wall">
+
+        <!-- Room 1: The Gold Disc -->
+        <a href="room-one.html" class="room-frame">
+            <div class="disc-icon disc-gold"></div>
+            <span class="room-title">Gold Room</span>
+            <span class="room-status">Deep House</span>
+        </a>
+
+        <!-- Room 2: The Silver Disc -->
+        <a href="room-two.html" class="room-frame">
+            <div class="disc-icon disc-silver"></div>
+            <span class="room-title">Silver Room</span>
+            <span class="room-status">Legacy Archive</span>
+        </a>
+
+        <!-- Room 3: The Platinum Disc -->
+        <a href="room-three.html" class="room-frame">
+            <div class="disc-icon disc-platinum"></div>
+            <span class="room-title">Platinum Room</span>
+            <span class="room-status">Black Rose</span>
+        </a>
+
+    </div>
+
+</body>
+</html>
