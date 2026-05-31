@@ -20,7 +20,8 @@
             max-width: 320px;
             height: 75vw;
             max-height: 320px;
-            background-image: url('FlaveRSoulLogo001.JPG'); /* Restored to exact .JPG extension */
+            /* Dual-fallback logic: Tries uppercase first, then lowercase automatically */
+            background-image: url('FlaveRSoulLogo001.JPG'), url('FlaveRSoulLogo001.jpg');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -40,7 +41,7 @@
 </head>
 <body>
 
-    <!-- Centered Logo Graphic -->
+    <!-- Centered Logo Graphic with built-in case safety -->
     <div class="logo-container"></div>
 
     <!-- Pure Black Dynamic Copyright Line -->
