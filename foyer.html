@@ -6,7 +6,7 @@
     <title>Foyer — Flave R Soul Records</title>
     <style>
         body {
-            background-color: #ffffff !important; /* Pure crisp white background */
+            background-color: #ffffff !important;
             margin: 0;
             padding: 60px 20px;
             display: flex;
@@ -15,7 +15,6 @@
             min-height: 100vh;
             box-sizing: border-box;
         }
-        /* Header Group Container */
         .header-group {
             text-align: center;
             margin-bottom: 70px;
@@ -39,7 +38,6 @@
             font-size: 1.2rem;
             margin: 0;
         }
-        /* Balanced 6-Column Grid Matrix */
         .gallery-wall {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -49,7 +47,6 @@
             justify-items: center;
             align-content: center;
         }
-        /* Individual Award Frame */
         .room-frame {
             display: flex;
             flex-direction: column;
@@ -62,7 +59,6 @@
         .room-frame:hover {
             transform: translateY(-8px);
         }
-        /* Vinyl shape directly referencing the actual image assets */
         .disc-icon {
             width: 160px;
             height: 160px;
@@ -75,50 +71,25 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.06);
         }
         
-        /* Room-Specific Image References - Synced with image_6e2fd7.jpg */
-        .disc-gold {
-            background-image: url('gold.jpeg');
-        }
-        .room-frame:hover .disc-gold {
-            box-shadow: 0 15px 30px rgba(212,175,55,0.4);
-        }
+        .disc-gold { background-image: url('gold.jpeg'); }
+        .room-frame:hover .disc-gold { box-shadow: 0 15px 30px rgba(212,175,55,0.4); }
 
-        .disc-silver {
-            background-image: url('silver.jpeg');
-        }
-        .room-frame:hover .disc-silver {
-            box-shadow: 0 15px 30px rgba(170,170,170,0.4);
-        }
+        .disc-silver { background-image: url('silver.jpeg'); }
+        .room-frame:hover .disc-silver { box-shadow: 0 15px 30px rgba(170,170,170,0.4); }
 
-        .disc-platinum {
-            background-image: url('platinum.jpeg');
-        }
-        .room-frame:hover .disc-platinum {
-            box-shadow: 0 15px 30px rgba(200,220,230,0.4);
-        }
+        .disc-platinum { background-image: url('platinum.jpeg'); }
+        .room-frame:hover .disc-platinum { box-shadow: 0 15px 30px rgba(200,220,230,0.4); }
 
-        .disc-bronze {
-            background-image: url('bronze.jpeg');
-        }
-        .room-frame:hover .disc-bronze {
-            box-shadow: 0 15px 30px rgba(210,105,30,0.35);
-        }
+        .disc-bronze { background-image: url('bronze.jpeg'); }
+        .room-frame:hover .disc-bronze { box-shadow: 0 15px 30px rgba(210,105,30,0.35); }
 
-        .disc-granite {
-            background-image: url('rock.jpeg');
-        }
-        .room-frame:hover .disc-granite {
-            box-shadow: 0 15px 30px rgba(215,90,118,0.4);
-        }
+        /* Fixed to display your real textured rock asset instead of pink vector */
+        .disc-granite { background-image: url('rock.jpeg'); }
+        .room-frame:hover .disc-granite { box-shadow: 0 15px 30px rgba(215,90,118,0.4); }
 
-        .disc-concrete {
-            background-image: url('concrete.jpeg');
-        }
-        .room-frame:hover .disc-concrete {
-            box-shadow: 0 15px 30px rgba(120,120,120,0.4);
-        }
+        .disc-concrete { background-image: url('concrete.jpeg'); }
+        .room-frame:hover .disc-concrete { box-shadow: 0 15px 30px rgba(120,120,120,0.4); }
 
-        /* Typography Styling */
         .room-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
@@ -141,7 +112,6 @@
 </head>
 <body>
 
-    <!-- Styled Header Layout Block -->
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
         <h2 class="sub-title">The Foyer</h2>
@@ -149,42 +119,36 @@
 
     <div class="gallery-wall">
 
-        <!-- Gold Award Frame -->
         <a href="gold-room.html" class="room-frame">
             <div class="disc-icon disc-gold"></div>
             <span class="room-title">Gold Room</span>
             <span class="room-status">Mainstream Hits</span>
         </a>
 
-        <!-- Silver Award Frame -->
         <a href="silver-room.html" class="room-frame">
             <div class="disc-icon disc-silver"></div>
             <span class="room-title">Silver Room</span>
             <span class="room-status">Soul Music</span>
         </a>
 
-        <!-- Platinum Award Frame -->
         <a href="platinum-room.html" class="room-frame">
             <div class="disc-icon disc-platinum"></div>
             <span class="room-title">Platinum Room</span>
             <span class="room-status">Dance Music</span>
         </a>
 
-        <!-- Bronze Award Frame -->
         <a href="bronze-room.html" class="room-frame">
             <div class="disc-icon disc-bronze"></div>
             <span class="room-title">Bronze Room</span>
             <span class="room-status">Spanish Catalog</span>
         </a>
 
-        <!-- Pink Granite Award Frame -->
         <a href="rock-room.html" class="room-frame">
             <div class="disc-icon disc-granite"></div>
             <span class="room-title">Granite Room</span>
             <span class="room-status">Rock Music</span>
         </a>
 
-        <!-- Concrete Award Frame -->
         <a href="concrete-room.html" class="room-frame">
             <div class="disc-icon disc-concrete"></div>
             <span class="room-title">Concrete Room</span>
