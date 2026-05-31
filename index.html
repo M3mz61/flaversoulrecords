@@ -16,23 +16,22 @@
             min-height: 100vh;
         }
         .logo-container {
-            width: 75vw; /* Scales smoothly relative to screen width */
-            max-width: 320px; /* Prevents it from getting too big on desktops */
+            width: 75vw;
+            max-width: 320px;
             height: 75vw;
             max-height: 320px;
-            background-image: url('FlaveRSoulLogo001.JPG');
+            background-image: url('FlaveRSoulLogo001.JPEG'); /* Fixed to uppercase .JPEG */
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            margin-bottom: 25px; /* Perfect spacing before text */
+            margin-bottom: 25px;
         }
         .copyright-text {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif; /* Targets Bodoni 72 first */
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            color: #000000;
+            color: #000000 !important; /* Forces absolute pure black text */
             text-align: center;
-            /* Fluid sizing: Scales dynamically but stays perfectly readable on all screens */
-            font-size: calc(12px + 1vw); 
+            font-size: calc(14px + 1vw); 
             letter-spacing: 0.5px;
             padding: 0 20px;
             margin: 0;
@@ -41,10 +40,10 @@
 </head>
 <body>
 
-    <!-- Dead centered graphic -->
+    <!-- Centered Logo Graphic -->
     <div class="logo-container"></div>
 
-    <!-- Universal Scaling Copyright Line -->
+    <!-- Pure Black Dynamic Copyright Line -->
     <p class="copyright-text">&copy; 2026 Flave R Soul Records. All rights reserved</p>
 
 </body>
