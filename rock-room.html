@@ -45,7 +45,7 @@
         .showcase-disc {
             width: 280px;
             height: 280px;
-            background-image: url("ROCK.jpeg"); /* Exactly matches your filename on GitHub */
+            background-image: url("ROCK.jpeg"); 
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -64,4 +64,72 @@
         }
         .track-entry {
             display: flex;
-            flex-direction
+            flex-direction: column;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        .track-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .track-name {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #000000;
+        }
+        .track-version {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.8rem;
+            color: #777777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .track-meta {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.75rem;
+            color: #999999;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Room Header -->
+    <div class="header-group">
+        <h1 class="main-title">Flave R Soul Records</h1>
+        <h2 class="sub-title">The Rock Room — Catalog</h2>
+    </div>
+
+    <!-- Centered Disc Graphic Container -->
+    <div class="showcase-disc"></div>
+
+    <!-- Track Layout Container -->
+    <div class="tracklist-container">
+        
+        <!-- Track Entry 1 -->
+        <div class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Track Title One</span>
+                <span class="track-version">Original Mix</span>
+            </div>
+            <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
+        </div>
+
+        <!-- Track Entry 2 -->
+        <div class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Track Title Two</span>
+                <span class="track-version">Rock Edit</span>
+            </div>
+            <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
