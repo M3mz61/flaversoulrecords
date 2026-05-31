@@ -6,7 +6,7 @@
     <title>Platinum Room — Flave R Soul Records</title>
     <style>
         body {
-            background-color: #ffffff !important; /* Pure crisp white backdrop to match your aesthetic */
+            background-color: #ffffff !important;
             margin: 0;
             padding: 60px 20px;
             display: flex;
@@ -15,6 +15,7 @@
             min-height: 100vh;
             box-sizing: border-box;
         }
+
         /* Header Group Container */
         .header-group {
             text-align: center;
@@ -39,12 +40,13 @@
             font-size: 1.2rem;
             margin: 0;
         }
-        /* Large Featured Platinum Disc Display */
+
+        /* Centered Graphic Element */
         .showcase-disc {
             width: 280px;
             height: 280px;
-            /* Using the absolute URL forces the browser to look precisely at the source */
-            background-image: url('https://raw.githubusercontent.com/M3mz61/flaversoulrecords/main/PlatinumDiscLogo.jpeg'); 
+            /* Added %20 to safely handle the space in your filename */
+            background-image: url('PlatinumDiscLogo%20Large.jpeg'); 
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -52,7 +54,8 @@
             margin-bottom: 50px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
-        /* Tracklist Showcase Section */
+
+        /* Tracklist Section */
         .tracklist-container {
             width: 100%;
             max-width: 600px;
