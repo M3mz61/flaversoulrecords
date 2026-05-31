@@ -1,3 +1,8 @@
+To display that specific graphic inside a centered circle on your Platinum Room page while maintaining the layout structure, we can reintroduce the `.showcase-disc` element but update it to use your new image.
+
+Here is the modified, ready-to-use HTML code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,8 +48,8 @@
         .showcase-disc {
             width: 280px;
             height: 280px;
-            background-image: url('PlatinumDiscLogo.jpeg'); /* Target for your new brushed steel file */
-            background-size: contain;
+            background-image: url('image.jpg'); /* Ensure this filename matches your uploaded graphic */
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             border-radius: 50%;
@@ -96,19 +101,15 @@
 </head>
 <body>
 
-    <!-- Room Header -->
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
         <h2 class="sub-title">The Platinum Room — Dance Catalog</h2>
     </div>
 
-    <!-- Centered Brushed Steel Platinum Award -->
     <div class="showcase-disc"></div>
 
-    <!-- Track Layout Container -->
     <div class="tracklist-container">
         
-        <!-- Track Entry 1 -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">Living Without Your Love</span>
@@ -117,7 +118,6 @@
             <span class="track-meta">ISRC: GXL3V2600002 • Release Year: 2026</span>
         </div>
 
-        <!-- Track Entry 2 -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">Sticky Panton</span>
@@ -131,3 +131,4 @@
 </body>
 </html>
 
+```
