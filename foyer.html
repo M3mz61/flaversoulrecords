@@ -39,13 +39,13 @@
             font-size: 1.2rem;
             margin: 0;
         }
-        /* Balanced 5-Column Grid Matrix */
+        /* Balanced 6-Column Grid Matrix */
         .gallery-wall {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 45px;
             width: 100%;
-            max-width: 1100px;
+            max-width: 1200px; /* Slightly widened to gracefully display 6 items */
             justify-items: center;
             align-content: center;
         }
@@ -98,14 +98,14 @@
         .room-frame:hover .disc-platinum {
             box-shadow: 0 15px 30px rgba(200,220,230,0.5);
         }
-        /* 4. Bronze Disc - RESTORED */
+        /* 4. Bronze Disc */
         .disc-bronze {
             filter: sepia(0.9) hue-rotate(345deg) saturate(1.8) brightness(0.75) contrast(1.1);
         }
         .room-frame:hover .disc-bronze {
             box-shadow: 0 15px 30px rgba(210,105,30,0.4);
         }
-        /* 5. Pink Granite Disc - FIXED with clean Blend-Overlay tint */
+        /* 5. Pink Granite Disc */
         .disc-granite::after {
             content: '';
             position: absolute;
@@ -123,6 +123,13 @@
         }
         .room-frame:hover .disc-granite {
             box-shadow: 0 15px 35px rgba(215, 90, 118, 0.5);
+        }
+        /* 6. Concrete Disc - Styled for a raw matte texture */
+        .disc-concrete {
+            filter: grayscale(1) contrast(0.85) brightness(0.85);
+        }
+        .room-frame:hover .disc-concrete {
+            box-shadow: 0 15px 30px rgba(120,120,120,0.45);
         }
         /* Typography Styling */
         .room-title {
@@ -188,6 +195,13 @@
             <div class="disc-icon disc-granite"></div>
             <span class="room-title">Granite Room</span>
             <span class="room-status">Rock Music</span>
+        </a>
+
+        <!-- Concrete Award Frame -->
+        <a href="concrete-room.html" class="room-frame">
+            <div class="disc-icon disc-concrete"></div>
+            <span class="room-title">Concrete Room</span>
+            <span class="room-status">Urban Music</span>
         </a>
 
     </div>
