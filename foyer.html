@@ -47,13 +47,13 @@
         /* ==================================================== */
         .foyer-grid {
             width: 100%;
-            max-width: 1400px;         /* Wide footprint to allow side-by-side display */
+            max-width: 1400px;         
             display: flex;
-            flex-direction: row;       /* Spreads discs horizontally on Mac */
-            flex-wrap: wrap;           /* Wraps cleanly into rows as needed */
-            justify-content: center;   /* Perfectly centers the discs on screen */
+            flex-direction: row;       
+            flex-wrap: wrap;           
+            justify-content: center;   
             align-items: flex-start;
-            gap: 50px 40px;            /* Spacing between vertical rows and horizontal items */
+            gap: 50px 40px;            
         }
 
         /* Room Link Wrapper */
@@ -63,12 +63,12 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            width: 300px;              /* Sets standard bounding box for desktop columns */
+            width: 300px;              
             transition: transform 0.2s ease;
         }
         
         .room-link:hover {
-            transform: translateY(-4px); /* Clean, subtle lifting movement on hover */
+            transform: translateY(-4px); 
         }
 
         /* Centered & Corrected Disc Graphics */
@@ -83,9 +83,13 @@
             background-position: center center;
         }
 
-        /* Specific Background Assignments & Adjustments */
+        /* Specific Background Assignments - VERIFIED WITH REPO */
         .disc-gold { 
             background-image: url("gold.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-silver { 
+            background-image: url("silver.jpeg"); 
             background-size: 102% 102%;
         }
         .disc-platinum { 
@@ -96,14 +100,23 @@
             background-image: url("bronze.jpeg"); 
             background-size: 102% 102%;
         }
+        .disc-granite { 
+            background-image: url("rock.jpeg"); /* FIXED: Points to your real repo file */
+            background-size: 102% 102%;
+        }
         .disc-concrete { 
             background-image: url("concrete.jpeg"); 
             background-size: 102% 102%;
         }
+        .disc-studio { 
+            background-image: url("studio.jpeg"); 
+            background-size: 102% 102%;
+            background-color: #000000; 
+        }
         .disc-mastering { 
-    background-image: url("mastering.jpeg"); 
-    background-size: 102% 102%; /* Shrinks the asset back to match the other discs perfectly */
-} 
+            background-image: url("mastering.jpeg"); 
+            background-size: 102% 102%; 
+        } 
         .disc-ar { 
             background-image: url("Aqua.jpeg"); 
             background-size: 102% 102%;
@@ -131,15 +144,15 @@
         /* ==================================================== */
         /* MOBILE MEDIA OVERRIDE (Forces iPhone Stacking)       */
         /* ==================================================== */
-        @media (max-width: 1024px) {
+        @media (max-width: 1250px) {
             .foyer-grid {
-                flex-direction: column; /* Flips the horizontal line into a clean vertical track */
+                flex-direction: column; 
                 align-items: center;
-                max-width: 500px;       /* Returns directly to your target mobile grid width */
-                gap: 50px;              /* Pulls back your precise original mobile gap spacing */
+                max-width: 500px;       
+                gap: 50px;              
             }
             .room-link {
-                width: 100%;            /* Reverts blocks back to safe mobile scaling */
+                width: 100%;            
             }
         }
     </style>
@@ -153,36 +166,63 @@
 
     <div class="foyer-grid">
 
+        <!-- 1) GOLD ROOM -->
         <a href="gold-room.html" class="room-link">
             <div class="foyer-disc disc-gold"></div>
             <h3 class="room-title">Gold Room</h3>
             <p class="room-description">Catalog</p>
         </a>
 
+        <!-- 2) SILVER ROOM -->
+        <a href="silver-room.html" class="room-link">
+            <div class="foyer-disc disc-silver"></div>
+            <h3 class="room-title">Silver Room</h3>
+            <p class="room-description">Soul Music</p>
+        </a>
+
+        <!-- 3) PLATINUM ROOM -->
         <a href="platinum-room.html" class="room-link">
             <div class="foyer-disc disc-platinum"></div>
             <h3 class="room-title">Platinum Room</h3>
             <p class="room-description">Dance Catalog</p>
         </a>
 
+        <!-- 4) BRONZE ROOM -->
         <a href="bronze-room.html" class="room-link">
             <div class="foyer-disc disc-bronze"></div>
             <h3 class="room-title">Bronze Room</h3>
             <p class="room-description">Spanish Catalog</p>
         </a>
 
+        <!-- 5) GRANITE ROOM -->
+        <a href="rock-room.html" class="room-link"> <!-- FIXED: Points to your real HTML page -->
+            <div class="foyer-disc disc-granite"></div>
+            <h3 class="room-title">Granite Room</h3>
+            <p class="room-description">Rock Catalog</p>
+        </a>
+
+        <!-- 6) CONCRETE ROOM -->
         <a href="concrete-room.html" class="room-link">
             <div class="foyer-disc disc-concrete"></div>
             <h3 class="room-title">Concrete Room</h3>
-            <p class="room-description">Catalog</p>
+            <p class="room-description">Urban Catalog</p>
         </a>
 
-        <a href="mastering.html" target="_blank" class="room-link">
+        <!-- 7) STUDIO HIRE -->
+        <a href="studio.html" class="room-link">
+            <div class="foyer-disc disc-studio"></div>
+            <h3 class="room-title">Studio Hire</h3>
+            <p class="room-description">Producer Booking</p>
+        </a>
+
+        <!-- 8) INVISIBLE MASTERING -->
+        <a href="mastering.html" class="room-link">
             <div class="foyer-disc disc-mastering"></div>
             <h3 class="room-title">Invisible Mastering</h3>
-            <p class="room-description">Engineering & Audio Suite</p>
+            <p class="room-description">Audio Suite</p>
         </a>
 
+        <!-- 9) A&R DEVELOPMENT -->
         <a href="development.html" class="room-link">
             <div class="foyer-disc disc-ar"></div>
             <h3 class="room-title">A &amp; R Room</h3>
