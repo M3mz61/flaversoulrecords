@@ -15,9 +15,12 @@
             min-height: 100vh;
             box-sizing: border-box;
         }
+
+        /* Header Group Container */
         .header-group {
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
+            width: 100%;
         }
         .main-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
@@ -38,75 +41,66 @@
             font-size: 1.2rem;
             margin: 0;
         }
-        .gallery-wall {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 45px;
+
+        /* Grid / Layout Wrapper for Rooms */
+        .foyer-grid {
             width: 100%;
-            max-width: 1200px;
-            justify-items: center;
-            align-content: center;
-        }
-        .room-frame {
+            max-width: 500px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 50px;
+        }
+
+        /* Room Link Wrapper */
+        .room-link {
             text-decoration: none;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
         }
-        .room-frame:hover {
-            transform: translateY(-8px);
-        }
-        .disc-icon {
-            width: 160px;
-            height: 160px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+
+        /* Centered & Corrected Disc Graphics */
+        .foyer-disc {
+            width: 280px;
+            height: 280px;
             border-radius: 50%;
-            margin-bottom: 25px;
-            transition: box-shadow 0.3s ease;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            
+            /* Fixes the edge-chopping and centering issues */
+            background-size: 102% 102%; 
+            background-repeat: no-repeat;
+            background-position: center center;
         }
-        
-        .disc-gold { background-image: url('gold.jpeg'); }
-        .room-frame:hover .disc-gold { box-shadow: 0 15px 30px rgba(212,175,55,0.4); }
 
-        .disc-silver { background-image: url('silver.jpeg'); }
-        .room-frame:hover .disc-silver { box-shadow: 0 15px 30px rgba(170,170,170,0.4); }
+        /* Specific Background Assignments */
+        .disc-gold { background-image: url("gold.jpeg"); }
+        .disc-platinum { background-image: url("platinum.jpeg"); }
+        .disc-bronze { background-image: url("bronze.jpeg"); }
+        .disc-concrete { background-image: url("concrete.jpeg"); }
+        .disc-mastering { background-image: url("mastering.jpeg"); } /* Ensure this asset exists */
+        .disc-ar { background-image: url("ar.jpeg"); }               /* Ensure this asset exists */
 
-        .disc-platinum { background-image: url('platinum.jpeg'); }
-        .room-frame:hover .disc-platinum { box-shadow: 0 15px 30px rgba(200,220,230,0.4); }
-
-        .disc-bronze { background-image: url('bronze.jpeg'); }
-        .room-frame:hover .disc-bronze { box-shadow: 0 15px 30px rgba(210,105,30,0.35); }
-
-        /* Fixed to display your real textured rock asset instead of pink vector */
-        .disc-granite { background-image: url('rock.jpeg'); }
-        .room-frame:hover .disc-granite { box-shadow: 0 15px 30px rgba(215,90,118,0.4); }
-
-        .disc-concrete { background-image: url('concrete.jpeg'); }
-        .room-frame:hover .disc-concrete { box-shadow: 0 15px 30px rgba(120,120,120,0.4); }
-
+        /* Typography Styles */
         .room-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
+            font-size: 1.6rem;
             color: #000000;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 8px;
-            text-align: center;
+            letter-spacing: 3px;
+            margin: 0 0 8px 0;
         }
-        .room-status {
+        .room-description {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.75rem;
-            color: #888888;
-            letter-spacing: 1px;
+            font-size: 0.95rem;
+            color: #777777;
             text-transform: uppercase;
-            text-align: center;
+            letter-spacing: 2px;
+            margin: 0;
         }
     </style>
 </head>
@@ -114,45 +108,51 @@
 
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">The Foyer</h2>
+        <h2 class="sub-title">Main Foyer</h2>
     </div>
 
-    <div class="gallery-wall">
+    <div class="foyer-grid">
 
-        <a href="gold-room.html" class="room-frame">
-            <div class="disc-icon disc-gold"></div>
-            <span class="room-title">Gold Room</span>
-            <span class="room-status">Mainstream Hits</span>
+        <!-- Gold Room -->
+        <a href="gold-room.html" class="room-link">
+            <div class="foyer-disc disc-gold"></div>
+            <h3 class="room-title">Gold Room</h3>
+            <p class="room-description">Catalog</p>
         </a>
 
-        <a href="silver-room.html" class="room-frame">
-            <div class="disc-icon disc-silver"></div>
-            <span class="room-title">Silver Room</span>
-            <span class="room-status">Soul Music</span>
+        <!-- Platinum Room -->
+        <a href="platinum-room.html" class="room-link">
+            <div class="foyer-disc disc-platinum"></div>
+            <h3 class="room-title">Platinum Room</h3>
+            <p class="room-description">Dance Catalog</p>
         </a>
 
-        <a href="platinum-room.html" class="room-frame">
-            <div class="disc-icon disc-platinum"></div>
-            <span class="room-title">Platinum Room</span>
-            <span class="room-status">Dance Music</span>
+        <!-- Bronze Room -->
+        <a href="bronze-room.html" class="room-link">
+            <div class="foyer-disc disc-bronze"></div>
+            <h3 class="room-title">Bronze Room</h3>
+            <p class="room-description">Spanish Catalog</p>
         </a>
 
-        <a href="bronze-room.html" class="room-frame">
-            <div class="disc-icon disc-bronze"></div>
-            <span class="room-title">Bronze Room</span>
-            <span class="room-status">Spanish Catalog</span>
+        <!-- Concrete Room -->
+        <a href="concrete-room.html" class="room-link">
+            <div class="foyer-disc disc-concrete"></div>
+            <h3 class="room-title">Concrete Room</h3>
+            <p class="room-description">Catalog</p>
         </a>
 
-        <a href="rock-room.html" class="room-frame">
-            <div class="disc-icon disc-granite"></div>
-            <span class="room-title">Granite Room</span>
-            <span class="room-status">Rock Music</span>
+        <!-- Mastering Room (NEW) -->
+        <a href="mastering-room.html" class="room-link">
+            <div class="foyer-disc disc-mastering"></div>
+            <h3 class="room-title">Mastering Room</h3>
+            <p class="room-description">Engineering & Audio Suite</p>
         </a>
 
-        <a href="concrete-room.html" class="room-frame">
-            <div class="disc-icon disc-concrete"></div>
-            <span class="room-title">Concrete Room</span>
-            <span class="room-status">Urban Music</span>
+        <!-- A & R Room (NEW) -->
+        <a href="ar-room.html" class="room-link">
+            <div class="foyer-disc disc-ar"></div>
+            <h3 class="room-title">A &amp; R Room</h3>
+            <p class="room-description">Talent &amp; Development</p>
         </a>
 
     </div>
