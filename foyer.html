@@ -70,25 +70,38 @@
             margin-bottom: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
             
-            /* Slices off the faux transparent checkerboard grid lines */
+            /* Essential to crop out overlapping image elements */
             overflow: hidden; 
-            
-            /* Aligns the core artwork details perfectly */
-            background-size: 102% 102%; 
             background-repeat: no-repeat;
             background-position: center center;
         }
 
-        /* Specific Background Assignments */
-        .disc-gold { background-image: url("gold.jpeg"); }
-        .disc-platinum { background-image: url("platinum.jpeg"); }
-        .disc-bronze { background-image: url("bronze.jpeg"); }
-        .disc-concrete { background-image: url("concrete.jpeg"); }
+        /* Specific Background Assignments & Adjustments */
+        .disc-gold { 
+            background-image: url("gold.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-platinum { 
+            background-image: url("platinum.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-bronze { 
+            background-image: url("bronze.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-concrete { 
+            background-image: url("concrete.jpeg"); 
+            background-size: 102% 102%;
+        }
         .disc-mastering { 
             background-image: url("mastering.jpeg"); 
-            background-size: 100% 100%; /* Keeps the custom vinyl record clean */
+            /* Stretches the image up to crop out the faux checkerboard pattern */
+            background-size: 142% 142%; 
         } 
-        .disc-ar { background-image: url("gold.jpeg"); }              
+        .disc-ar { 
+            background-image: url("gold.jpeg"); 
+            background-size: 102% 102%;
+        }              
 
         /* Typography Styles */
         .room-title {
