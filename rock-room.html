@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Room — Flave R Soul Records</title>
+    <title>Concrete Room — Flave R Soul Records</title>
     <style>
         body {
             background-color: #ffffff !important;
@@ -20,6 +20,7 @@
         .header-group {
             text-align: center;
             margin-bottom: 50px;
+            width: 100%;
         }
         .main-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
@@ -41,16 +42,16 @@
             margin: 0;
         }
 
-        /* Centered Graphic Element */
+        /* Centered Graphic Element with Offset Fix */
         .showcase-disc {
             width: 280px;
             height: 280px;
-            background-image: url("rock.jpeg"); 
-            background-size: cover;
+            background-image: url("concrete.jpeg");
+            background-size: 106%; /* Slightly enlarged to mask edge unevenness */
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: 44% center; /* Shifted left to counteract the asymmetric artwork shadow */
             border-radius: 50%;
-            margin-bottom: 50px;
+            margin: 0 auto 50px auto;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
@@ -61,6 +62,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            margin-bottom: 50px;
         }
         .track-entry {
             display: flex;
@@ -95,41 +97,63 @@
             color: #999999;
             letter-spacing: 0.5px;
         }
+
+        /* Premium Return Button Styling */
+        .foyer-button {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 1px solid #000000;
+            border-radius: 2px;
+            background: transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block; /* Forces proper layout rendering */
+            text-align: center;
+        }
+        .foyer-button:hover {
+            background-color: #000000;
+            color: #ffffff;
+            letter-spacing: 4px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Room Header -->
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">The Rock Room — Catalog</h2>
+        <h2 class="sub-title">The Concrete Room — Catalog</h2>
     </div>
 
-    <!-- Centered Disc Graphic Container -->
     <div class="showcase-disc"></div>
 
-    <!-- Track Layout Container -->
     <div class="tracklist-container">
         
-        <!-- Track Entry 1 -->
         <div class="track-entry">
             <div class="track-header">
-                <span class="track-name">Track Title One</span>
+                <span class="track-name">Concrete Track Title One</span>
                 <span class="track-version">Original Mix</span>
             </div>
             <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
         </div>
 
-        <!-- Track Entry 2 -->
         <div class="track-entry">
             <div class="track-header">
-                <span class="track-name">Track Title Two</span>
-                <span class="track-version">Rock Edit</span>
+                <span class="track-name">Concrete Track Title Two</span>
+                <span class="track-version">Club Mix</span>
             </div>
             <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
         </div>
 
     </div>
+
+    <!-- Navigation Back Link -->
+    <a href="foyer.html" class="foyer-button">Return to Foyer</a>
 
 </body>
 </html>
