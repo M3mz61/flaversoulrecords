@@ -61,6 +61,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            margin-bottom: 50px; /* Added spacing before the button */
         }
         .track-entry {
             display: flex;
@@ -95,6 +96,28 @@
             color: #999999;
             letter-spacing: 0.5px;
         }
+
+        /* Premium Return Button Styling */
+        .foyer-button {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 1px solid #000000;
+            border-radius: 2px;
+            background: transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .foyer-button:hover {
+            background-color: #000000;
+            color: #ffffff;
+            letter-spacing: 4px;
+        }
     </style>
 </head>
 <body>
@@ -125,6 +148,9 @@
         </div>
 
     </div>
+
+    <!-- Navigation Back Link -->
+    <a href="foyer.html" class="foyer-button">Return to Foyer</a>
 
 </body>
 </html>
