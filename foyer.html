@@ -42,14 +42,18 @@
             margin: 0;
         }
 
-        /* Grid / Layout Wrapper for Rooms */
+        /* ==================================================== */
+        /* RESPONSIVE LAYOUT WRAPPER FOR ROOMS                  */
+        /* ==================================================== */
         .foyer-grid {
             width: 100%;
-            max-width: 500px;
+            max-width: 1400px;         /* Wide footprint to allow side-by-side display */
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 50px;
+            flex-direction: row;       /* Spreads discs horizontally on Mac */
+            flex-wrap: wrap;           /* Wraps cleanly into rows as needed */
+            justify-content: center;   /* Perfectly centers the discs on screen */
+            align-items: flex-start;
+            gap: 50px 40px;            /* Spacing between vertical rows and horizontal items */
         }
 
         /* Room Link Wrapper */
@@ -59,7 +63,12 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            width: 100%;
+            width: 300px;              /* Sets standard bounding box for desktop columns */
+            transition: transform 0.2s ease;
+        }
+        
+        .room-link:hover {
+            transform: translateY(-4px); /* Clean, subtle lifting movement on hover */
         }
 
         /* Centered & Corrected Disc Graphics */
@@ -117,6 +126,21 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin: 0;
+        }
+
+        /* ==================================================== */
+        /* MOBILE MEDIA OVERRIDE (Forces iPhone Stacking)       */
+        /* ==================================================== */
+        @media (max-width: 1024px) {
+            .foyer-grid {
+                flex-direction: column; /* Flips the horizontal line into a clean vertical track */
+                align-items: center;
+                max-width: 500px;       /* Returns directly to your target mobile grid width */
+                gap: 50px;              /* Pulls back your precise original mobile gap spacing */
+            }
+            .room-link {
+                width: 100%;            /* Reverts blocks back to safe mobile scaling */
+            }
         }
     </style>
 </head>
