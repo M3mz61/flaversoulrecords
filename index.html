@@ -11,19 +11,49 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
         }
 
-        /* Main Intro Container */
+        /* ==================================================== */
+        /* STATIC HEADER (Locked to top, independent of scroll)*/
+        /* ==================================================== */
+        .static-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent to let content slide under nicely */
+            backdrop-filter: blur(5px); /* Soft blur effect for content passing underneath */
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+            box-sizing: border-box;
+            z-index: 1000; /* Keeps it layered above all scrolling elements */
+        }
+        
+        .main-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2.2rem;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        /* ==================================================== */
+        /* MAIN SCROLLABLE CONTENT CONTAINER                   */
+        /* ==================================================== */
         .landing-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 20px;
+            margin-top: 180px; /* Pushes content down so it doesn't get hidden behind the static header */
+            flex-grow: 1; /* Pushes the footer down towards the bottom */
         }
 
         /* Clickable Hero Logo Link */
@@ -40,7 +70,7 @@
         .hero-disc {
             width: 280px;
             height: 280px;
-            background-image: url('gold.jpeg'); /* Lowercase filename to match github precisely */
+            background-image: url('gold.jpeg'); 
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -63,7 +93,7 @@
             border-radius: 2px;
             background: transparent;
             transition: all 0.3s ease;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             cursor: pointer;
         }
         .enter-button:hover {
@@ -76,30 +106,34 @@
         .copyright-text {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            color: #000000;
-            font-size: 1rem;
+            color: #777777; /* Slightly softened down from pure black for premium aesthetic */
+            font-size: 0.9rem;
             letter-spacing: 0.5px;
             line-height: 1.6;
+            margin-bottom: 40px; /* Gives room at the very bottom of the viewport */
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
+    <header class="static-header">
+        <h1 class="main-title">Flave R Soul Records</h1>
+    </header>
+
     <div class="landing-container">
         
-        <!-- Hero Entry Graphic -->
         <a href="foyer.html" class="logo-link">
             <div class="hero-disc"></div>
         </a>
 
-        <!-- Premium Entry Link -->
         <a href="foyer.html" class="enter-button">Enter</a>
 
-        <!-- Copyright Footer Text -->
-        <div class="copyright-text">
-            © 2026 Flave R Soul Records. All rights reserved
-        </div>
+    </div>
 
+    <div class="copyright-text">
+        © 2026 Flave R Soul Records. All rights reserved
     </div>
 
 </body>
