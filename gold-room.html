@@ -121,6 +121,30 @@
             color: #ffffff;
             letter-spacing: 4px;
         }
+
+        /* Container to fix the gap issue if Spotify fails to load */
+        .spotify-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .spotify-backup-link {
+            display: block;
+            padding: 40px 20px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #1ED760;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .spotify-wrapper iframe {
+            position: relative;
+            z-index: 2;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -154,8 +178,11 @@
             <span class="track-meta">ISRC: GXL3V2625689 Coming Soon • Release Year: 2026</span>
         </div>
 
-        <!-- Spotify Album Embed Player -->
-        <iframe style="border-radius: 12px;" src="https://spotify.com" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+        <!-- Styled Spotify Embed Player with Text Backup -->
+        <div class="spotify-wrapper">
+            <a class="spotify-backup-link" href="https://spotify.com" target="_blank">♫ Listen to this Album on Spotify</a>
+            <iframe style="margin-top: -104px;" src="https://spotify.com" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+        </div>
 
         <!-- Track Entry 3 (Newly Added & Correctly Isolated) -->
         <div class="track-entry">
