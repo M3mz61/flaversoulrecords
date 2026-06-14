@@ -8,7 +8,12 @@
         body {
             background-color: #ffffff !important; /* Pure white background */
             margin: 0;
-            padding: 40px;
+            padding: 40px 20px 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
         
         .grid-container {
@@ -16,8 +21,9 @@
             /* Symmetric 4-column layout for iPad landscape */
             grid-template-columns: repeat(4, 1fr); 
             gap: 30px; /* Clean spacing between hardware images */
-            max-width: 100%;
-            margin: 0 auto;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto 50px auto;
         }
 
         img {
@@ -25,6 +31,29 @@
             height: auto;
             display: block;
             object-fit: contain; /* Keeps hardware items perfectly scaled */
+        }
+
+        /* Premium Navigation Button Styling */
+        .studio-button {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 1px solid #000000;
+            border-radius: 2px;
+            background: transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-top: auto;
+        }
+        .studio-button:hover {
+            background-color: #000000;
+            color: #ffffff;
+            letter-spacing: 4px;
         }
 
         /* Responsive shift to 2 columns if iPad is rotated to portrait */
@@ -51,6 +80,9 @@
         <img src="sm57.jpeg" alt="Equipment">
         <img src="jmp1.jpeg" alt="Equipment">
     </div>
+
+    <!-- Navigation Footer Option -->
+    <a href="studio.html" class="studio-button">Return to Studio</a>
 
 </body>
 </html>
