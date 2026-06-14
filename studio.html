@@ -21,12 +21,53 @@
             width: 280px;
             height: 280px;
             background-image: url("studio.jpeg");
-            background-size: 116% 116%; /* Zooms past the built-in white margin seen in image */
+            background-size: 116% 116%;
             background-repeat: no-repeat;
             background-position: center center;
             border-radius: 50%;
             margin-bottom: 40px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        /* Minimalist Price List Section */
+        .price-container {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 45px;
+            border-top: 1px dashed #e0e0e0;
+            border-bottom: 1px dashed #e0e0e0;
+            padding: 25px 10px;
+            box-sizing: border-box;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 16px;
+        }
+        .price-row:last-child {
+            margin-bottom: 0;
+        }
+        .price-item {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1.15rem;
+            color: #000000;
+            letter-spacing: 1px;
+        }
+        .price-value {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000000;
+        }
+        .price-subtext {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.8rem;
+            color: #777777;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
         }
 
         /* Booking Cards Layout Section */
@@ -45,7 +86,7 @@
             border: 1px solid #e0e0e0;
             border-radius: 4px;
             background-color: #fafafa;
-            text-decoration: none; /* Clears link underline styles */
+            text-decoration: none;
             color: inherit;
             transition: all 0.3s ease;
         }
@@ -114,6 +155,38 @@
 
     <!-- Central Logo Disc Graphic -->
     <div class="showcase-disc"></div>
+
+    <!-- Minimalist Rates Presentation Section -->
+    <div class="price-container">
+        <div class="price-row">
+            <div>
+                <div class="price-item">Single Hour Run</div>
+                <div class="price-subtext">Quick drop-ins & spot edits</div>
+            </div>
+            <span class="price-value">£75</span>
+        </div>
+        <div class="price-row" style="margin-top: 16px; margin-bottom: 16px;">
+            <div>
+                <div class="price-item">Two Hour Session</div>
+                <div class="price-subtext">Focused tracking window</div>
+            </div>
+            <span class="price-value">£140</span>
+        </div>
+        <div class="price-row" style="margin-bottom: 16px;">
+            <div>
+                <div class="price-item">Half Day Session (3-4 Hours)</div>
+                <div class="price-subtext">Acoustic runs & arrangement blocks</div>
+            </div>
+            <span class="price-value">£65 / hr</span>
+        </div>
+        <div class="price-row">
+            <div>
+                <div class="price-item">Full Day Lockout (8 Hours)</div>
+                <div class="price-subtext">Comprehensive recording & tracking block</div>
+            </div>
+            <span class="price-value">£375</span>
+        </div>
+    </div>
 
     <div class="tracklist-container">
         
