@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Equipment</title>
+    <style>
+        body {
+            background-color: #ffffff !important; /* Pure white background */
+            margin: 0;
+            padding: 40px;
+        }
+        
+        .grid-container {
+            display: grid;
+            /* Symmetric 4-column layout for iPad landscape */
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 30px; /* Clean spacing between hardware images */
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain; /* Keeps hardware items perfectly scaled */
+        }
+
+        /* Responsive shift to 2 columns if iPad is rotated to portrait */
+        @media (max-width: 1024px) and (orientation: portrait) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <img src="u87.JPG" alt="Equipment">
+        <img src="mg15.jpeg" alt="Equipment">
+        <img src="egg150.jpeg" alt="Equipment">
+        <img src="ms2.jpeg" alt="Equipment">
+        <img src="sm57a.jpeg" alt="Equipment">
+        <img src="re20.jpeg" alt="Equipment">
+        <img src="3035.jpeg" alt="Equipment">
+        <img src="line6.jpeg" alt="Equipment">
+        <img src="sm58.jpeg" alt="Equipment">
+        <img src="jcm900.jpeg" alt="Equipment">
+        <img src="sm57.jpeg" alt="Equipment">
+        <img src="jmp1.jpeg" alt="Equipment">
+    </div>
+
+</body>
+</html>
