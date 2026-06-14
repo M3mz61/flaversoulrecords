@@ -3,67 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foyer</title>
+    <title>Foyer — Flave R Soul Records</title>
     <style>
         body {
-            background-color: #ffffff !important; /* Pure white background */
+            background-color: #ffffff !important;
             margin: 0;
-            padding: 40px;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Header Group Container */
+        .header-group {
+            text-align: center;
+            margin-bottom: 60px;
+            width: 100%;
+        }
+        .main-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2.2rem;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+        .sub-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: normal;
+            color: #555555;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* ==================================================== */
+        /* RESPONSIVE LAYOUT WRAPPER FOR ROOMS                  */
+        /* ==================================================== */
+        .foyer-grid {
+            width: 100%;
+            max-width: 1400px;         
+            display: flex;
+            flex-direction: row;       
+            flex-wrap: wrap;           
+            justify-content: center;   
+            align-items: flex-start;
+            gap: 50px 40px;            
+        }
+
+        /* Room Link Wrapper */
+        .room-link {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 300px;              
+            transition: transform 0.2s ease;
         }
         
-        .grid-container {
-            display: grid;
-            /* Perfectly symmetric 4-column landscape layout for iPad */
-            grid-template-columns: repeat(4, 1fr); 
-            gap: 30px; /* Clean spacing between image discs */
-            max-width: 100%;
-            margin: 0 auto;
+        .room-link:hover {
+            transform: translateY(-4px); 
         }
 
-        .grid-link {
-            display: block;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-        .grid-link:hover {
-            transform: translateY(-2px);
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain; /* Keeps all circle discs perfectly round */
+        /* Centered & Corrected Disc Graphics */
+        .foyer-disc {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            overflow: hidden; 
+            background-repeat: no-repeat;
+            background-position: center center;
         }
 
-        /* Adjusts to 2 columns if the iPad is turned vertically */
-        @media (max-width: 1024px) and (orientation: portrait) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
+        /* Specific Background Assignments - VERIFIED WITH REPO */
+        .disc-gold { 
+            background-image: url("gold.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-silver { 
+            background-image: url("silver.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-platinum { 
+            background-image: url("platinum.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-bronze { 
+            background-image: url("bronze.jpeg"); /* FIXED: Restored link to display the bronze asset */
+            background-size: 102% 102%;
+        }
+        .disc-granite { 
+            background-image: url("rock.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-concrete { 
+            background-image: url("concrete.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-studio { 
+            background-image: url("studio.jpeg"); 
+            background-size: 116% 116%; /* FIXED: Scaled up to hide the built-in white border */
+            background-color: #000000; 
+        }
+        .disc-mastering { 
+            background-image: url("mastering.jpeg"); 
+            background-size: 102% 102%; 
+        } 
+        .disc-ar { 
+            background-image: url("Aqua.jpeg"); 
+            background-size: 102% 102%;
+        }              
+
+        /* Typography Styles */
+        .room-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1.6rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0 0 8px 0;
+        }
+        .room-description {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.95rem;
+            color: #777777;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        /* ==================================================== */
+        /* MOBILE MEDIA OVERRIDE (Forces iPhone Stacking)       */
+        /* ==================================================== */
+        @media (max-width: 1250px) {
+            .foyer-grid {
+                flex-direction: column; 
+                align-items: center;
+                max-width: 500px;       
+                gap: 50px;              
+            }
+            .room-link {
+                width: 100%;            
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="grid-container">
-        <!-- Row 1 -->
-        <a href="studio.html" class="grid-link"><img src="studio.jpeg" alt="Studio Hire"></a>
-        <a href="platinum-room.html" class="grid-link"><img src="platinum.jpeg" alt="Platinum Room"></a>
-        <a href="gold-room.html" class="grid-link"><img src="gold.jpeg" alt="Gold Room"></a>
-        <a href="concrete-room.html" class="grid-link"><img src="concrete.jpeg" alt="Concrete Room"></a>
-        
-        <!-- Row 2 -->
-        <a href="development.html" class="grid-link"><img src="Aqua.jpeg" alt="A&R Department"></a>
-        <a href="deeafro-room.html" class="grid-link"><img src="gold.jpeg" alt="Memz & DeeAfro"></a>
-        <a href="polluted-room.html" class="grid-link"><img src="concrete.jpeg" alt="Polluted Records"></a>
-        <a href="#" class="grid-link" onclick="return false;"><img src="studio.jpeg" alt="Placeholder"></a>
-        
-        <!-- Row 3 -->
-        <a href="#" class="grid-link" onclick="return false;"><img src="platinum.jpeg" alt="Placeholder"></a>
-        <a href="#" class="grid-link" onclick="return false;"><img src="gold.jpeg" alt="Placeholder"></a>
-        <a href="#" class="grid-link" onclick="return false;"><img src="concrete.jpeg" alt="Placeholder"></a>
-        <a href="#" class="grid-link" onclick="return false;"><img src="Aqua.jpeg" alt="Placeholder"></a>
+    <div class="header-group">
+        <h1 class="main-title">Flave R Soul Records</h1>
+        <h2 class="sub-title">Main Foyer</h2>
+    </div>
+
+    <div class="foyer-grid">
+
+        <!-- 1) GOLD ROOM -->
+        <a href="gold-room.html" class="room-link">
+            <div class="foyer-disc disc-gold"></div>
+            <h3 class="room-title">Gold Room</h3>
+            <p class="room-description">Catalog</p>
+        </a>
+
+        <!-- 2) SILVER ROOM -->
+        <a href="silver-room.html" class="room-link">
+            <div class="foyer-disc disc-silver"></div>
+            <h3 class="room-title">Silver Room</h3>
+            <p class="room-description">Soul Music</p>
+        </a>
+
+        <!-- 3) PLATINUM ROOM -->
+        <a href="platinum-room.html" class="room-link">
+            <div class="foyer-disc disc-platinum"></div>
+            <h3 class="room-title">Platinum Room</h3>
+            <p class="room-description">Dance Catalog</p>
+        </a>
+
+        <!-- 4) BRONZE ROOM -->
+        <a href="bronze-room.html" class="room-link">
+            <div class="foyer-disc disc-bronze"></div>
+            <h3 class="room-title">Bronze Room</h3>
+            <p class="room-description">Spanish Catalog</p>
+        </a>
+
+        <!-- 5) GRANITE ROOM -->
+        <a href="rock-room.html" class="room-link"> 
+            <div class="foyer-disc disc-granite"></div>
+            <h3 class="room-title">Granite Room</h3>
+            <p class="room-description">Rock Catalog</p>
+        </a>
+
+        <!-- 6) CONCRETE ROOM -->
+        <a href="concrete-room.html" class="room-link">
+            <div class="foyer-disc disc-concrete"></div>
+            <h3 class="room-title">Concrete Room</h3>
+            <p class="room-description">Urban Catalog</p>
+        </a>
+
+        <!-- 7) STUDIO HIRE -->
+        <a href="studio.html" class="room-link">
+            <div class="foyer-disc disc-studio"></div>
+            <h3 class="room-title">Studio Hire</h3>
+            <p class="room-description">Producer Booking</p>
+        </a>
+
+        <!-- 8) INVISIBLE MASTERING -->
+        <a href="mastering.html" class="room-link">
+            <div class="foyer-disc disc-mastering"></div>
+            <h3 class="room-title">Invisible Mastering</h3>
+            <p class="room-description">Audio Suite</p>
+        </a>
+
+        <!-- 9) A&R DEVELOPMENT -->
+        <a href="development.html" class="room-link">
+            <div class="foyer-disc disc-ar"></div>
+            <h3 class="room-title">A &amp; R Room</h3>
+            <p class="room-description">Talent &amp; Development</p>
+        </a>
+
     </div>
 
 </body>
