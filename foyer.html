@@ -16,217 +16,219 @@
             box-sizing: border-box;
         }
 
-        /* Header Group Container */
-        .header-group {
-            text-align: center;
-            margin-bottom: 60px;
-            width: 100%;
-        }
-        .main-title {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            color: #000000;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 2.2rem;
-            margin: 0 0 16px 0;
-            line-height: 1.2;
-        }
-        .sub-title {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: normal;
-            color: #555555;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 1.2rem;
-            margin: 0;
-        }
-
-        /* ==================================================== */
-        /* RESPONSIVE LAYOUT WRAPPER FOR ROOMS                  */
-        /* ==================================================== */
-        .foyer-grid {
-            width: 100%;
-            max-width: 1400px;         
-            display: flex;
-            flex-direction: row;       
-            flex-wrap: wrap;           
-            justify-content: center;   
-            align-items: flex-start;
-            gap: 50px 40px;            
-        }
-
-        /* Room Link Wrapper */
-        .room-link {
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 300px;              
-            transition: transform 0.2s ease;
-        }
-        
-        .room-link:hover {
-            transform: translateY(-4px); 
-        }
-
-        /* Centered & Corrected Disc Graphics */
-        .foyer-disc {
+        /* Centered Umbrella Logo Disc */
+        .showcase-disc {
             width: 280px;
             height: 280px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-            overflow: hidden; 
+            background-image: url("studio.jpeg");
+            background-size: 116% 116%;
             background-repeat: no-repeat;
             background-position: center center;
+            border-radius: 50%;
+            margin-bottom: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
-        /* Specific Background Assignments - VERIFIED WITH REPO */
-        .disc-gold { 
-            background-image: url("gold.jpeg"); 
-            background-size: 102% 102%;
+        /* 12-Button Symmetrical Grid Optimized for iPad Landscape */
+        .foyer-grid {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 clear vertical columns */
+            gap: 20px;
+            margin-bottom: 50px;
         }
-        .disc-silver { 
-            background-image: url("silver.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-platinum { 
-            background-image: url("platinum.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-bronze { 
-            background-image: url("bronze.jpeg"); /* FIXED: Restored link to display the bronze asset */
-            background-size: 102% 102%;
-        }
-        .disc-granite { 
-            background-image: url("rock.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-concrete { 
-            background-image: url("concrete.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-studio { 
-            background-image: url("studio.jpeg"); 
-            background-size: 116% 116%; /* FIXED: Scaled up to hide the built-in white border */
-            background-color: #000000; 
-        }
-        .disc-mastering { 
-            background-image: url("mastering.jpeg"); 
-            background-size: 102% 102%; 
-        } 
-        .disc-ar { 
-            background-image: url("Aqua.jpeg"); 
-            background-size: 102% 102%;
-        }              
 
-        /* Typography Styles */
-        .room-title {
+        .grid-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 22px 18px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #fafafa;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            min-height: 110px;
+        }
+        .grid-button:hover {
+            border-color: #000000;
+            background-color: #ffffff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
+        }
+
+        /* Future Pipeline Disabled Block Style */
+        .grid-button-placeholder {
+            border-style: dashed;
+            cursor: default;
+            opacity: 0.6;
+        }
+        .grid-button-placeholder:hover {
+            border-color: #e0e0e0;
+            background-color: #fafafa;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .button-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .button-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             color: #000000;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin: 0 0 8px 0;
+            letter-spacing: 0.5px;
         }
-        .room-description {
+        .button-action {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.95rem;
+            font-size: 0.75rem;
             color: #777777;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 0;
+            letter-spacing: 1px;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        .grid-button:hover .button-action {
+            color: #000000;
+            border-color: #000000;
+        }
+        .button-meta {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.75rem;
+            color: #999999;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
         }
 
-        /* ==================================================== */
-        /* MOBILE MEDIA OVERRIDE (Forces iPhone Stacking)       */
-        /* ==================================================== */
-        @media (max-width: 1250px) {
+        /* Turn into 2 columns if rotated to vertical Portrait view */
+        @media (max-width: 1024px) and (orientation: portrait) {
             .foyer-grid {
-                flex-direction: column; 
-                align-items: center;
-                max-width: 500px;       
-                gap: 50px;              
-            }
-            .room-link {
-                width: 100%;            
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 600px;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="header-group">
-        <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">Main Foyer</h2>
-    </div>
+    <!-- Central Parent Company Graphic -->
+    <div class="showcase-disc"></div>
 
     <div class="foyer-grid">
-
-        <!-- 1) GOLD ROOM -->
-        <a href="gold-room.html" class="room-link">
-            <div class="foyer-disc disc-gold"></div>
-            <h3 class="room-title">Gold Room</h3>
-            <p class="room-description">Catalog</p>
+        
+        <!-- Row 1 / Card 1: Studio Portal -->
+        <a href="studio.html" class="grid-button">
+            <div class="button-header">
+                <span class="button-title">Studio Hire</span>
+                <span class="button-action">Enter →</span>
+            </div>
+            <span class="button-meta">Rates, hardware routing &amp; session booking parameters.</span>
         </a>
 
-        <!-- 2) SILVER ROOM -->
-        <a href="silver-room.html" class="room-link">
-            <div class="foyer-disc disc-silver"></div>
-            <h3 class="room-title">Silver Room</h3>
-            <p class="room-description">Soul Music</p>
+        <!-- Row 1 / Card 2: Platinum Room Imprint -->
+        <a href="platinum-room.html" class="grid-button">
+            <div class="button-header">
+                <span class="button-title">Platinum Room</span>
+                <span class="button-action">Enter →</span>
+            </div>
+            <span class="button-meta">Flave R Soul Dance forthcoming premium house rollouts.</span>
         </a>
 
-        <!-- 3) PLATINUM ROOM -->
-        <a href="platinum-room.html" class="room-link">
-            <div class="foyer-disc disc-platinum"></div>
-            <h3 class="room-title">Platinum Room</h3>
-            <p class="room-description">Dance Catalog</p>
+        <!-- Row 1 / Card 3: Gold Room Imprint -->
+        <a href="gold-room.html" class="grid-button">
+            <div class="button-header">
+                <span class="button-title">Gold Room</span>
+                <span class="button-action">Enter →</span>
+            </div>
+            <span class="button-meta">Core instrumentation legacy back-catalogue masters.</span>
         </a>
 
-        <!-- 4) BRONZE ROOM -->
-        <a href="bronze-room.html" class="room-link">
-            <div class="foyer-disc disc-bronze"></div>
-            <h3 class="room-title">Bronze Room</h3>
-            <p class="room-description">Spanish Catalog</p>
+        <!-- Row 2 / Card 4: Concrete Room Imprint -->
+        <a href="concrete-room.html" class="grid-button">
+            <div class="button-header">
+                <span class="button-title">Concrete Room</span>
+                <span class="button-action">Enter →</span>
+            </div>
+            <span class="button-meta">Urban instrumental leases &amp; sync non-exclusive licenses.</span>
         </a>
 
-        <!-- 5) GRANITE ROOM -->
-        <a href="rock-room.html" class="room-link"> 
-            <div class="foyer-disc disc-granite"></div>
-            <h3 class="room-title">Granite Room</h3>
-            <p class="room-description">Rock Catalog</p>
+        <!-- Row 2 / Card 5: A&R Submissions -->
+        <a href="development.html" class="grid-button">
+            <div class="button-header">
+                <span class="button-title">A&amp;R Department</span>
+                <span class="button-action">Audition →</span>
+            </div>
+            <span class="button-meta">Artist and repertoire evaluation submission desk.</span>
         </a>
 
-        <!-- 6) CONCRETE ROOM -->
-        <a href="concrete-room.html" class="room-link">
-            <div class="foyer-disc disc-concrete"></div>
-            <h3 class="room-title">Concrete Room</h3>
-            <p class="room-description">Urban Catalog</p>
+        <!-- Row 2 / Card 6: NEW Memz & DeeAfro Dedicated Archive -->
+        <a href="deeafro-room.html" class="grid-button">
+            <div class="button-header">
+                <span class="button-title">Memz &amp; DeeAfro</span>
+                <span class="button-action">Review →</span>
+            </div>
+            <span class="button-meta">Historical documentation of unified tracking projects.</span>
         </a>
 
-        <!-- 7) STUDIO HIRE -->
-        <a href="studio.html" class="room-link">
-            <div class="foyer-disc disc-studio"></div>
-            <h3 class="room-title">Studio Hire</h3>
-            <p class="room-description">Producer Booking</p>
+        <!-- Row 3 / Card 7: NEW Polluted Records Room -->
+        <a href="polluted-room.html" class="grid-button">
+            <div class="button-header">
+                <span class="button-title">Polluted Records</span>
+                <span class="button-action">Inspect →</span>
+            </div>
+            <span class="button-meta">Engineering portfolio &amp; master processing archive.</span>
         </a>
 
-        <!-- 8) INVISIBLE MASTERING -->
-        <a href="mastering.html" class="room-link">
-            <div class="foyer-disc disc-mastering"></div>
-            <h3 class="room-title">Invisible Mastering</h3>
-            <p class="room-description">Audio Suite</p>
+        <!-- Row 3 / Card 8: Future Placeholder 1 (Active Display Layout) -->
+        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
+            <div class="button-header">
+                <span class="button-title">Flave R Soul Groove</span>
+                <span class="button-action">Locked</span>
+            </div>
+            <span class="button-meta">Imprint pipeline layout: Organic soul and blues tracks.</span>
         </a>
 
-        <!-- 9) A&R DEVELOPMENT -->
-        <a href="development.html" class="room-link">
-            <div class="foyer-disc disc-ar"></div>
-            <h3 class="room-title">A &amp; R Room</h3>
-            <p class="room-description">Talent &amp; Development</p>
+        <!-- Row 3 / Card 9: Future Placeholder 2 -->
+        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
+            <div class="button-header">
+                <span class="button-title">Flave R Soul Latina</span>
+                <span class="button-action">Locked</span>
+            </div>
+            <span class="button-meta">Imprint pipeline layout: Afro-Latin and rhythm matrices.</span>
+        </a>
+
+        <!-- Row 4 / Card 10: Future Placeholder 3 -->
+        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
+            <div class="button-header">
+                <span class="button-title">Flave R Soul Granite</span>
+                <span class="button-action">Locked</span>
+            </div>
+            <span class="button-meta">Imprint pipeline layout: Hard-performance urban masters.</span>
+        </a>
+
+        <!-- Row 4 / Card 11: Future Placeholder 4 -->
+        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
+            <div class="button-header">
+                <span class="button-title">Instrument Inventory</span>
+                <span class="button-action">Locked</span>
+            </div>
+            <span class="button-meta">Hardware logs tracking local asset configurations.</span>
+        </a>
+
+        <!-- Row 4 / Card 12: Future Placeholder 5 (To Be Specified Later) -->
+        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
+            <div class="button-header">
+                <span class="button-title">Factory Pipeline TBA</span>
+                <span class="button-action">Locked</span>
+            </div>
+            <span class="button-meta">System architecture parameter reserved for expansion.</span>
         </a>
 
     </div>
