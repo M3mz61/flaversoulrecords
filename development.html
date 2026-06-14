@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Room — Flave R Soul Records</title>
+    <title>A & R Room — Flave R Soul Records</title>
     <style>
         body {
             background-color: #ffffff !important;
@@ -52,53 +52,58 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
-        .tracklist-container {
+        .action-container {
             width: 100%;
             max-width: 600px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
             margin-bottom: 50px;
         }
-        .track-entry {
+
+        .audition-box {
             display: flex;
             flex-direction: column;
-            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 30px;
             border: 1px solid #e0e0e0;
             border-radius: 4px;
             background-color: #fafafa;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
         }
-        .track-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 6px;
+
+        .audition-box:hover {
+            border-color: #000000;
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
         }
-        .track-name {
+
+        .audition-text {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            line-height: 1.6;
             color: #000000;
-        }
-        .track-version {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.8rem;
-            color: #777777;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .track-artist {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #333333;
-            margin-bottom: 8px;
-        }
-        .track-meta {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.75rem;
-            color: #999999;
             letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .audition-email {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            color: #555555;
+            transition: color 0.3s ease;
+        }
+
+        .audition-box:hover .audition-email {
+            color: #000000;
         }
 
         .foyer-button {
@@ -132,37 +137,14 @@
 
     <div class="showcase-disc"></div>
 
-    <div class="tracklist-container">
+    <div class="action-container">
         
-        <!-- Track Entry 1 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Living Without Your Love</span>
-                <span class="track-version">Radio Edit</span>
-            </div>
-            <div class="track-artist">featuring Lizzie France — By Memz</div>
-            <span class="track-meta">ISRC: GXL3V2600001 • Release Year: 2026</span>
-        </div>
-
-        <!-- Track Entry 2 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">That Song Jaydah Likes</span>
-                <span class="track-version">Original</span>
-            </div>
-            <div class="track-artist">By Memz</div>
-            <span class="track-meta">ISRC: GXL3V2625689 Coming Soon • Release Year: 2026</span>
-        </div>
-
-        <!-- Track Entry 3 (Newly Added & Correctly Isolated) -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Obsessive</span>
-                <span class="track-version">Sticky Panton Remix</span>
-            </div>
-            <div class="track-artist">By Memz</div>
-            <span class="track-meta">ISRC: GXL3V2600008 • Release Year: 2026</span>
-        </div>
+        <a href="mailto:memz@://flaversoulrecords.com" class="audition-box">
+            <p class="audition-text">
+                To send an audition audio file for consideration please contact 
+                <span class="audition-email">memz@flaversoulrecords.com</span>
+            </p>
+        </a>
 
     </div>
 
