@@ -3,233 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foyer — Flave R Soul Records</title>
+    <title>Foyer</title>
     <style>
         body {
-            background-color: #ffffff !important;
+            background-color: #ffffff !important; /* Pure white background */
             margin: 0;
-            padding: 60px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            box-sizing: border-box;
+            padding: 40px;
         }
-
-        /* Centered Umbrella Logo Disc */
-        .showcase-disc {
-            width: 280px;
-            height: 280px;
-            background-image: url("studio.jpeg");
-            background-size: 116% 116%;
-            background-repeat: no-repeat;
-            background-position: center center;
-            border-radius: 50%;
-            margin-bottom: 50px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-        }
-
-        /* 12-Button Grid Optimized for iPad Landscape */
-        .foyer-grid {
-            width: 100%;
-            max-width: 900px;
+        
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 20px;
-            margin-bottom: 50px;
+            /* Perfectly symmetric 4-column landscape layout for iPad */
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 30px; /* Clean spacing between image discs */
+            max-width: 100%;
+            margin: 0 auto;
         }
 
-        .grid-button {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 22px 18px;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            background-color: #fafafa;
+        .grid-link {
+            display: block;
             text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-            min-height: 110px;
+            transition: transform 0.3s ease;
         }
-        .grid-button:hover {
-            border-color: #000000;
-            background-color: #ffffff;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        .grid-link:hover {
             transform: translateY(-2px);
         }
 
-        /* Future Pipeline Disabled Block Style */
-        .grid-button-placeholder {
-            border-style: dashed;
-            cursor: default;
-            opacity: 0.6;
-        }
-        .grid-button-placeholder:hover {
-            border-color: #e0e0e0;
-            background-color: #fafafa;
-            box-shadow: none;
-            transform: none;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain; /* Keeps all circle discs perfectly round */
         }
 
-        .button-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 6px;
-        }
-        .button-title {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: #000000;
-            letter-spacing: 0.5px;
-        }
-        .button-action {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.75rem;
-            color: #777777;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease;
-        }
-        .grid-button:hover .button-action {
-            color: #000000;
-            border-color: #000000;
-        }
-        .button-meta {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.75rem;
-            color: #999999;
-            letter-spacing: 0.3px;
-            line-height: 1.4;
-        }
-
-        /* 2 columns if rotated to vertical Portrait view */
+        /* Adjusts to 2 columns if the iPad is turned vertically */
         @media (max-width: 1024px) and (orientation: portrait) {
-            .foyer-grid {
+            .grid-container {
                 grid-template-columns: repeat(2, 1fr);
-                max-width: 600px;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="showcase-disc"></div>
-
-    <div class="foyer-grid">
+    <div class="grid-container">
+        <!-- Row 1 -->
+        <a href="studio.html" class="grid-link"><img src="studio.jpeg" alt="Studio Hire"></a>
+        <a href="platinum-room.html" class="grid-link"><img src="platinum.jpeg" alt="Platinum Room"></a>
+        <a href="gold-room.html" class="grid-link"><img src="gold.jpeg" alt="Gold Room"></a>
+        <a href="concrete-room.html" class="grid-link"><img src="concrete.jpeg" alt="Concrete Room"></a>
         
-        <!-- Button 1: Studio Portal -->
-        <a href="studio.html" class="grid-button">
-            <div class="button-header">
-                <span class="button-title">Studio Hire</span>
-                <span class="button-action">Enter →</span>
-            </div>
-            <span class="button-meta">Rates, hardware routing &amp; session booking.</span>
-        </a>
-
-        <!-- Button 2: Platinum Room Imprint -->
-        <a href="platinum-room.html" class="grid-button">
-            <div class="button-header">
-                <span class="button-title">Platinum Room</span>
-                <span class="button-action">Enter →</span>
-            </div>
-            <span class="button-meta">Flave R Soul Dance forthcoming house rollouts.</span>
-        </a>
-
-        <!-- Button 3: Gold Room Imprint -->
-        <a href="gold-room.html" class="grid-button">
-            <div class="button-header">
-                <span class="button-title">Gold Room</span>
-                <span class="button-action">Enter →</span>
-            </div>
-            <span class="button-meta">Core instrumentation legacy back-catalogue.</span>
-        </a>
-
-        <!-- Button 4: Concrete Room Imprint -->
-        <a href="concrete-room.html" class="grid-button">
-            <div class="button-header">
-                <span class="button-title">Concrete Room</span>
-                <span class="button-action">Enter →</span>
-            </div>
-            <span class="button-meta">Urban instrumental leases &amp; sync licensing.</span>
-        </a>
-
-        <!-- Button 5: A&R Submissions -->
-        <a href="development.html" class="grid-button">
-            <div class="button-header">
-                <span class="button-title">A&amp;R Department</span>
-                <span class="button-action">Audition →</span>
-            </div>
-            <span class="button-meta">Artist and repertoire evaluation submission desk.</span>
-        </a>
-
-        <!-- Button 6: Memz & DeeAfro Room -->
-        <a href="deeafro-room.html" class="grid-button">
-            <div class="button-header">
-                <span class="button-title">Memz &amp; DeeAfro</span>
-                <span class="button-action">Review →</span>
-            </div>
-            <span class="button-meta">Historical portfolio of unified tracking projects.</span>
-        </a>
-
-        <!-- Button 7: Polluted Records Room -->
-        <a href="polluted-room.html" class="grid-button">
-            <div class="button-header">
-                <span class="button-title">Polluted Records</span>
-                <span class="button-action">Inspect →</span>
-            </div>
-            <span class="button-meta">Engineering portfolio &amp; mastering catalog.</span>
-        </a>
-
-        <!-- Button 8: Placeholder Room -->
-        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
-            <div class="button-header">
-                <span class="button-title">Flave R Soul Groove</span>
-                <span class="button-action">Locked</span>
-            </div>
-            <span class="button-meta">Imprint pipeline: Organic soul and blues tracks.</span>
-        </a>
-
-        <!-- Button 9: Placeholder Room -->
-        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
-            <div class="button-header">
-                <span class="button-title">Flave R Soul Latina</span>
-                <span class="button-action">Locked</span>
-            </div>
-            <span class="button-meta">Imprint pipeline: Afro-Latin rhythm matrices.</span>
-        </a>
-
-        <!-- Button 10: Placeholder Room -->
-        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
-            <div class="button-header">
-                <span class="button-title">Flave R Soul Granite</span>
-                <span class="button-action">Locked</span>
-            </div>
-            <span class="button-meta">Imprint pipeline: Heavy urban master catalog.</span>
-        </a>
-
-        <!-- Button 11: Placeholder Room -->
-        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
-            <div class="button-header">
-                <span class="button-title">Flave R Soul Beats</span>
-                <span class="button-action">Locked</span>
-            </div>
-            <span class="button-meta">Imprint pipeline: Instrumental lease distribution.</span>
-        </a>
-
-        <!-- Button 12: TBS Future Placeholder -->
-        <a href="#" class="grid-button grid-button-placeholder" onclick="return false;">
-            <div class="button-header">
-                <span class="button-title">Factory Pipeline TBA</span>
-                <span class="button-action">Locked</span>
-            </div>
-            <span class="button-meta">System parameter reserved for future expansion.</span>
-        </a>
-
+        <!-- Row 2 -->
+        <a href="development.html" class="grid-link"><img src="Aqua.jpeg" alt="A&R Department"></a>
+        <a href="deeafro-room.html" class="grid-link"><img src="gold.jpeg" alt="Memz & DeeAfro"></a>
+        <a href="polluted-room.html" class="grid-link"><img src="concrete.jpeg" alt="Polluted Records"></a>
+        <a href="#" class="grid-link" onclick="return false;"><img src="studio.jpeg" alt="Placeholder"></a>
+        
+        <!-- Row 3 -->
+        <a href="#" class="grid-link" onclick="return false;"><img src="platinum.jpeg" alt="Placeholder"></a>
+        <a href="#" class="grid-link" onclick="return false;"><img src="gold.jpeg" alt="Placeholder"></a>
+        <a href="#" class="grid-link" onclick="return false;"><img src="concrete.jpeg" alt="Placeholder"></a>
+        <a href="#" class="grid-link" onclick="return false;"><img src="Aqua.jpeg" alt="Placeholder"></a>
     </div>
 
 </body>
