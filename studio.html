@@ -50,11 +50,28 @@
             background-repeat: no-repeat;
             background-position: center center;
             border-radius: 50%;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
-        /* Tracklist Section */
+        /* Technical Hardware Spec Block */
+        .spec-container {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #444444;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+        }
+        .spec-highlight {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        /* Booking Cards Layout Section */
         .tracklist-container {
             width: 100%;
             max-width: 600px;
@@ -70,6 +87,15 @@
             border: 1px solid #e0e0e0;
             border-radius: 4px;
             background-color: #fafafa;
+            text-decoration: none; /* Clears link underline styles */
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        .track-entry:hover {
+            border-color: #000000;
+            background-color: #ffffff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
         }
         .track-header {
             display: flex;
@@ -89,6 +115,12 @@
             color: #777777;
             text-transform: uppercase;
             letter-spacing: 1px;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        .track-entry:hover .track-version {
+            color: #000000;
+            border-color: #000000;
         }
         .track-meta {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -129,23 +161,30 @@
 
     <div class="showcase-disc"></div>
 
+    <!-- Technical Facility Spec Context -->
+    <div class="spec-container">
+        Engineered for pristine tracking and uncompromised acoustic fidelity. Hosting high-end signal paths featuring our flagship <span class="spec-highlight">Neumann U87 Ai</span> vocal microphone setup, traditional <span class="spec-highlight">Gibson J-45</span> heavy acoustic platforms (.014 gauge), and live unquantized hardware arrangement stations.
+    </div>
+
     <div class="tracklist-container">
         
-        <div class="track-entry">
+        <!-- Interactive Booking Suite Link Card A -->
+        <a href="mailto:booking@://flaversoulrecords.com" class="track-entry">
             <div class="track-header">
                 <span class="track-name">Main Tracking Room A</span>
-                <span class="track-version">Neumann U87 Ai Suite</span>
+                <span class="track-version">Book Session →</span>
             </div>
-            <span class="track-meta">Availability: By Appointment Only • Booking Year: 2026</span>
-        </div>
+            <span class="track-meta">Primary Rig: Neumann U87 Ai Suite • Availability: By Appointment Only • 2026</span>
+        </a>
 
-        <div class="track-entry">
+        <!-- Interactive Booking Suite Link Card B -->
+        <a href="mailto:booking@://flaversoulrecords.com" class="track-entry">
             <div class="track-header">
                 <span class="track-name">Production & Mixing Bay B</span>
-                <span class="track-version">Producer Hire</span>
+                <span class="track-version">Hire Producer →</span>
             </div>
-            <span class="track-meta">Availability: By Appointment Only • Booking Year: 2026</span>
-        </div>
+            <span class="track-meta">Primary Rig: Custom Control Matrix & Producer Hire • Availability: By Appointment Only • 2026</span>
+        </a>
 
     </div>
 
