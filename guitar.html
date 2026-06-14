@@ -9,29 +9,44 @@
             background-color: #ffffff; /* Pure white background */
             margin: 0;
             padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px; /* Clean spacing between images */
         }
-        img {
+        
+        .grid-container {
+            display: grid;
+            /* Creates a clean 4-column layout for iPad landscape */
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 30px; /* Even spacing between the images */
             max-width: 100%;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
             height: auto;
             display: block;
+            object-fit: contain; /* Prevents images from distorting */
+        }
+
+        /* Adjusts to 2 columns if the iPad is turned to portrait mode */
+        @media (max-width: 1024px) and (orientation: portrait) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
 <body>
 
-    <img src="WS12.jpg" alt="Guitar">
-    <img src="ES355.jpeg" alt="Guitar">
-    <img src="Hnyd1.jpeg" alt="Guitar">
-    <img src="J45std.jpeg" alt="Guitar">
-    <img src="hws1.jpeg" alt="Guitar">
-    <img src="Jem.jpg" alt="Guitar">
-    <img src="LP1.jpeg" alt="Guitar">
-    <img src="SRX700.jpeg" alt="Guitar">
+    <div class="grid-container">
+        <img src="WS12.jpg" alt="Guitar">
+        <img src="ES355.jpeg" alt="Guitar">
+        <img src="Hnyd1.jpeg" alt="Guitar">
+        <img src="J45std.jpeg" alt="Guitar">
+        <img src="hws1.jpeg" alt="Guitar">
+        <img src="Jem.jpg" alt="Guitar">
+        <img src="LP1.jpeg" alt="Guitar">
+        <img src="SRX700.jpeg" alt="Guitar">
+    </div>
 
 </body>
 </html>
-
