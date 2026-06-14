@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concrete Room — Flave R Soul Street</title>
+    <title>The Concrete Room — Flave R Soul Records</title>
     <style>
         body {
             background-color: #ffffff !important;
@@ -16,7 +16,6 @@
             box-sizing: border-box;
         }
 
-        /* Header Group Container */
         .header-group {
             text-align: center;
             margin-bottom: 50px;
@@ -41,11 +40,11 @@
             margin: 0;
         }
 
-        /* Centered Graphic Element */
+        /* Centered Hat-and-Vinyl Logo Graphic */
         .showcase-disc {
             width: 280px;
             height: 280px;
-            background-image: url("concrete.jpeg"); /* Matches your concrete asset filename exactly */
+            background-image: url("concrete.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -54,14 +53,14 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
-        /* Tracklist Section */
+        /* Booking Cards Layout Section */
         .tracklist-container {
             width: 100%;
             max-width: 600px;
             display: flex;
             flex-direction: column;
             gap: 20px;
-            margin-bottom: 50px; /* Added spacing before the button */
+            margin-bottom: 50px;
         }
         .track-entry {
             display: flex;
@@ -70,6 +69,15 @@
             border: 1px solid #e0e0e0;
             border-radius: 4px;
             background-color: #fafafa;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        .track-entry:hover {
+            border-color: #000000;
+            background-color: #ffffff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
         }
         .track-header {
             display: flex;
@@ -85,16 +93,25 @@
         }
         .track-version {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.8rem;
-            color: #777777;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000000;
+            letter-spacing: 0.5px;
         }
         .track-meta {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.75rem;
-            color: #999999;
+            color: #777777;
             letter-spacing: 0.5px;
+            line-height: 1.5;
+            margin-top: 4px;
+        }
+        .track-license-type {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #999999;
+            letter-spacing: 1px;
+            margin-top: 8px;
         }
 
         /* Premium Return Button Styling */
@@ -124,32 +141,57 @@
 
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">The Concrete Room — Catalog</h2>
+        <h2 class="sub-title">The Concrete Room — Licensing Tiers</h2>
     </div>
 
+    <!-- Central Hat & Vinyl Illustration Logo -->
     <div class="showcase-disc"></div>
 
     <div class="tracklist-container">
         
-        <div class="track-entry">
+        <!-- Standard MP3 Lease -->
+        <a href="mailto:memz@://flaversoulrecords.com" class="track-entry">
             <div class="track-header">
-                <span class="track-name">Too Late For Me<span>
-                <span class="track-version">Instrumental With Hook/Chorus Mix</span>
+                <span class="track-name">Standard Beat Lease</span>
+                <span class="track-version">£35</span>
             </div>
-            <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
-        </div>
+            <span class="track-meta">High-Quality MP3 Format • Perfect for raw vocal tracking and demo write-ups. Cap at 10,000 distribution streams.</span>
+            <span class="track-license-type">Non-Exclusive Sync Contract</span>
+        </a>
 
-        <div class="track-entry">
+        <!-- Premium WAV Lease -->
+        <a href="mailto:memz@://flaversoulrecords.com" class="track-entry">
             <div class="track-header">
-                <span class="track-name">Cold Hard Steel </span>
-                <span class="track-version">Instrumentsl</span>
+                <span class="track-name">Premium Studio Lease</span>
+                <span class="track-version">£55</span>
             </div>
-            <span class="track-meta">ISRC: Coming Soon • Release Year: 2026</span>
-        </div>
+            <span class="track-meta">Uncompressed 24-bit Studio WAV Format • High-fidelity headroom for final vocal mixes. Cap at 50,000 streams.</span>
+            <span class="track-license-type">Non-Exclusive Sync Contract</span>
+        </a>
+
+        <!-- Premium Hook Lease -->
+        <a href="mailto:memz@://flaversoulrecords.com" class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Vocal Hook Arrangement</span>
+                <span class="track-version">£95</span>
+            </div>
+            <span class="track-meta">Studio WAV + Pre-Mixed Chorus Vocal Stems • Includes full performance hooks ready for verse drops. Cap at 100,000 streams.</span>
+            <span class="track-license-type">Non-Exclusive Sync Contract</span>
+        </a>
+
+        <!-- Full Track Out Stems Lease -->
+        <a href="mailto:memz@://flaversoulrecords.com" class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Full Track Out Stems</span>
+                <span class="track-version">£150</span>
+            </div>
+            <span class="track-meta">Complete Multi-Track Audio stems • Individual channel outputs for targeted professional engineer control. Cap at 500,000 streams.</span>
+            <span class="track-license-type">Non-Exclusive Commercial Contract</span>
+        </a>
 
     </div>
 
-    <!-- Navigation Back Link -->
+    <!-- Navigation Footer Option -->
     <a href="foyer.html" class="foyer-button">Return to Foyer</a>
 
 </body>
