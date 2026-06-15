@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guitars</title>
+    <title>Studio Workspace — Flave R Soul</title>
     <style>
         body {
-            background-color: #ffffff !important; /* Pure white background */
+            background-color: #ffffff !important;
             margin: 0;
-            padding: 40px 20px 60px 20px;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
         }
-        
-        .grid-container {
-            display: grid;
-            /* Creates a clean 4-column layout for iPad landscape */
-            grid-template-columns: repeat(4, 1fr); 
-            gap: 30px; /* Even spacing between the images */
-            max-width: 1000px;
+
+        /* Flex row layout to keep both speakers side-by-side */
+        .speaker-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 60px;
             width: 100%;
-            margin: 0 auto 50px auto;
+            max-width: 400px;
         }
 
-        img {
-            width: 100%;
+        .speaker-row img {
+            width: 45%;
             height: auto;
-            display: block;
-            object-fit: contain; /* Prevents images from distorting */
+            max-width: 140px;
         }
 
-        /* Premium Navigation Button Styling */
-        .studio-button {
+        .foyer-button {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
             font-size: 1rem;
@@ -48,37 +48,29 @@
             background: transparent;
             transition: all 0.3s ease;
             cursor: pointer;
-            margin-top: auto; /* Pushes button to bottom if page content is short */
+            margin-bottom: 40px;
+            display: inline-block;
         }
-        .studio-button:hover {
+        .foyer-button:hover {
             background-color: #000000;
             color: #ffffff;
             letter-spacing: 4px;
-        }
-
-        /* Adjusts to 2 columns if the iPad is turned to portrait mode */
-        @media (max-width: 1024px) and (orientation: portrait) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
     </style>
 </head>
 <body>
 
-    <div class="grid-container">
-        <img src="Spkr_Memz1.gif" alt="Guitar">
-        <img src="Spkr_Memz1.gif" alt="Guitar">
-        <img src="AX49.jpeg" alt="Guitar">
-        <img src="MX88.jpeg" alt="Guitar">
-        <img src="MX88.jpeg" alt="Guitar">
-        <img src="Jem.jpg" alt="Guitar">
-        <img src="Memz& DeeAfro Chrome.jpeg" alt="Guitar">
-        <img src="SRX700.jpeg" alt="Guitar">
+    <!-- Symmetrical Pumping Speakers Layout -->
+    <div class="speaker-row">
+        <img src="speaker.gif" alt="Left Speaker Component">
+        <img src="speaker.gif" alt="Right Speaker Component">
     </div>
 
-    <!-- Navigation Footer Option -->
-    <a href="studio.html" class="studio-button">Return to Studio</a>
+    <!-- Clean Navigation Return Link -->
+    <a href="index.html" class="foyer-button">Return to Studio</a>
+
+    <!-- Persistent Brand Watermark -->
+    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #999999; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: auto; margin-bottom: 20px;">Flave R Soul Records ©️ 2026</p>
 
 </body>
 </html>
