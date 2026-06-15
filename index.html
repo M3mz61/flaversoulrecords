@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flave R Soul Records</title>
+    <title>Foyer — Flave R Soul Records</title>
     <style>
         body {
-            background-color: #ffffff !important; /* Pure crisp white backdrop */
+            background-color: #ffffff !important;
             margin: 0;
-            padding: 0;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -16,22 +16,12 @@
             box-sizing: border-box;
         }
 
-        /* ==================================================== */
-        /* STATIC HEADER (Locked to top, independent of scroll)*/
-        /* ==================================================== */
-        .static-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent to let content slide under nicely */
-            backdrop-filter: blur(5px); /* Soft blur effect for content passing underneath */
+        /* Header Group Container */
+        .header-group {
             text-align: center;
-            padding: 40px 20px 20px 20px;
-            box-sizing: border-box;
-            z-index: 1000; /* Keeps it layered above all scrolling elements */
+            margin-bottom: 60px;
+            width: 100%;
         }
-        
         .main-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
@@ -39,101 +29,206 @@
             text-transform: uppercase;
             letter-spacing: 4px;
             font-size: 2.2rem;
-            margin: 0;
+            margin: 0 0 16px 0;
             line-height: 1.2;
+        }
+        .sub-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: normal;
+            color: #555555;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.2rem;
+            margin: 0;
         }
 
         /* ==================================================== */
-        /* MAIN SCROLLABLE CONTENT CONTAINER                   */
+        /* RESPONSIVE LAYOUT WRAPPER FOR ROOMS                  */
         /* ==================================================== */
-        .landing-container {
+        .foyer-grid {
+            width: 100%;
+            max-width: 1400px;         
+            display: flex;
+            flex-direction: row;       
+            flex-wrap: wrap;           
+            justify-content: center;   
+            align-items: flex-start;
+            gap: 50px 40px;            
+        }
+
+        /* Room Link Wrapper */
+        .room-link {
+            text-decoration: none;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 20px;
-            margin-top: 180px; /* Pushes content down so it doesn't get hidden behind the static header */
-            flex-grow: 1; /* Pushes the footer down towards the bottom */
+            width: 300px;              
+            transition: transform 0.2s ease;
+        }
+        
+        .room-link:hover {
+            transform: translateY(-4px); 
         }
 
-        /* Clickable Hero Logo Link */
-        .logo-link {
-            text-decoration: none;
-            display: inline-block;
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-        .logo-link:hover {
-            transform: scale(1.03);
-        }
-
-        /* Central Gold Hero Asset */
-        .hero-disc {
+        /* Centered & Corrected Disc Graphics */
+        .foyer-disc {
             width: 280px;
             height: 280px;
-            background-image: url('gold.jpeg'); 
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
             border-radius: 50%;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            overflow: hidden; 
+            background-repeat: no-repeat;
+            background-position: center center;
         }
 
-        /* Elegant Entry Button */
-        .enter-button {
+        /* Specific Background Assignments - VERIFIED WITH REPO */
+        .disc-gold { 
+            background-image: url("gold.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-silver { 
+            background-image: url("silver.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-platinum { 
+            background-image: url("platinum.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-bronze { 
+            background-image: url("bronze.jpeg"); /* FIXED: Restored link to display the bronze asset */
+            background-size: 102% 102%;
+        }
+        .disc-granite { 
+            background-image: url("rock.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-concrete { 
+            background-image: url("concrete.jpeg"); 
+            background-size: 102% 102%;
+        }
+        .disc-studio { 
+            background-image: url("studio.jpeg"); 
+            background-size: 116% 116%; /* FIXED: Scaled up to hide the built-in white border */
+            background-color: #000000; 
+        }
+        .disc-mastering { 
+            background-image: url("mastering.jpeg"); 
+            background-size: 102% 102%; 
+        } 
+        .disc-ar { 
+            background-image: url("Aqua.jpeg"); 
+            background-size: 102% 102%;
+        }              
+
+        /* Typography Styles */
+        .room-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             color: #000000;
             text-transform: uppercase;
-            letter-spacing: 5px;
-            text-decoration: none;
-            padding: 12px 35px;
-            border: 1px solid #000000;
-            border-radius: 2px;
-            background: transparent;
-            transition: all 0.3s ease;
-            margin-bottom: 40px;
-            cursor: pointer;
+            letter-spacing: 3px;
+            margin: 0 0 8px 0;
         }
-        .enter-button:hover {
-            background-color: #000000;
-            color: #ffffff;
-            letter-spacing: 7px;
+        .room-description {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.95rem;
+            color: #777777;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
         }
 
-        /* Brand Footer Text */
-        .copyright-text {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            color: #777777; /* Slightly softened down from pure black for premium aesthetic */
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            line-height: 1.6;
-            margin-bottom: 40px; /* Gives room at the very bottom of the viewport */
-            width: 100%;
-            text-align: center;
+        /* ==================================================== */
+        /* MOBILE MEDIA OVERRIDE (Forces iPhone Stacking)       */
+        /* ==================================================== */
+        @media (max-width: 1250px) {
+            .foyer-grid {
+                flex-direction: column; 
+                align-items: center;
+                max-width: 500px;       
+                gap: 50px;              
+            }
+            .room-link {
+                width: 100%;            
+            }
         }
     </style>
 </head>
 <body>
 
-    <header class="static-header">
+    <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
-    </header>
-
-    <div class="landing-container">
-        
-        <a href="foyer.html" class="logo-link">
-            <div class="hero-disc"></div>
-        </a>
-
-        <a href="foyer.html" class="enter-button">Enter</a>
-
+        <h2 class="sub-title">Main Foyer</h2>
     </div>
 
-    <div class="copyright-text">
-        © 2026 Flave R Soul Records. All rights reserved
+    <div class="foyer-grid">
+
+        <!-- 1) GOLD ROOM -->
+        <a href="gold-room.html" class="room-link">
+            <div class="foyer-disc disc-gold"></div>
+            <h3 class="room-title">Gold Room</h3>
+            <p class="room-description">Catalog</p>
+        </a>
+
+        <!-- 2) SILVER ROOM -->
+        <a href="silver-room.html" class="room-link">
+            <div class="foyer-disc disc-silver"></div>
+            <h3 class="room-title">Silver Room</h3>
+            <p class="room-description">Soul Music</p>
+        </a>
+
+        <!-- 3) PLATINUM ROOM -->
+        <a href="platinum-room.html" class="room-link">
+            <div class="foyer-disc disc-platinum"></div>
+            <h3 class="room-title">Platinum Room</h3>
+            <p class="room-description">Dance Catalog</p>
+        </a>
+
+        <!-- 4) BRONZE ROOM -->
+        <a href="bronze-room.html" class="room-link">
+            <div class="foyer-disc disc-bronze"></div>
+            <h3 class="room-title">Bronze Room</h3>
+            <p class="room-description">Spanish Catalog</p>
+        </a>
+
+        <!-- 5) GRANITE ROOM -->
+        <a href="rock-room.html" class="room-link"> 
+            <div class="foyer-disc disc-granite"></div>
+            <h3 class="room-title">Granite Room</h3>
+            <p class="room-description">Rock Catalog</p>
+        </a>
+
+        <!-- 6) CONCRETE ROOM -->
+        <a href="concrete-room.html" class="room-link">
+            <div class="foyer-disc disc-concrete"></div>
+            <h3 class="room-title">Concrete Room</h3>
+            <p class="room-description">Urban Catalog</p>
+        </a>
+
+        <!-- 7) STUDIO HIRE -->
+        <a href="studio.html" class="room-link">
+            <div class="foyer-disc disc-studio"></div>
+            <h3 class="room-title">Studio Hire</h3>
+            <p class="room-description">Producer Booking</p>
+        </a>
+
+        <!-- 8) INVISIBLE MASTERING -->
+        <a href="mastering.html" class="room-link">
+            <div class="foyer-disc disc-mastering"></div>
+            <h3 class="room-title">Invisible Mastering</h3>
+            <p class="room-description">Audio Suite</p>
+        </a>
+
+        <!-- 9) A&R DEVELOPMENT -->
+        <a href="development.html" class="room-link">
+            <div class="foyer-disc disc-ar"></div>
+            <h3 class="room-title">A &amp; R Room</h3>
+            <p class="room-description">Talent &amp; Development</p>
+        </a>
+
     </div>
 
 </body>
