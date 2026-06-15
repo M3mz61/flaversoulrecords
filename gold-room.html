@@ -48,13 +48,15 @@
             background-repeat: no-repeat;
             background-position: center;
             border-radius: 50%;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
-<audio controls>
-  <source src="audio/track-one.wav" type="audio/wav">
-  Your browser does not support the audio element.
-</audio>
+
+        audio {
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 400px;
+        }
 
         .tracklist-container {
             width: 100%;
@@ -121,27 +123,6 @@
             color: #999999;
             letter-spacing: 0.5px;
         }
-
-        .foyer-button {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            font-size: 1rem;
-            color: #000000;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-decoration: none;
-            padding: 10px 25px;
-            border: 1px solid #000000;
-            border-radius: 2px;
-            background: transparent;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .foyer-button:hover {
-            background-color: #000000;
-            color: #ffffff;
-            letter-spacing: 4px;
-        }
     </style>
 </head>
 <body>
@@ -153,9 +134,15 @@
 
     <div class="showcase-disc"></div>
 
+    <!-- Audio player correctly placed in body -->
+    <audio controls>
+        <source src="audio/track-one.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
     <div class="tracklist-container">
         
-        <!-- Track 1: Newly Added Lorenzo Panico Collaboration -->
+        <!-- Track 1 -->
         <a href="#" class="track-entry">
             <div class="track-header">
                 <span class="track-name">Deja Vu</span>
@@ -245,40 +232,6 @@
             <span class="track-meta">Official Remix Portfolio • Imprint: Flave R Soul Dance</span>
         </a>
 
-        <!-- Track 10 -->
-        <a href="#" class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Obsessed</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">featuring Lizzie France</div>
-            <span class="track-meta">Label: KluBasic Records • Imprint: Flave R Soul Groove</span>
-        </a>
-
-        <!-- Track 11 -->
-        <a href="#" class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Sorry</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">featuring Lizzie France</div>
-            <span class="track-meta">Label: KluBasic Records • Imprint: Flave R Soul Groove</span>
-        </a>
-
-        <!-- Track 12 -->
-        <a href="#" class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Wetness</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro</div>
-            <span class="track-meta">Label: In the Loop • Imprint: Flave R Soul Dance</span>
-        </a>
-
-        <!-- Track 13 -->
-        <a href="#" class="track-entry">
-            <div class="track-header">
-                <span class="track-name">K-Hole</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro</div>
+    </div>
+</body>
+</html>
