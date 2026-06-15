@@ -42,9 +42,7 @@
             margin: 0;
         }
 
-        /* ==================================================== */
-        /* RESPONSIVE LAYOUT WRAPPER FOR ROOMS                  */
-        /* ==================================================== */
+        /* RESPONSIVE LAYOUT WRAPPER */
         .foyer-grid {
             width: 100%;
             max-width: 1400px;         
@@ -83,44 +81,17 @@
             background-position: center center;
         }
 
-        /* Specific Background Assignments - VERIFIED WITH REPO */
-        .disc-gold { 
-            background-image: url("gold.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-silver { 
-            background-image: url("silver.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-platinum { 
-            background-image: url("platinum.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-bronze { 
-            background-image: url("bronze.jpeg"); /* FIXED: Restored link to display the bronze asset */
-            background-size: 102% 102%;
-        }
-        .disc-granite { 
-            background-image: url("rock.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-concrete { 
-            background-image: url("concrete.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-studio { 
-            background-image: url("studio.jpeg"); 
-            background-size: 116% 116%; /* FIXED: Scaled up to hide the built-in white border */
-            background-color: #000000; 
-        }
-        .disc-mastering { 
-            background-image: url("mastering.jpeg"); 
-            background-size: 102% 102%; 
-        } 
-        .disc-ar { 
-            background-image: url("Aqua.jpeg"); 
-            background-size: 102% 102%;
-        }              
+        /* Specific Background Assignments */
+        .disc-gold { background-image: url("gold.jpeg"); background-size: 102% 102%; }
+        .disc-silver { background-image: url("silver.jpeg"); background-size: 102% 102%; }
+        .disc-platinum { background-image: url("platinum.jpeg"); background-size: 102% 102%; }
+        .disc-bronze { background-image: url("bronze.jpeg"); background-size: 102% 102%; }
+        .disc-granite { background-image: url("rock.jpeg"); background-size: 102% 102%; }
+        .disc-concrete { background-image: url("concrete.jpeg"); background-size: 102% 102%; }
+        .disc-studio { background-image: url("studio.jpeg"); background-size: 116% 116%; background-color: #000000; }
+        .disc-mastering { background-image: url("mastering.jpeg"); background-size: 102% 102%; }
+        .disc-mnd { background-image: url("Violet.jpeg"); background-size: 102% 102%; }
+        .disc-ar { background-image: url("Aqua.jpeg"); background-size: 102% 102%; }
 
         /* Typography Styles */
         .room-title {
@@ -141,9 +112,6 @@
             margin: 0;
         }
 
-        /* ==================================================== */
-        /* MOBILE MEDIA OVERRIDE (Forces iPhone Stacking)       */
-        /* ==================================================== */
         @media (max-width: 1250px) {
             .foyer-grid {
                 flex-direction: column; 
@@ -166,63 +134,60 @@
 
     <div class="foyer-grid">
 
-        <!-- 1) GOLD ROOM -->
         <a href="gold-room.html" class="room-link">
             <div class="foyer-disc disc-gold"></div>
             <h3 class="room-title">Gold Room</h3>
             <p class="room-description">Catalog</p>
         </a>
 
-        <!-- 2) SILVER ROOM -->
         <a href="silver-room.html" class="room-link">
             <div class="foyer-disc disc-silver"></div>
             <h3 class="room-title">Silver Room</h3>
             <p class="room-description">Soul Music</p>
         </a>
 
-        <!-- 3) PLATINUM ROOM -->
         <a href="platinum-room.html" class="room-link">
             <div class="foyer-disc disc-platinum"></div>
             <h3 class="room-title">Platinum Room</h3>
             <p class="room-description">Dance Catalog</p>
         </a>
 
-        <!-- 4) BRONZE ROOM -->
         <a href="bronze-room.html" class="room-link">
             <div class="foyer-disc disc-bronze"></div>
             <h3 class="room-title">Bronze Room</h3>
             <p class="room-description">Spanish Catalog</p>
         </a>
 
-        <!-- 5) GRANITE ROOM -->
         <a href="rock-room.html" class="room-link"> 
             <div class="foyer-disc disc-granite"></div>
             <h3 class="room-title">Granite Room</h3>
             <p class="room-description">Rock Catalog</p>
         </a>
 
-        <!-- 6) CONCRETE ROOM -->
         <a href="concrete-room.html" class="room-link">
             <div class="foyer-disc disc-concrete"></div>
             <h3 class="room-title">Concrete Room</h3>
             <p class="room-description">Urban Catalog</p>
         </a>
 
-        <!-- 7) STUDIO HIRE -->
         <a href="studio.html" class="room-link">
             <div class="foyer-disc disc-studio"></div>
             <h3 class="room-title">Studio Hire</h3>
             <p class="room-description">Producer Booking</p>
         </a>
 
-        <!-- 8) INVISIBLE MASTERING -->
         <a href="mastering.html" class="room-link">
             <div class="foyer-disc disc-mastering"></div>
             <h3 class="room-title">Invisible Mastering</h3>
             <p class="room-description">Audio Suite</p>
         </a>
 
-        <!-- 9) A&R DEVELOPMENT -->
+        <a href="mnd.html" class="room-link">
+            <div class="foyer-disc disc-mnd"></div>
+            <h3 class="room-title">Memz &amp; DeeAfro</h3>
+            <p class="room-description">Exclusive Releases</p>
+        </a>
+
         <a href="development.html" class="room-link">
             <div class="foyer-disc disc-ar"></div>
             <h3 class="room-title">A &amp; R Room</h3>
