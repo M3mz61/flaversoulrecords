@@ -42,15 +42,13 @@
             margin: 0;
         }
 
-        /* ==================================================== */
-        /* RESPONSIVE LAYOUT WRAPPER FOR ROOMS                  */
-        /* ==================================================== */
+        /* RESPONSIVE LAYOUT WRAPPER */
         .foyer-grid {
             width: 100%;
-            max-width: 1400px;        
+            max-width: 1400px;         
             display: flex;
-            flex-direction: row;      
-            flex-wrap: wrap;          
+            flex-direction: row;       
+            flex-wrap: wrap;           
             justify-content: center;   
             align-items: flex-start;
             gap: 50px 40px;            
@@ -83,44 +81,17 @@
             background-position: center center;
         }
 
-        /* Specific Background Assignments - UPDATED TO Logo/ FOLDER */
-        .disc-gold { 
-            background-image: url("Logo/gold.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-silver { 
-            background-image: url("Logo/silver.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-platinum { 
-            background-image: url("Logo/platinum.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-bronze { 
-            background-image: url("Logo/bronze.jpeg");
-            background-size: 102% 102%;
-        }
-        .disc-granite { 
-            background-image: url("Logo/rock.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-concrete { 
-            background-image: url("Logo/concrete.jpeg"); 
-            background-size: 102% 102%;
-        }
-        .disc-studio { 
-            background-image: url("Logo/studio.jpeg"); 
-            background-size: 116% 116%;
-            background-color: #000000; 
-        }
-        .disc-mastering { 
-            background-image: url("Logo/goldonv Large.jpeg"); 
-            background-size: 102% 102%; 
-        } 
-        .disc-ar { 
-            background-image: url("Logo/Aqua.jpeg"); 
-            background-size: 102% 102%;
-        }              
+        /* Specific Background Assignments - Logo/ FOLDER */
+        .disc-gold { background-image: url("Logo/gold.jpeg"); background-size: 102% 102%; }
+        .disc-silver { background-image: url("Logo/silver.jpeg"); background-size: 102% 102%; }
+        .disc-platinum { background-image: url("Logo/platinum.jpeg"); background-size: 102% 102%; }
+        .disc-bronze { background-image: url("Logo/bronze.jpeg"); background-size: 102% 102%; }
+        .disc-granite { background-image: url("Logo/rock.jpeg"); background-size: 102% 102%; }
+        .disc-concrete { background-image: url("Logo/concrete.jpeg"); background-size: 102% 102%; }
+        .disc-studio { background-image: url("Logo/studio.jpeg"); background-size: 116% 116%; background-color: #000000; }
+        .disc-mastering { background-image: url("Logo/goldonv Large.jpeg"); background-size: 102% 102%; }
+        .disc-mnd { background-image: url("Logo/Violet.jpeg"); background-size: 102% 102%; }
+        .disc-ar { background-image: url("Logo/Aqua.jpeg"); background-size: 102% 102%; }
 
         /* Typography Styles */
         .room-title {
@@ -141,9 +112,6 @@
             margin: 0;
         }
 
-        /* ==================================================== */
-        /* MOBILE MEDIA OVERRIDE (Forces iPhone Stacking)       */
-        /* ==================================================== */
         @media (max-width: 1250px) {
             .foyer-grid {
                 flex-direction: column; 
@@ -214,6 +182,12 @@
             <p class="room-description">Audio Suite</p>
         </a>
 
+        <a href="mnd.html" class="room-link">
+            <div class="foyer-disc disc-mnd"></div>
+            <h3 class="room-title">Memz &amp; DeeAfro</h3>
+            <p class="room-description">Exclusive Releases</p>
+        </a>
+
         <a href="development.html" class="room-link">
             <div class="foyer-disc disc-ar"></div>
             <h3 class="room-title">A &amp; R Room</h3>
@@ -221,6 +195,7 @@
         </a>
 
     </div>
+
     <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #999999; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 50px;">Flave R Soul Records ©️ 2026</p>
 
 </body>
