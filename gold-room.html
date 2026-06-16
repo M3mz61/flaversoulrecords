@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gold Room — Flave R Soul Records</title>
+    <title>A & R Room — Flave R Soul Records</title>
     <style>
         body {
             background-color: #ffffff !important;
@@ -43,84 +43,68 @@
         .showcase-disc {
             width: 280px;
             height: 280px;
-            background-image: url("gold.jpeg");
+            /* UPDATED: Path now points to Logo/ folder */
+            background-image: url("Logo/Aqua.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             border-radius: 50%;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
-        audio {
-            margin-bottom: 40px;
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .tracklist-container {
+        .action-container {
             width: 100%;
             max-width: 600px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
             margin-bottom: 50px;
         }
-        
-        .track-entry {
+
+        .audition-box {
             display: flex;
             flex-direction: column;
-            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 30px;
             border: 1px solid #e0e0e0;
             border-radius: 4px;
             background-color: #fafafa;
             text-decoration: none;
             color: inherit;
             transition: all 0.3s ease;
+            box-sizing: border-box;
         }
-        .track-entry:hover {
+
+        .audition-box:hover {
             border-color: #000000;
             background-color: #ffffff;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             transform: translateY(-2px);
         }
-        .track-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 6px;
-        }
-        .track-name {
+
+        .audition-text {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            line-height: 1.6;
             color: #000000;
-        }
-        .track-version {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.8rem;
-            color: #777777;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease;
-        }
-        .track-entry:hover .track-version {
-            color: #000000;
-            border-color: #000000;
-        }
-        .track-artist {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #333333;
-            margin-bottom: 8px;
-        }
-        .track-meta {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.75rem;
-            color: #999999;
             letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .audition-email {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            color: #555555;
+            transition: color 0.3s ease;
+        }
+
+        .audition-box:hover .audition-email {
+            color: #000000;
         }
 
         .foyer-button {
@@ -137,8 +121,6 @@
             background: transparent;
             transition: all 0.3s ease;
             cursor: pointer;
-            margin-bottom: 40px;
-            display: inline-block;
         }
         .foyer-button:hover {
             background-color: #000000;
@@ -151,144 +133,23 @@
 
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">The Gold Room — Legacy Catalog</h2>
+        <h2 class="sub-title">The Artists & Repertoire — Development</h2>
     </div>
 
     <div class="showcase-disc"></div>
 
-    <audio controls>
-        <source src="Living Without Your Love.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <div class="tracklist-container">
+    <div class="action-container">
         
-        <!-- Track 1 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Deja Vu</span>
-                <span class="track-version">Memz Vocal Version</span>
-            </div>
-            <div class="track-artist">Lorenzo Panico</div>
-            <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Dance</span>
-        </div>
+        <a href="mailto:memz@flaversoulrecords.com" class="audition-box">
+            <p class="audition-text">
+                To send an audition audio file for consideration please contact 
+                <span class="audition-email">memz@flaversoulrecords.com</span>
+            </p>
+        </a>
 
-        <!-- Track 2 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Fallin 4U</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro</div>
-            <span class="track-meta">Label: Form & Function • Imprint: Flave R Soul Groove</span>
-        </div>
+    </div>
 
-        <!-- Track 3 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Something Nu</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro</div>
-            <span class="track-meta">Label: Sleazy Deep • Imprint: Flave R Soul Groove</span>
-        </div>
-
-        <!-- Track 4 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">MeeSo Crazy</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro</div>
-            <span class="track-meta">Label: Prison Entertainment • Imprint: Flave R Soul Dance</span>
-        </div>
-
-        <!-- Track 5 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Bad Habits</span>
-                <span class="track-version">Remix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro</div>
-            <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Dance</span>
-        </div>
-
-        <!-- Track 6 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">It's Over</span>
-                <span class="track-version">Memz & DeeAfro Remix</span>
-            </div>
-            <div class="track-artist">JazzyFunk</div>
-            <span class="track-meta">Label: Sleazy Deep • Imprint: Flave R Soul Dance</span>
-        </div>
-
-        <!-- Track 7 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Thinking About You</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro</div>
-            <span class="track-meta">Label: Capital Heaven • Imprint: Flave R Soul Groove</span>
-        </div>
-
-        <!-- Track 8 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Nobody's Good</span>
-                <span class="track-version">Remix</span>
-            </div>
-            <div class="track-artist">WD2N</div>
-            <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Dance</span>
-        </div>
-        <!-- Track 9 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Sorry</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro featuring Lizzie France</div>
-            <span class="track-meta">Label: kluBasic Records • Imprint: Flave R Soul Dance</span>
-        </div>
-
-        <!-- Track 10 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Wetness</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro featuring Lizzie France</div>
-            <span class="track-meta">Label: In The Loop • Imprint: Flave R Soul Groove</span>
-        </div>
-
-        <!-- Track 11 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Obsessed</span>
-                <span class="track-version">Original Mix</span>
-            </div>
-            <div class="track-artist">Memz & DeeAfro featuring Lizzie France</div>
-            <span class="track-meta">Label: kluBasic Records • Imprint: Flave R Soul Groove</span>
-        </div>
-
-        <!-- Track 12 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Obsessive</span>
-                <span class="track-version">Sticky Panton Remix</span>
-            </div>
-            <div class="track-artist">Memz</div>
-            <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Dance</span>
-        </div>
-
-    </div> <!-- Closes tracklist-container -->
-
-    <!-- Return to Foyer Button pointing directly to index.html -->
     <a href="index.html" class="foyer-button">Return to Foyer</a>
-
-    <!-- Clean Watermark Text -->
-    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #999999; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 10px; margin-bottom: 20px;">Flave R Soul Records ©️ 2026</p>
 
 </body>
 </html>
