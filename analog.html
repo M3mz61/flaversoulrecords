@@ -6,7 +6,7 @@
     <title>Analog Gear</title>
     <style>
         body {
-            background-color: #ffffff !important; /* Pure white background */
+            background-color: #ffffff !important;
             margin: 0;
             padding: 40px 20px 60px 20px;
             display: flex;
@@ -14,13 +14,13 @@
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
+            color: #000000 !important;
         }
         
         .grid-container {
             display: grid;
-            /* Symmetric 4-column layout for iPad landscape */
             grid-template-columns: repeat(4, 1fr); 
-            gap: 30px; /* Clean spacing between analog hardware images */
+            gap: 30px;
             max-width: 1000px;
             width: 100%;
             margin: 0 auto 50px auto;
@@ -30,15 +30,14 @@
             width: 100%;
             height: auto;
             display: block;
-            object-fit: contain; /* Keeps analog gear perfectly scaled */
+            object-fit: contain;
         }
 
-        /* Premium Navigation Button Styling */
         .studio-button {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
             font-size: 1rem;
-            color: #000000;
+            color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 3px;
             text-decoration: none;
@@ -50,14 +49,22 @@
             cursor: pointer;
             margin-top: auto;
         }
+        
         .studio-button:hover {
             background-color: #000000;
-            color: #ffffff;
+            color: #ffffff !important;
             letter-spacing: 4px;
         }
 
-        /* Responsive shift to 2 columns if iPad is rotated to portrait */
-        @media (max-width: 1024px) and (orientation: portrait) {
+        /* iPhone view: Stacked (single column) */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* iPad/Tablet portrait: 2 columns */
+        @media (min-width: 601px) and (max-width: 1024px) {
             .grid-container {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -78,7 +85,6 @@
         <img src="FX/mackie.jpeg" alt="Analog Gear">
     </div>
 
-    <!-- Navigation Footer Option -->
     <a href="studio.html" class="studio-button">Return to Studio</a>
 
 </body>
