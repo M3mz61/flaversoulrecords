@@ -29,13 +29,24 @@
             height: auto;
         }
 
-        /* Content Area */
-        .content {
-            flex: 1;
+        /* New Layout Container */
+        .layout-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
             width: 100%;
             max-width: 800px;
             padding: 20px;
-            text-align: center;
+        }
+
+        .memz-image {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        .text-content {
+            text-align: left;
         }
 
         /* Footer */
@@ -58,9 +69,12 @@
         <img src="mnd/bkg.png" alt="Memz & DeeAfro Header">
     </div>
 
-    <div class="content">
-        <h1>Memz &amp; DeeAfro</h1>
-        <p>Official releases and production archives.</p>
+    <div class="layout-wrapper">
+        <img src="mnd/memz01.jpeg" alt="Memz" class="memz-image">
+        <div class="text-content">
+            <h1>Memz &amp; DeeAfro</h1>
+            <p>Official releases and production archives.</p>
+        </div>
     </div>
 
     <div class="footer">
