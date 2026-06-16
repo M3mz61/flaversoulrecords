@@ -6,7 +6,7 @@
     <title>Guitars</title>
     <style>
         body {
-            background-color: #ffffff !important;
+            background-color: #ffffff !important; /* Pure white background */
             margin: 0;
             padding: 40px 20px 60px 20px;
             display: flex;
@@ -18,28 +18,22 @@
         
         .grid-container {
             display: grid;
+            /* Creates a clean 4-column layout for iPad landscape */
             grid-template-columns: repeat(4, 1fr); 
-            gap: 30px;
+            gap: 30px; /* Even spacing between the images */
             max-width: 1000px;
             width: 100%;
             margin: 0 auto 50px auto;
         }
 
-        /* Forces all images into a uniform square container */
-        .guitar-wrapper {
+        img {
             width: 100%;
-            aspect-ratio: 1 / 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: auto;
+            display: block;
+            object-fit: contain; /* Prevents images from distorting */
         }
 
-        .guitar-wrapper img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
+        /* Premium Navigation Button Styling */
         .studio-button {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
@@ -54,7 +48,7 @@
             background: transparent;
             transition: all 0.3s ease;
             cursor: pointer;
-            margin-top: auto;
+            margin-top: auto; /* Pushes button to bottom if page content is short */
         }
         .studio-button:hover {
             background-color: #000000;
@@ -62,6 +56,7 @@
             letter-spacing: 4px;
         }
 
+        /* Adjusts to 2 columns if the iPad is turned to portrait mode */
         @media (max-width: 1024px) and (orientation: portrait) {
             .grid-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -71,17 +66,17 @@
 </head>
 <body>
 
-    <div class="grid-container">
-        <div class="guitar-wrapper"><img src="Guitar/WS12.jpg" alt="Guitar"></div>
-        <div class="guitar-wrapper"><img src="Guitar/J45std.jpeg" alt="Guitar"></div>
-        <div class="guitar-wrapper"><img src="Guitar/Hnyd1.jpeg" alt="Guitar"></div>
-        <div class="guitar-wrapper"><img src="Guitar/ES355.jpeg" alt="Guitar"></div>
-        <div class="guitar-wrapper"><img src="Guitar/hws1.jpeg" alt="Guitar"></div>
-        <div class="guitar-wrapper"><img src="Guitar/Jem.jpg" alt="Guitar"></div>
-        <div class="guitar-wrapper"><img src="Guitar/LP1.jpeg" alt="Guitar"></div>
-        <div class="guitar-wrapper"><img src="Guitar/SRX700.jpeg" alt="Guitar"></div>
+  <div class="grid-container">
+        <img src="Guitar/WS12.jpg" alt="Guitar">
+        <img src="Guitar/J45std.jpeg" alt="Guitar">
+        <img src="Guitar/Hnyd1.jpeg" alt="Guitar">
+        <img src="Guitar/ES355.jpeg" alt="Guitar">
+        <img src="Guitar/hws1.jpeg" alt="Guitar">
+        <img src="Guitar/Jem.jpg" alt="Guitar">
+        <img src="Guitar/LP1.jpeg" alt="Guitar">
+        <img src="Guitar/SRX700.jpeg" alt="Guitar">
     </div>
-
+    <!-- Navigation Footer Option -->
     <a href="studio.html" class="studio-button">Return to Studio</a>
 
 </body>
