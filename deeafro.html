@@ -4,102 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeeAfro | Official Solo Hub</title>
+    <style>
+        /* Pure Minimal Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", "Playfair Display", serif;
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Content Blocks Matching Studio Page Layout */
+        .content-block {
+            border: 1px solid #000000;
+            padding: 30px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        /* Flex Header Setup for Title & Action Link */
+        .block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        
+        h1, h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.1;
+            max-width: 70%;
+        }
+        
+        /* Action Links Styling */
+        .action-link {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", "Playfair Display", serif;
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            white-space: nowrap;
+            letter-spacing: 1px;
+        }
+        .action-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Description Paragraphs & Lists */
+        p {
+            font-size: 1.1rem;
+            max-width: 800px;
+        }
+        
+        .meta-info {
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        /* Tracklist styling */
+        .track-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .track-list li {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            border-bottom: 1px dotted #000000;
+            padding-bottom: 4px;
+        }
+
+        /* Embedded Media Containers */
+        .media-container {
+            margin-top: 20px;
+            border: 1px solid #000000;
+            background: #ffffff;
+        }
+
+        /* Simple Unstyled Image List for Gallery */
+        .gallery-list {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .gallery-list img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border: 1px solid #000000;
+            display: block;
+        }
+
+        /* Footer Link Block back to mnd.html */
+        .footer-nav {
+            margin-top: 40px;
+            border-top: 1px solid #000000;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation Breadcrumbs -->
-    <nav class="breadcrumbs" aria-label="breadcrumb">
-        <p><a href="index.html">Home</a> &gt; <a href="mnd.html">Memz & DeeAfro</a> &gt; <strong>DeeAfro</strong></p>
-    </nav>
+    <div class="container">
 
-    <!-- Hero Introduction Section -->
-    <header class="hero-section">
-        <h1>DeeAfro</h1>
-        <p class="tagline"><strong>Behind the Beats & the Basslines.</strong></p>
-        <p>Welcome to the solo hub of DeeAfro. While known to many for her powerhouse collaborations and production alongside Memz, DeeAfro has been commanding dancefloors and airwaves in her own right since she first stepped behind the decks at just 18 years old. Fueled by an infectious, ever-growing passion for cutting-edge sound, she has built a reputation for delivering high-energy underground house, tech, and bass-heavy sets that keep dancefloors locked in from the first beat to the last.</p>
-    </header>
-
-    <hr>
-
-    <!-- The Sound & Style -->
-    <section class="sound-style">
-        <h2>The Sound & Style</h2>
-        <p>DeeAfro’s signature style is a deep, energetic blend of rhythm and bass. Her solo releases and live sets seamlessly drift between heavy bass grooves, driving tech-house rhythms, and deep hypnotic club vibes. Whether commanding a dark late-night club crowd or hosting live radio shows, her passion translates into pure energy.</p>
-        <p><strong>Key Genres:</strong> Deep House & Tech House | Bass House | Underground Club Mixes</p>
-    </section>
-
-    <hr>
-
-    <!-- Photo Gallery Block -->
-    <section class="photo-gallery">
-        <h2>Live & Press Gallery</h2>
-        <div class="gallery-grid" style="display: flex; gap: 15px; flex-wrap: wrap;">
-            <!-- Replace image sources with your actual image paths -->
-            <div class="gallery-item">
-                <img src="images/deeafro-live-1.jpg" alt="DeeAfro live performance behind the decks" width="300" height="200">
-                <p><small>Live behind the decks</small></p>
+        <!-- Block 1: Main Bio Title -->
+        <section class="content-block">
+            <div class="block-header">
+                <h1>DeeAfro</h1>
+                <p class="tagline">Behind the Beats & Basslines</p>
             </div>
-            <div class="gallery-item">
-                <img src="images/deeafro-press-2.jpg" alt="DeeAfro official promo press shot" width="300" height="200">
-                <p><small>Official Promo Shot</small></p>
+            <p>Welcome to the solo hub of DeeAfro. Known for her powerhouse collaborations and production alongside Memz, DeeAfro has been commanding dancefloors and airwaves since stepping behind the decks at 18 years old. Delivering high-energy underground house, tech, and bass-heavy sets.</p>
+        </section>
+
+        <!-- Block 2: Sound & Style -->
+        <section class="content-block">
+            <div class="block-header">
+                <h2>The Sound & Style</h2>
             </div>
-            <div class="gallery-item">
-                <img src="images/deeafro-radio-3.jpg" alt="DeeAfro hosting a live radio broadcast" width="300" height="200">
-                <p><small>On air in the studio</small></p>
+            <p>A deep, energetic blend of rhythm and bass. Solo releases and live sets drift between heavy bass grooves, driving tech-house rhythms, and deep club vibes.</p>
+            <p class="meta-info">Genres: Deep House • Tech House • Bass House • Underground Club Mixes</p>
+        </section>
+
+        <!-- Block 3: Discography & Audio Stream Widgets -->
+        <section class="content-block">
+            <div class="block-header">
+                <h2>Featured Solo Discography</h2>
+                <span class="action-link">Listen Now &rarr;</span>
             </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <!-- Featured Solo Discography & Audio Widgets -->
-    <section class="discography-media">
-        <h2>Featured Solo Discography & Mixes</h2>
-        <p><em>Explore the solo productions and curated sounds shaping DeeAfro’s musical journey.</em></p>
-        
-        <ul>
-            <li><strong>"The Flight"</strong> – A driving, mixed journey showcasing her capability to build long-form club tension.</li>
-            <li><strong>"MeeSo Crazy" (Original Mix)</strong> – Pure club energy packed with a signature tech bassline.</li>
-            <li><strong>"Desire" & "Get Up"</strong> – Essential, high-tempo additions to any underground playlist.</li>
-            <li><strong>"Deep Vibes" & "White Lines Bass Face"</strong> – Acclaimed extended mixes highlighting her technical prowess and track selection.</li>
-            <li><strong>Solo EPs</strong> – Including the fan-favourite <em>Pick It Up EP</em> and <em>Listen</em>.</li>
-        </ul>
-
-        <p><small><em>(Looking for the joint remixes? Head back to the main Memz & DeeAfro page to stream "It's Over - Memz & Deeafro Remix"!)</em></small></p>
-
-        <!-- Media Player Widgets -->
-        <div class="audio-players" style="margin-top: 25px;">
-            <h3>Listen Now</h3>
+            <p>Explore solo productions and curated sounds shaping DeeAfro’s musical journey.</p>
             
-            <!-- Spotify Embed Placeholder (Replace SRC with your actual Spotify link/embed URL) -->
-            <div class="spotify-widget" style="margin-bottom: 20px;">
-                <iframe style="border-radius:12px" src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
+            <ul class="track-list">
+                <li><strong>"The Flight"</strong> – Long-form club tension mix.</li>
+                <li><strong>"MeeSo Crazy"</strong> (Original Mix) – Tech bassline club focus.</li>
+                <li><strong>"Desire" & "Get Up"</strong> – High-tempo underground playlist editions.</li>
+                <li><strong>"Deep Vibes" & "White Lines Bass Face"</strong> – Extended technical mixes.</li>
+                <li><strong>Solo EPs</strong> – Featuring Pick It Up EP and Listen.</li>
+            </ul>
+            
+            <p class="meta-info" style="font-style: italic;">Looking for joint remixes? Stream "It's Over - Memz & Deeafro Remix" on the main <a href="mnd.html" style="color:#000;">Memz & DeeAfro</a> page.</p>
 
-            <!-- SoundCloud Embed Placeholder (Replace SRC with your actual SoundCloud track/playlist embed URL) -->
-            <div class="soundcloud-widget">
+            <!-- Media Widgets with minimal borders -->
+            <div class="media-container">
+                <iframe style="display:block;" src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="media-container">
                 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://soundcloud.com"></iframe>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <hr>
+        <!-- Block 4: Live Imagery Gallery -->
+        <section class="content-block">
+            <div class="block-header">
+                <h2>Live & Press Gallery</h2>
+            </div>
+            <div class="gallery-list">
+                <img src="images/deeafro-live-1.jpg" alt="DeeAfro live behind the decks">
+                <img src="images/deeafro-press-2.jpg" alt="DeeAfro studio promo">
+                <img src="images/deeafro-radio-3.jpg" alt="DeeAfro radio booth">
+            </div>
+        </section>
 
-    <!-- Radio & Live Bookings -->
-    <section class="bookings">
-        <h2>Radio & Live Bookings</h2>
-        <p>Beyond the studio, DeeAfro is a seasoned radio host and club DJ. Having started out on the airwaves, she continues to deliver multi-hour live radio shows, bringing exclusive promos, fresh white labels, and unreleased cuts directly to her listeners worldwide.</p>
-        <p><strong>Available for:</strong> Club Bookings, Festival Lineups, Radio Guest Mixes, and Showcase Sets.</p>
-        
-        <p><strong>📥 Booking & Press Inquiries:</strong> <a href="contact.html">Contact Team DeeAfro</a></p>
-    </section>
+        <!-- Block 5: Booking Action -->
+        <section class="content-block">
+            <div class="block-header">
+                <h2>Radio & Live Bookings</h2>
+                <a href="contact.html" class="action-link">Book Session &rarr;</a>
+            </div>
+            <p>Available for Club Bookings, Festival Lineups, Radio Guest Mixes, and Showcase Sets. Delivering multi-hour live radio shows packed with exclusive promos and unreleased cuts.</p>
+        </section>
 
-    <hr>
+        <!-- Pure Text Footer Return to mnd.html -->
+        <footer class="footer-nav">
+            <a href="mnd.html" class="action-link">&larr; Return to Memz & DeeAfro Hub</a>
+        </footer>
 
-    <!-- Return Link Block -->
-    <footer class="subpage-footer" style="margin-top: 40px; padding: 20px 0;">
-        <p><a href="mnd.html" class="back-btn" style="display: inline-block; padding: 10px 20px; background-color: #333; color: #fff; text-decoration: none; border-radius: 5px;">&larr; Back to Memz & DeeAfro Hub</a></p>
-    </footer>
+    </div>
 
 </body>
 </html>
