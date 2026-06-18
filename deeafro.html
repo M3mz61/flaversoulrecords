@@ -16,16 +16,16 @@
             color: #000000;
             font-family: "Bodoni 72", "Bodoni MT", "Didot", "Playfair Display", serif;
             text-align: center; /* Centers all content text to match the Main Foyer layout */
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         /* Top Header Styling */
         header {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         h1 {
             font-size: 2.2rem;
@@ -44,13 +44,13 @@
         .bio-p {
             font-size: 1.15rem;
             line-height: 1.6;
-            max-width: 750px;
+            max-width: 650px;
             margin: 0 auto;
         }
 
         /* Section Block Typography Elements */
         section {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         h2 {
             font-size: 1.6rem;
@@ -69,7 +69,7 @@
         .body-text {
             font-size: 1.1rem;
             line-height: 1.6;
-            max-width: 750px;
+            max-width: 650px;
             margin: 0 auto 20px auto;
         }
 
@@ -78,7 +78,7 @@
             list-style: none;
             display: inline-block;
             text-align: left;
-            max-width: 650px;
+            max-width: 600px;
             margin: 20px auto;
         }
         .track-list li {
@@ -89,7 +89,7 @@
 
         /* Media Frame Configurations */
         .widget-wrapper {
-            max-width: 650px;
+            max-width: 600px;
             margin: 30px auto 0 auto;
         }
         .media-frame {
@@ -98,45 +98,60 @@
             margin-bottom: 15px;
         }
 
-        /* Image Profile Display Matching Foyer Hub Proportions */
-        .gallery-wrap {
+        /* Landscape/Horizontal Image Stack Layout */
+        .landscape-gallery {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 30px;
+            gap: 25px;
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto 0 auto;
         }
-        .profile-img {
-            width: 240px; /* Sized to match the layout dimensions of the vinyl artwork discs */
-            height: 240px;
-            object-fit: cover;
-            border-radius: 50%; /* Pure circle formatting matching the Foyer vinyl look */
+        .landscape-gallery img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #000000;
             display: block;
-            margin: 0 auto;
         }
 
-        /* Standard Minimal Link Elements */
-        a {
-            color: #000000;
-            text-decoration: none;
+        /* Vertical Image Container Layout */
+        .vertical-display {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border: 1px solid #000000;
+            display: block;
+            margin: 30px auto 0 auto;
         }
-        a:hover {
-            text-decoration: underline;
-        }
-        .action-link {
+
+        /* Box Navigation Link Element matching the Memz "RETURN TO STUDIO" look */
+        .foyer-button {
             display: inline-block;
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
             font-size: 1rem;
-            letter-spacing: 2px;
+            color: #000000;
             text-transform: uppercase;
-            margin-top: 15px;
-            font-weight: 700;
+            letter-spacing: 3px;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 1px solid #000000;
+            border-radius: 2px;
+            background: transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 40px;
+        }
+        .foyer-button:hover {
+            background-color: #000000;
+            color: #ffffff;
+            letter-spacing: 4px;
         }
 
         /* Bottom Footer Routing Element */
         footer {
-            margin-top: 100px;
-            padding-top: 30px;
+            margin-top: 80px;
         }
     </style>
 </head>
@@ -172,8 +187,8 @@
                 <li><strong>Solo EPs</strong> – Featuring Pick It Up EP and Listen.</li>
             </ul>
             
-            <p class="body-text" style="font-size: 1rem; margin-top: 20px; font-style: italic;">
-                Looking for joint remixes? Stream "It's Over - Memz & Deeafro Remix" on the main <a href="mnd.html">Memz & DeeAfro</a> page.
+            <p class="body-text" style="font-size: 1rem; margin-top: 25px; font-style: italic;">
+                Looking for joint remixes? Stream "It's Over - Memz & Deeafro Remix" on the main <a href="mnd.html" style="text-decoration: underline;">Memz & DeeAfro</a> page.
             </p>
 
             <div class="widget-wrapper">
@@ -182,31 +197,37 @@
             </div>
         </section>
 
-        <!-- Pure Circle Visual Gallery Elements -->
+        <!-- Horizontal/Landscape Visual Gallery Archive -->
         <section>
             <h2>Live & Press Gallery</h2>
             <p class="section-desc">Visual Archive</p>
-            <div class="gallery-wrap">
-                <img class="profile-img" src="mnd/d1.jpeg" alt="DeeAfro Live Sets">
-                <img class="profile-img" src="mnd/d2.jpeg" alt="DeeAfro Studio">
-                <img class="profile-img" src="mnd/d3.jpeg" alt="DeeAfro On Air">
+            <div class="landscape-gallery">
+                <img src="mnd/D1.jpeg" alt="DeeAfro Live Club Set Landscape View">
+                <img src="mnd/D2.jpeg" alt="DeeAfro Promotional Studio Landscape View">
             </div>
         </section>
 
-        <!-- Session Bookings Matrix -->
+        <!-- Session Bookings Matrix & Vertical Image Placement -->
         <section>
             <h2>Radio & Live Bookings</h2>
             <p class="section-desc">Availability</p>
             <p class="body-text">Available for Club Bookings, Festival Lineups, Radio Guest Mixes, and Showcase Sets. Delivering multi-hour live radio shows packed with exclusive promos and unreleased cuts.</p>
-            <a href="contact.html" class="action-link">Book Session &rarr;</a>
+            
+            <!-- Vertical Imagery variant placed symmetrically here -->
+            <img class="vertical-display" src="mnd/D1V.jpeg" alt="DeeAfro Profile Vertical Press Variant">
+            <br>
+            <a href="contact.html" class="foyer-button">Book Session</a>
         </section>
 
-        <!-- Navigation Matrix Route Back -->
+        <!-- Navigation Matrix Route Back to mnd.html -->
         <footer>
-            <a href="mnd.html" class="action-link" style="font-weight: normal; font-size: 0.9rem; letter-spacing: 3px;">&larr; Return to Memz & DeeAfro Hub</a>
+            <a href="mnd.html" class="foyer-button">Return to Memz & DeeAfro</a>
         </footer>
 
     </div>
+
+    <!-- Persistent Brand Watermark -->
+    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #999999; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 60px; margin-bottom: 20px;">Flave R Soul Records ©️ 2026</p>
 
 </body>
 </html>
