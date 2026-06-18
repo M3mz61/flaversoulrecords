@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeeAfro | Official Solo Hub</title>
     <style>
-        /* Pure Minimal Reset */
+        /* Minimalist Structural Reset */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -15,102 +15,128 @@
             background-color: #ffffff;
             color: #000000;
             font-family: "Bodoni 72", "Bodoni MT", "Didot", "Playfair Display", serif;
-            line-height: 1.5;
-            padding: 40px 20px;
+            text-align: center; /* Centers all content text to match the Main Foyer layout */
+            padding: 60px 20px;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        /* Content Blocks Matching Studio Page Layout */
-        .content-block {
-            border: 1px solid #000000;
-            padding: 30px;
-            margin-bottom: 25px;
-            position: relative;
+        /* Top Header Styling */
+        header {
+            margin-bottom: 80px;
         }
-        
-        /* Flex Header Setup for Title & Action Link */
-        .block-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-            gap: 20px;
-        }
-        
-        h1, h2 {
-            font-size: 2rem;
+        h1 {
+            font-size: 2.2rem;
             font-weight: 700;
-            line-height: 1.1;
-            max-width: 70%;
-        }
-        
-        /* Action Links Styling */
-        .action-link {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", "Playfair Display", serif;
-            color: #000000;
-            text-decoration: none;
-            font-size: 1.1rem;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            white-space: nowrap;
-            letter-spacing: 1px;
+            margin-bottom: 6px;
         }
-        .action-link:hover {
-            text-decoration: underline;
+        .main-subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #555555;
+            margin-bottom: 35px;
+        }
+        .bio-p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto;
         }
 
-        /* Description Paragraphs & Lists */
-        p {
+        /* Section Block Typography Elements */
+        section {
+            margin-bottom: 80px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .section-desc {
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #555555;
+            margin-bottom: 25px;
+        }
+        .body-text {
             font-size: 1.1rem;
-            max-width: 800px;
-        }
-        
-        .meta-info {
-            margin-top: 15px;
-            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto 20px auto;
         }
 
-        /* Tracklist styling */
+        /* Clean List Layout centered layout */
         .track-list {
             list-style: none;
-            margin-top: 15px;
+            display: inline-block;
+            text-align: left;
+            max-width: 650px;
+            margin: 20px auto;
         }
         .track-list li {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            border-bottom: 1px dotted #000000;
-            padding-bottom: 4px;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
         }
 
-        /* Embedded Media Containers */
-        .media-container {
-            margin-top: 20px;
-            border: 1px solid #000000;
-            background: #ffffff;
+        /* Media Frame Configurations */
+        .widget-wrapper {
+            max-width: 650px;
+            margin: 30px auto 0 auto;
         }
-
-        /* Simple Unstyled Image List for Gallery */
-        .gallery-list {
-            margin-top: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .gallery-list img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border: 1px solid #000000;
+        .media-frame {
+            border: none;
             display: block;
+            margin-bottom: 15px;
         }
 
-        /* Footer Link Block back to mnd.html */
-        .footer-nav {
-            margin-top: 40px;
-            border-top: 1px solid #000000;
-            padding-top: 20px;
+        /* Image Profile Display Matching Foyer Hub Proportions */
+        .gallery-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .profile-img {
+            width: 240px; /* Sized to match the layout dimensions of the vinyl artwork discs */
+            height: 240px;
+            object-fit: cover;
+            border-radius: 50%; /* Pure circle formatting matching the Foyer vinyl look */
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Standard Minimal Link Elements */
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .action-link {
+            display: inline-block;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 15px;
+            font-weight: 700;
+        }
+
+        /* Bottom Footer Routing Element */
+        footer {
+            margin-top: 100px;
+            padding-top: 30px;
         }
     </style>
 </head>
@@ -118,75 +144,66 @@
 
     <div class="container">
 
-        <!-- Block 1: Main Bio Title -->
-        <section class="content-block">
-            <div class="block-header">
-                <h1>DeeAfro</h1>
-                <p class="tagline">Behind the Beats & Basslines</p>
-            </div>
-            <p>Welcome to the solo hub of DeeAfro. Known for her powerhouse collaborations and production alongside Memz, DeeAfro has been commanding dancefloors and airwaves since stepping behind the decks at 18 years old. Delivering high-energy underground house, tech, and bass-heavy sets.</p>
+        
+        <header>
+            <h1>DeeAfro</h1>
+            <p class="main-subtitle">Solo Production Hub</p>
+            <p class="bio-p">Welcome to the solo hub of DeeAfro. Known for her powerhouse collaborations and production alongside Memz, DeeAfro has been commanding dancefloors and airwaves since stepping behind the decks at 18 years old. Delivering high-energy underground house, tech, and bass-heavy sets.</p>
+        </header>
+
+        <!-- Sound & Vibe Overview -->
+        <section>
+            <h2>The Sound & Style</h2>
+            <p class="section-desc">Sonic Profile</p>
+            <p class="body-text">A deep, energetic blend of rhythm and bass. Solo releases and live sets drift between heavy bass grooves, driving tech-house rhythms, and deep club vibes.</p>
+            <p class="section-desc" style="font-size: 0.8rem; margin-top: 15px;">Deep House • Tech House • Bass House • Underground Mixes</p>
         </section>
 
-        <!-- Block 2: Sound & Style -->
-        <section class="content-block">
-            <div class="block-header">
-                <h2>The Sound & Style</h2>
-            </div>
-            <p>A deep, energetic blend of rhythm and bass. Solo releases and live sets drift between heavy bass grooves, driving tech-house rhythms, and deep club vibes.</p>
-            <p class="meta-info">Genres: Deep House • Tech House • Bass House • Underground Club Mixes</p>
-        </section>
-
-        <!-- Block 3: Discography & Audio Stream Widgets -->
-        <section class="content-block">
-            <div class="block-header">
-                <h2>Featured Solo Discography</h2>
-                <span class="action-link">Listen Now &rarr;</span>
-            </div>
-            <p>Explore solo productions and curated sounds shaping DeeAfro’s musical journey.</p>
+        <!-- Music Media Playlists -->
+        <section>
+            <h2>Featured Solo Discography</h2>
+            <p class="section-desc">Releases & Mixes</p>
             
             <ul class="track-list">
                 <li><strong>"The Flight"</strong> – Long-form club tension mix.</li>
-                <li><strong>"MeeSo Crazy"</strong> (Original Mix) – Tech bassline club focus.</li>
+                <li><strong>"MeeSo Crazy" (Original Mix)</strong> – Tech bassline club focus.</li>
                 <li><strong>"Desire" & "Get Up"</strong> – High-tempo underground playlist editions.</li>
                 <li><strong>"Deep Vibes" & "White Lines Bass Face"</strong> – Extended technical mixes.</li>
                 <li><strong>Solo EPs</strong> – Featuring Pick It Up EP and Listen.</li>
             </ul>
             
-            <p class="meta-info" style="font-style: italic;">Looking for joint remixes? Stream "It's Over - Memz & Deeafro Remix" on the main <a href="mnd.html" style="color:#000;">Memz & DeeAfro</a> page.</p>
+            <p class="body-text" style="font-size: 1rem; margin-top: 20px; font-style: italic;">
+                Looking for joint remixes? Stream "It's Over - Memz & Deeafro Remix" on the main <a href="mnd.html">Memz & DeeAfro</a> page.
+            </p>
 
-            <!-- Media Widgets with minimal borders -->
-            <div class="media-container">
-                <iframe style="display:block;" src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            <div class="media-container">
-                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://soundcloud.com"></iframe>
+            <div class="widget-wrapper">
+                <iframe class="media-frame" src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe class="media-frame" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://soundcloud.com"></iframe>
             </div>
         </section>
 
-        <!-- Block 4: Live Imagery Gallery -->
-        <section class="content-block">
-            <div class="block-header">
-                <h2>Live & Press Gallery</h2>
-            </div>
-            <div class="gallery-list">
-                <img src="images/deeafro-live-1.jpg" alt="DeeAfro live behind the decks">
-                <img src="images/deeafro-press-2.jpg" alt="DeeAfro studio promo">
-                <img src="images/deeafro-radio-3.jpg" alt="DeeAfro radio booth">
+        <!-- Pure Circle Visual Gallery Elements -->
+        <section>
+            <h2>Live & Press Gallery</h2>
+            <p class="section-desc">Visual Archive</p>
+            <div class="gallery-wrap">
+                <img class="profile-img" src="mnd/d1.jpeg" alt="DeeAfro Live Sets">
+                <img class="profile-img" src="mnd/d2.jpeg" alt="DeeAfro Studio">
+                <img class="profile-img" src="mnd/d3.jpeg" alt="DeeAfro On Air">
             </div>
         </section>
 
-        <!-- Block 5: Booking Action -->
-        <section class="content-block">
-            <div class="block-header">
-                <h2>Radio & Live Bookings</h2>
-                <a href="contact.html" class="action-link">Book Session &rarr;</a>
-            </div>
-            <p>Available for Club Bookings, Festival Lineups, Radio Guest Mixes, and Showcase Sets. Delivering multi-hour live radio shows packed with exclusive promos and unreleased cuts.</p>
+        <!-- Session Bookings Matrix -->
+        <section>
+            <h2>Radio & Live Bookings</h2>
+            <p class="section-desc">Availability</p>
+            <p class="body-text">Available for Club Bookings, Festival Lineups, Radio Guest Mixes, and Showcase Sets. Delivering multi-hour live radio shows packed with exclusive promos and unreleased cuts.</p>
+            <a href="contact.html" class="action-link">Book Session &rarr;</a>
         </section>
 
-        <!-- Pure Text Footer Return to mnd.html -->
-        <footer class="footer-nav">
-            <a href="mnd.html" class="action-link">&larr; Return to Memz & DeeAfro Hub</a>
+        <!-- Navigation Matrix Route Back -->
+        <footer>
+            <a href="mnd.html" class="action-link" style="font-weight: normal; font-size: 0.9rem; letter-spacing: 3px;">&larr; Return to Memz & DeeAfro Hub</a>
         </footer>
 
     </div>
