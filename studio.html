@@ -17,7 +17,9 @@
             box-sizing: border-box;
         }
 
+        /* Modified into a link block element with a hover pointer interaction */
         .showcase-disc {
+            display: block;
             width: 280px;
             height: 280px;
             background-image: url("Logo/studio.jpeg");
@@ -27,6 +29,14 @@
             border-radius: 50%;
             margin-bottom: 40px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .showcase-disc:hover {
+            transform: scale(1.01);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.16);
         }
 
         .price-container {
@@ -136,6 +146,8 @@
             background: transparent;
             transition: all 0.3s ease;
             cursor: pointer;
+            display: inline-block;
+            margin-bottom: 40px;
         }
         .foyer-button:hover {
             background-color: #000000;
@@ -146,7 +158,8 @@
 </head>
 <body>
 
-    <div class="showcase-disc"></div>
+    <!-- Clickable Disc Link Wrapper -->
+    <a href="https://flaversoulstudios.com" target="_blank" rel="noopener" class="showcase-disc" title="Visit Flave R Soul Studios"></a>
 
     <div class="price-container">
         <div class="price-row">
@@ -235,7 +248,11 @@
         </a>
     </div>
 
-    <a href="foyer.html" class="foyer-button">Return to Foyer</a>
+    <!-- Return Link Block -->
+    <a href="index.html" class="foyer-button">Return to Foyer</a>
+
+    <!-- Persistent Brand Watermark -->
+    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #999999; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: auto; margin-bottom: 20px;">Flave R Soul Records ©️ 2026</p>
 
 </body>
 </html>
