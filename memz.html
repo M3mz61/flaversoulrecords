@@ -23,7 +23,7 @@
             align-items: center;
             gap: 20px;
             margin-top: 40px;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             width: 100%;
             max-width: 400px;
         }
@@ -32,6 +32,24 @@
             width: 45%;
             height: auto;
             max-width: 140px;
+        }
+
+        /* Minimal Studio Photo Gallery Column */
+        .studio-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 60px;
+        }
+
+        .studio-gallery img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #000000;
+            display: block;
         }
 
         .foyer-button {
@@ -66,7 +84,14 @@
         <img src="mnd/Spkr_Memz1.gif" alt="Right Speaker Component">
     </div>
 
-    <!-- Clean Navigation Return Link Back to mnd Hub -->
+    <!-- Silent Studio Work Archive Gallery -->
+    <div class="studio-gallery">
+        <img src="mnd/memz01.jpeg" alt="Memz Studio Tracking Setup">
+        <img src="mnd/M2.jpeg" alt="Memz Engineering Console">
+        <img src="mnd/memzeuphonix.jpeg" alt="Euphonix System Hardware Rig">
+    </div>
+
+    <!-- Clean Navigation Return Link -->
     <a href="mnd.html" class="foyer-button">Return to Studio</a>
 
     <!-- Persistent Brand Watermark -->
