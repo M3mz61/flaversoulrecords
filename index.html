@@ -113,6 +113,46 @@
             margin: 0;
         }
 
+        /* Brand Footer Container & Links Styles */
+        .brand-footer {
+            margin-top: 60px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .footer-copyright {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-size: 0.85rem;
+            color: #000000 !important;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0 0 15px 0;
+        }
+
+        .footer-links-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+        }
+
+        .footer-sub-link {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-size: 0.8rem;
+            color: #000000 !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+            transition: border-color 0.2s ease;
+        }
+
+        .footer-sub-link:hover {
+            border-bottom-color: #000000;
+        }
+
         @media (max-width: 1250px) {
             .foyer-grid {
                 flex-direction: column; 
@@ -197,7 +237,14 @@
 
     </div>
 
-    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #000000 !important; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 50px;">Flave R Soul Records ©️ 2026</p>
+    <!-- Grouped Brand Footer Node Area -->
+    <footer class="brand-footer">
+        <p class="footer-copyright">Flave R Soul Records ©️ 2026</p>
+        <div class="footer-links-group">
+            <a href="https://flaversoulstudios.com" target="_blank" rel="noopener noreferrer" class="footer-sub-link">Flave R Soul Studios</a>
+            <a href="https://invisiblemastering.com" target="_blank" rel="noopener noreferrer" class="footer-sub-link">Invisible Mastering ©️</a>
+        </div>
+    </footer>
 
 </body>
 </html>
