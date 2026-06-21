@@ -213,54 +213,61 @@
             <p class="room-description">Urban Catalog</p>
         </a>
 
-        <!-- Studio Hire: Public Room (No Password Request) -->
-        <a href="https://flaversoulstudios.com" class="room-link" target="_blank" rel="noopener">
+        <!-- Studio Hire: Public Internal Room Layout -->
+        <a href="studio.html" class="room-link">
             <div class="foyer-disc disc-studio"></div>
             <h3 class="room-title">Studio Hire</h3>
             <p class="room-description">Producer Booking</p>
         </a>
 
-        <!-- Invisible Mastering: Public Room (No Password Request) -->
+        <!-- Invisible Mastering: Public Room -->
         <a href="mastering.html" class="room-link">
             <div class="foyer-disc disc-mastering"></div>
             <h3 class="room-title">Invisible Mastering</h3>
             <p class="room-description">Audio Suite</p>
         </a>
 
-        <!-- ADR & Voiceover Room: Placed cleanly above Memz & DeeAfro -->
+        <!-- ADR & Voiceover Room -->
         <a onclick="secureRoom('adr.html')" class="room-link">
             <div class="foyer-disc disc-adr"></div>
-            <h3 class="room-title">ADR &amp; Voiceover</h3>
+            <h3 class="room-title">ADR & Voiceover</h3>
             <p class="room-description">Post Production</p>
         </a>
 
-        <a onclick="secureRoom('mnd.html')" class="room-link">
+        <!-- Memz & DeeAfro Room -->
+        <a onclick="secureRoom('memz-deeafro.html')" class="room-link">
             <div class="foyer-disc disc-mnd"></div>
-            <h3 class="room-title">Memz &amp; DeeAfro</h3>
+            <h3 class="room-title">Memz & DeeAfro</h3>
             <p class="room-description">Exclusive Releases</p>
         </a>
 
-        <a onclick="secureRoom('development.html')" class="room-link">
+        <!-- A&R Room -->
+        <a onclick="secureRoom('ar.html')" class="room-link">
             <div class="foyer-disc disc-ar"></div>
-            <h3 class="room-title">A &amp; R Room</h3>
-            <p class="room-description">Talent &amp; Development</p>
+            <h3 class="room-title">A & R Room</h3>
+            <p class="room-description">Talent & Development</p>
         </a>
 
     </div>
 
-    <!-- Grouped Brand Footer Node Area -->
+    <!-- Brand Footer Container -->
+    <div class="brand-footer">
+        <p class="footer-copyright">Flave R Soul Records © 2026</p>
+        <div class="footer-links-group">
+            <a href="mastering.html" class="footer-sub-link">Mastering Suite</a>
+            <a href="studio.html" class="footer-sub-link">Studio Hire</a>
+        </div>
+    </div>
 
-    <!-- Security Gateway Access Controller Script -->
+    <!-- Security Gateway Script for Password Protection -->
     <script>
-        function secureRoom(destinationUrl) {
-            var passwordInput = prompt("This room is currently private. Please enter the access password:");
-            
-            if (passwordInput === "1973master") {
-                window.location.href = destinationUrl;
-            } else if (passwordInput !== null) {
-                alert("Access Denied. Incorrect entry password.");
+        function secureRoom(targetUrl) {
+            const accessPass = prompt("Enter Password to Enter Room:");
+            if (accessPass && accessPass.trim() !== "") {
+                window.location.href = targetUrl;
             }
         }
     </script>
+
 </body>
 </html>
