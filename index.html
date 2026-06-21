@@ -64,6 +64,7 @@
             text-align: center;
             width: 300px;              
             transition: transform 0.2s ease;
+            cursor: pointer;
         }
         
         .room-link:hover {
@@ -91,6 +92,7 @@
         .disc-concrete { background-image: url("Logo/concrete.jpeg"); background-size: 102% 102%; }
         .disc-studio { background-image: url("Logo/studio.jpeg"); background-size: 116% 116%; background-color: #000000; }
         .disc-mastering { background-image: url("Logo/goldonv Large.jpeg"); background-size: 102% 102%; }
+        .disc-adr { background-image: url("Logo/adr.jpeg"); background-size: 102% 102%; }
         .disc-mnd { background-image: url("Logo/Violet.jpeg"); background-size: 102% 102%; }
         .disc-ar { background-image: url("Logo/Aqua.jpeg"); background-size: 102% 102%; }
 
@@ -175,61 +177,70 @@
 
     <div class="foyer-grid">
 
-        <a href="gold-room.html" class="room-link">
+        <a onclick="secureRoom('gold-room.html')" class="room-link">
             <div class="foyer-disc disc-gold"></div>
             <h3 class="room-title">Gold Room</h3>
             <p class="room-description">Catalog</p>
         </a>
 
-        <a href="silver-room.html" class="room-link">
+        <a onclick="secureRoom('silver-room.html')" class="room-link">
             <div class="foyer-disc disc-silver"></div>
             <h3 class="room-title">Silver Room</h3>
             <p class="room-description">Soul Music</p>
         </a>
 
-        <a href="platinum-room.html" class="room-link">
+        <a onclick="secureRoom('platinum-room.html')" class="room-link">
             <div class="foyer-disc disc-platinum"></div>
             <h3 class="room-title">Platinum Room</h3>
             <p class="room-description">Dance Catalog</p>
         </a>
 
-        <a href="bronze-room.html" class="room-link">
+        <a onclick="secureRoom('bronze-room.html')" class="room-link">
             <div class="foyer-disc disc-bronze"></div>
             <h3 class="room-title">Bronze Room</h3>
             <p class="room-description">Spanish Catalog</p>
         </a>
 
-        <a href="rock-room.html" class="room-link"> 
+        <a onclick="secureRoom('rock-room.html')" class="room-link"> 
             <div class="foyer-disc disc-granite"></div>
             <h3 class="room-title">Granite Room</h3>
             <p class="room-description">Rock Catalog</p>
         </a>
 
-        <a href="concrete-room.html" class="room-link">
+        <a onclick="secureRoom('concrete-room.html')" class="room-link">
             <div class="foyer-disc disc-concrete"></div>
             <h3 class="room-title">Concrete Room</h3>
             <p class="room-description">Urban Catalog</p>
         </a>
 
-        <a href="studio.html" class="room-link">
+        <!-- Studio Hire: Public Room (No Password Request) -->
+        <a href="https://flaversoulstudios.com" class="room-link" target="_blank" rel="noopener">
             <div class="foyer-disc disc-studio"></div>
             <h3 class="room-title">Studio Hire</h3>
             <p class="room-description">Producer Booking</p>
         </a>
 
+        <!-- Invisible Mastering: Public Room (No Password Request) -->
         <a href="mastering.html" class="room-link">
             <div class="foyer-disc disc-mastering"></div>
             <h3 class="room-title">Invisible Mastering</h3>
             <p class="room-description">Audio Suite</p>
         </a>
 
-        <a href="mnd.html" class="room-link">
+        <!-- ADR & Voiceover Room: Placed cleanly above Memz & DeeAfro -->
+        <a onclick="secureRoom('adr.html')" class="room-link">
+            <div class="foyer-disc disc-adr"></div>
+            <h3 class="room-title">ADR &amp; Voiceover</h3>
+            <p class="room-description">Post Production</p>
+        </a>
+
+        <a onclick="secureRoom('mnd.html')" class="room-link">
             <div class="foyer-disc disc-mnd"></div>
             <h3 class="room-title">Memz &amp; DeeAfro</h3>
             <p class="room-description">Exclusive Releases</p>
         </a>
 
-        <a href="development.html" class="room-link">
+        <a onclick="secureRoom('development.html')" class="room-link">
             <div class="foyer-disc disc-ar"></div>
             <h3 class="room-title">A &amp; R Room</h3>
             <p class="room-description">Talent &amp; Development</p>
@@ -238,13 +249,18 @@
     </div>
 
     <!-- Grouped Brand Footer Node Area -->
-    <footer class="brand-footer">
-        <p class="footer-copyright">Flave R Soul Records ©️ 2026</p>
-        <div class="footer-links-group">
-            <a href="https://flaversoulstudios.com" target="_blank" rel="noopener noreferrer" class="footer-sub-link">Flave R Soul Studios</a>
-            <a href="https://invisiblemastering.com" target="_blank" rel="noopener noreferrer" class="footer-sub-link">Invisible Mastering ©️</a>
-        </div>
-    </footer>
 
+    <!-- Security Gateway Access Controller Script -->
+    <script>
+        function secureRoom(destinationUrl) {
+            var passwordInput = prompt("This room is currently private. Please enter the access password:");
+            
+            if (passwordInput === "1973master") {
+                window.location.href = destinationUrl;
+            } else if (passwordInput !== null) {
+                alert("Access Denied. Incorrect entry password.");
+            }
+        }
+    </script>
 </body>
 </html>
