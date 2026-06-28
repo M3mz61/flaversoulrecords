@@ -1,93 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Equipment</title>
-    <style>
-        body {
-            background-color: #ffffff !important;
-            margin: 0;
-            padding: 40px 20px 60px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            box-sizing: border-box;
-            color: #000000; /* Ensures all text defaults to black */
-        }
-        
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); 
-            gap: 30px;
-            max-width: 1000px;
-            width: 100%;
-            margin: 0 auto 50px auto;
-        }
+<style>
+    body {
+        background-color: #ffffff !important;
+        margin: 0;
+        padding: 40px 20px 60px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+        color: #000000;
+    }
 
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain;
-        }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 30px;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto 50px auto;
+    }
 
-        .studio-button {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            font-size: 1rem;
-            color: #000000 !important; /* Force pure black text */
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-decoration: none;
-            padding: 10px 25px;
-            border: 1px solid #000000;
-            border-radius: 2px;
-            background: transparent;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .studio-button:hover {
-            background-color: #000000;
-            color: #ffffff !important;
-            letter-spacing: 4px;
-        }
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
 
-        /* Mobile View: Stacked single column for iPhone */
-        @media (max-width: 600px) {
-            .grid-container {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
+    .studio-button {
+        font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+        font-weight: bold;
+        font-size: 1rem;
+        color: #000000 !important;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-decoration: none;
+        padding: 10px 25px;
+        border: 1px solid #000000;
+        border-radius: 2px;
+        background: transparent;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .studio-button:hover {
+        background-color: #000000;
+        color: #ffffff !important;
+        letter-spacing: 4px;
+    }
 
-        /* iPad Landscape/Portrait adjustments */
-        @media (max-width: 1024px) and (orientation: portrait) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
-</head>
-<body>
+    /* Mobile: Stacked */
+    @media (max-width: 600px) {
+        .grid-container { grid-template-columns: 1fr; gap: 20px; }
+    }
 
-    <div class="grid-container">
-        <img src="MicAmp/u87.JPG" alt="Equipment">
-        <img src="MicAmp/mg15.jpeg" alt="Equipment">
-        <img src="MicAmp/egg150.jpeg" alt="Equipment">
-        <img src="MicAmp/ms2.jpeg" alt="Equipment">
-        <img src="MicAmp/dt770.jpeg" alt="Equipment">
-        <img src="MicAmp/re20.jpeg" alt="Equipment">
-        <img src="MicAmp/3035.jpeg" alt="Equipment">
-        <img src="MicAmp/line6.jpeg" alt="Equipment">
-        <img src="MicAmp/sm58.jpeg" alt="Equipment">
-        <img src="MicAmp/jcm900.jpeg" alt="Equipment">
-        <img src="MicAmp/sm57.jpeg" alt="Equipment">
-        <img src="MicAmp/jmp1.jpeg" alt="Equipment">
-    </div>
+    /* Tablet Portrait */
+    @media (min-width: 601px) and (max-width: 1024px) {
+        .grid-container { grid-template-columns: repeat(2, 1fr); }
+    }
 
-    <a href="studio.html" class="studio-button">Return to Studio</a>
+    /* Tablet Landscape */
+    @media (min-width: 1025px) and (max-width: 1366px) {
+        .grid-container { grid-template-columns: repeat(4, 1fr); }
+    }
 
-</body>
-</html>
+    /* Large Display / Mac Pro */
+    @media (min-width: 1367px) {
+        .grid-container { grid-template-columns: repeat(5, 1fr); max-width: 1400px; }
+    }
+</style>
