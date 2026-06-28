@@ -14,6 +14,7 @@
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
+            color: #000000 !important;
         }
 
         /* Header Group Container */
@@ -24,7 +25,7 @@
         .main-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            color: #000000;
+            color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 4px;
             font-size: 2.2rem;
@@ -34,7 +35,7 @@
         .sub-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: normal;
-            color: #555555;
+            color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: 1.2rem;
@@ -45,8 +46,7 @@
         .showcase-disc {
             width: 280px;
             height: 280px;
-            /* UPDATED: Path now points to Logo/ folder */
-            background-image: url('Logo/platinum.jpeg'); 
+            background-image: url("Logo/platinum.jpeg"); 
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -62,13 +62,13 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            margin-bottom: 50px; /* Added spacing before the button */
+            margin-bottom: 50px;
         }
         .track-entry {
             display: flex;
             flex-direction: column;
             padding: 20px;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #000000 !important;
             border-radius: 4px;
             background-color: #fafafa;
         }
@@ -82,33 +82,41 @@
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
             font-size: 1.3rem;
-            color: #000000;
+            color: #000000 !important;
         }
         .track-version {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.8rem;
-            color: #777777;
+            color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+        .track-artist {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #000000 !important;
+            margin-bottom: 8px;
         }
         .track-meta {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.75rem;
-            color: #999999;
+            color: #000000 !important;
             letter-spacing: 0.5px;
+            line-height: 1.4;
         }
 
-        /* Premium Return Button Styling */
+        /* Premium Return Button */
         .foyer-button {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
             font-size: 1rem;
-            color: #000000;
+            color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 3px;
             text-decoration: none;
             padding: 10px 25px;
-            border: 1px solid #000000;
+            border: 1px solid #000000 !important;
             border-radius: 2px;
             background: transparent;
             transition: all 0.3s ease;
@@ -116,7 +124,7 @@
         }
         .foyer-button:hover {
             background-color: #000000;
-            color: #ffffff;
+            color: #ffffff !important;
             letter-spacing: 4px;
         }
     </style>
@@ -125,32 +133,65 @@
 
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">The Platinum Room — Dance Catalog</h2>
+        <h2 class="sub-title">Platinum Room — Dance Catalog</h2>
     </div>
 
     <div class="showcase-disc"></div>
 
     <div class="tracklist-container">
         
+        <!-- Track 1 -->
+        <div class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Living Without Your Love</span>
+                <span class="track-version">Radio Edition</span>
+            </div>
+            <div class="track-artist">Single by: Memz (Feat. Lizzie France)</div>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 10 July, 2026<br>ISRC: GXL3V2600001 • Copyright: © 2026, Mehmet Osman</span>
+        </div>
+
+        <!-- Track 2 -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">Living Without Your Love</span>
                 <span class="track-version">Extended Club Edition</span>
             </div>
-            <span class="track-meta">ISRC: GXL3V2600002 • Release Year: 2026</span>
+            <div class="track-artist">Single by: Memz (Feat. Lizzie France)</div>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 03 July, 2026<br>ISRC: GXL3V2600002 • Copyright: © 2026, Mehmet Osman</span>
         </div>
 
+        <!-- Track 3 -->
         <div class="track-entry">
             <div class="track-header">
-                <span class="track-name">Sticky Panton</span>
-                <span class="track-version">Original Club Mix</span>
+                <span class="track-name">Terror Eyes</span>
+                <span class="track-version">Processing Release</span>
             </div>
-            <span class="track-meta">ISRC: GXL3V2600009 • Release Year: 2026</span>
+            <div class="track-artist">Single by: Memz</div>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 03 July, 2026<br>ISRC: GXL3V2600003 • Copyright: © 2026, Mehmet Osman</span>
+        </div>
+
+        <!-- Track 4 -->
+        <div class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Set Me Free</span>
+                <span class="track-version">Processing Release</span>
+            </div>
+            <div class="track-artist">Single by: Memz</div>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 17 July, 2026<br>ISRC: GXL3V2600006 • Copyright: © 2026, Mehmet Osman</span>
+        </div>
+
+        <!-- Track 5 -->
+        <div class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Can’t Fight The Feeling</span>
+                <span class="track-version">Processing Release</span>
+            </div>
+            <div class="track-artist">Single by: Memz</div>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 24 July, 2026<br>ISRC: GXL3V2600012 • Copyright: © 2026, Mehmet Osman</span>
         </div>
 
     </div>
 
-    <!-- Navigation Back Link -->
     <a href="index.html" class="foyer-button">Return to Foyer</a>
 
 </body>
