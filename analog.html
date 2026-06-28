@@ -17,51 +17,62 @@
             color: #000000 !important;
         }
         
-        /* Grid container setup */
+        /* Main responsive layout wrapper */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr); 
-            gap: 40px 30px;
+            gap: 50px 30px;
             max-width: 1200px;
             width: 100%;
             margin: 0 auto 50px auto;
         }
 
-        /* Gear card tracking block */
+        /* Group card to lock image and text together */
         .gear-card {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
             width: 100%;
+            text-align: center;
         }
 
-        /* Standard image scaling for rackmount devices */
-        .gear-card img {
+        /* Specific container to control image sizing bounds uniformly */
+        .image-box {
             width: 100%;
             height: 140px;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
-            margin-bottom: 12px;
+            display: block;
         }
 
-        /* Proportional constraint for small stompboxes and pedals */
-        .gear-card.pedal img {
-            height: 110px; 
+        /* Proportion constraint to stop small stompboxes looking massive */
+        .gear-card.pedal .image-box {
+            height: 100px;
         }
 
-        /* Equipment text identification styling */
+        /* Equipment title label definition */
         .gear-name {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: bold;
             color: #000000 !important;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
+            letter-spacing: 2px;
             margin: 0;
-            width: 100%;
             line-height: 1.3;
+            min-height: 2.6rem; /* Ensures alignment if text wraps to 2 lines */
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
         }
 
         .studio-button {
@@ -91,14 +102,14 @@
         @media (max-width: 600px) {
             .grid-container {
                 grid-template-columns: 1fr;
-                gap: 50px 0;
+                gap: 60px 0;
             }
-            .gear-card img {
+            .image-box {
                 height: auto;
                 max-height: 160px;
             }
-            .gear-card.pedal img {
-                max-height: 130px;
+            .gear-card.pedal .image-box {
+                max-height: 110px;
             }
         }
 
@@ -109,7 +120,7 @@
             }
         }
 
-        /* iPad landscape view: Spreads out wider to 4 columns */
+        /* iPad landscape / Desktop view: 4 columns wide expansion */
         @media (min-width: 901px) {
             .grid-container {
                 grid-template-columns: repeat(4, 1fr);
@@ -121,105 +132,134 @@
 
     <div class="grid-container">
 
-        <!-- MACKIE CONSOLES -->
+        <!-- Mackie 1604 VLZ Pro -->
         <div class="gear-card">
-            <img src="FX/1604vlzpro.jpeg" alt="Mackie 1604-VLZ Pro">
+            <div class="image-box">
+                <img src="FX/1604vlzpro.jpeg" alt="Mackie 1604-VLZ Pro">
+            </div>
             <p class="gear-name">Mackie 1604-VLZ Pro</p>
         </div>
 
+        <!-- Mackie CR1604 -->
         <div class="gear-card">
-            <img src="FX/mackie.jpeg" alt="Mackie CR1604">
+            <div class="image-box">
+                <img src="FX/mackie.jpeg" alt="Mackie CR1604">
+            </div>
             <p class="gear-name">Mackie CR1604</p>
         </div>
-        
-        <!-- UNIVERSAL AUDIO INTERFACE & FOCUSRITE PREAMPS -->
-        <div class="gear-card">
-            <img src="FX/apollo16.jpeg" alt="Universal Audio Apollo x16">
-            <p class="gear-name">Universal Audio Apollo x16</p>
-        </div>
 
+        <!-- Focusrite Octopre -->
         <div class="gear-card">
-            <img src="FX/octopre.jpeg" alt="Focusrite OctoPre">
+            <div class="image-box">
+                <img src="FX/octopre.jpeg" alt="Focusrite OctoPre">
+            </div>
             <p class="gear-name">Focusrite OctoPre</p>
         </div>
         
-        <!-- BEHRINGER OUTBOARD RACK HARDWARE -->
+        <!-- Behringer Modulizer Pro DSP1200P -->
         <div class="gear-card">
-            <img src="FX/Modulizer Pro.JPG" alt="Behringer Modulizer Pro">
+            <div class="image-box">
+                <img src="FX/Modulizer Pro.JPG" alt="Behringer Modulizer Pro">
+            </div>
             <p class="gear-name">Behringer Modulizer Pro</p>
         </div>
 
+        <!-- Behringer Ultragraph Pro GEQ3102 -->
         <div class="gear-card">
-            <img src="FX/Ultragraph Pro.jpg" alt="Behringer Ultragraph Pro">
+            <div class="image-box">
+                <img src="FX/Ultragraph Pro.jpg" alt="Behringer Ultragraph Pro">
+            </div>
             <p class="gear-name">Behringer Ultragraph Pro</p>
         </div>
 
+        <!-- Behringer Tube Composer T1952 -->
         <div class="gear-card">
-            <img src="FX/Tube Composer.jpg" alt="Behringer Tube Composer">
+            <div class="image-box">
+                <img src="FX/Tube Composer.jpg" alt="Behringer Tube Composer">
+            </div>
             <p class="gear-name">Behringer Tube Composer</p>
         </div>
 
+        <!-- Behringer Multicom Pro MDX4400 -->
         <div class="gear-card">
-            <img src="FX/MulticomPro.jpg" alt="Behringer Multicom Pro">
+            <div class="image-box">
+                <img src="FX/MulticomPro.jpg" alt="Behringer Multicom Pro">
+            </div>
             <p class="gear-name">Behringer Multicom Pro</p>
         </div>
 
-        <!-- ROLAND, KORG, ALESIS PROCESSING HARDWARE -->
+        <!-- Roland SDE-2000 -->
         <div class="gear-card">
-            <img src="FX/SDE2000.jpg" alt="Roland SDE-2000">
+            <div class="image-box">
+                <img src="FX/SDE2000.jpg" alt="Roland SDE-2000">
+            </div>
             <p class="gear-name">Roland SDE-2000</p>
         </div>
 
+        <!-- Roland SDE-1000 -->
         <div class="gear-card">
-            <img src="FX/SDE1000.JPG" alt="Roland SDE-1000">
+            <div class="image-box">
+                <img src="FX/SDE1000.JPG" alt="Roland SDE-1000">
+            </div>
             <p class="gear-name">Roland SDE-1000</p>
         </div>
 
+        <!-- Korg M3R Module -->
         <div class="gear-card">
-            <img src="FX/Korg M3R.JPG" alt="Korg M3R Synth Module">
+            <div class="image-box">
+                <img src="FX/Korg M3R.JPG" alt="Korg M3R Module">
+            </div>
             <p class="gear-name">Korg M3R Module</p>
         </div>
 
+        <!-- Alesis Quadraverb -->
         <div class="gear-card">
-            <img src="FX/quad.JPG" alt="Alesis Quadraverb">
+            <div class="image-box">
+                <img src="FX/quad.JPG" alt="Alesis Quadraverb">
+            </div>
             <p class="gear-name">Alesis Quadraverb</p>
         </div>
         
-        <!-- GUITAR PEDALS & HARDWARE STOMPBOXES -->
+        <!-- Boss DS-1 Distortion -->
         <div class="gear-card pedal">
-            <img src="FX/ds1.JPG" alt="Boss DS-1 Distortion">
+            <div class="image-box">
+                <img src="FX/ds1.JPG" alt="Boss DS-1 Distortion">
+            </div>
             <p class="gear-name">Boss DS-1 Distortion</p>
         </div>
 
+        <!-- Digitech RP5 -->
         <div class="gear-card">
-            <img src="FX/digitech-rp5.jpeg" alt="Digitech RP5">
+            <div class="image-box">
+                <img src="FX/digitech-rp5.jpeg" alt="Digitech RP5">
+            </div>
             <p class="gear-name">Digitech RP5</p>
         </div>
 
+        <!-- Dunlop CryBaby Wah -->
         <div class="gear-card pedal">
-            <img src="FX/CryBaby_wah.png" alt="Dunlop CryBaby Wah">
+            <div class="image-box">
+                <img src="FX/CryBaby_wah.png" alt="Dunlop CryBaby Wah">
+            </div>
             <p class="gear-name">Dunlop CryBaby Wah</p>
         </div>
 
+        <!-- MXR Analog Chorus -->
         <div class="gear-card pedal">
-            <img src="FX/MXR.jpeg" alt="MXR Analog Chorus">
+            <div class="image-box">
+                <img src="FX/MXR.jpeg" alt="MXR Analog Chorus">
+            </div>
             <p class="gear-name">MXR Analog Chorus</p>
         </div>
 
+        <!-- Marshall ShredMaster (1994) -->
         <div class="gear-card pedal">
-            <img src="FX/shredmaster.jpeg" alt="Marshall ShredMaster">
-            <p class="gear-name">Marshall ShredMaster</p>
+            <div class="image-box">
+                <img src="FX/sm94.JPG" alt="Marshall ShredMaster 1994">
+            </div>
+            <p class="gear-name">Marshall ShredMaster (1994)</p>
         </div>
 
-        <div class="gear-card pedal">
-            <img src="FX/Whammy.jpg" alt="DigiTech Whammy">
-            <p class="gear-name">DigiTech Whammy</p>
-        </div>
-
-        <div class="gear-card pedal">
-            <img src="FX/SCR-DI.jpg" alt="Ampeg SCR-DI">
-            <p class="gear-name">Ampeg SCR-DI</p>
-        </div>
     </div>
 
     <a href="studio.html" class="studio-button">Return to Studio</a>
