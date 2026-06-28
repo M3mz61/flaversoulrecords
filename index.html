@@ -177,72 +177,67 @@
 
     <div class="foyer-grid">
 
-        <a onclick="secureRoom('gold-room.html')" class="room-link">
+        <a href="gold-room.html" class="room-link">
             <div class="foyer-disc disc-gold"></div>
             <h3 class="room-title">Gold Room</h3>
             <p class="room-description">Catalog</p>
         </a>
 
-        <a onclick="secureRoom('silver-room.html')" class="room-link">
+        <a href="silver-room.html" class="room-link">
             <div class="foyer-disc disc-silver"></div>
             <h3 class="room-title">Silver Room</h3>
             <p class="room-description">Soul Music</p>
         </a>
 
-        <a onclick="secureRoom('platinum-room.html')" class="room-link">
+        <a href="platinum-room.html" class="room-link">
             <div class="foyer-disc disc-platinum"></div>
             <h3 class="room-title">Platinum Room</h3>
             <p class="room-description">Dance Catalog</p>
         </a>
 
-        <a onclick="secureRoom('bronze-room.html')" class="room-link">
+        <a href="bronze-room.html" class="room-link">
             <div class="foyer-disc disc-bronze"></div>
             <h3 class="room-title">Bronze Room</h3>
             <p class="room-description">Spanish Catalog</p>
         </a>
 
-        <a onclick="secureRoom('rock-room.html')" class="room-link"> 
+        <a href="rock-room.html" class="room-link"> 
             <div class="foyer-disc disc-granite"></div>
             <h3 class="room-title">Granite Room</h3>
             <p class="room-description">Rock Catalog</p>
         </a>
 
-        <a onclick="secureRoom('concrete-room.html')" class="room-link">
+        <a href="concrete-room.html" class="room-link">
             <div class="foyer-disc disc-concrete"></div>
             <h3 class="room-title">Concrete Room</h3>
             <p class="room-description">Urban Catalog</p>
         </a>
 
-        <!-- Studio Hire: Public Internal Room Layout -->
         <a href="studio.html" class="room-link">
             <div class="foyer-disc disc-studio"></div>
             <h3 class="room-title">Studio Hire</h3>
             <p class="room-description">Producer Booking</p>
         </a>
 
-        <!-- Invisible Mastering: Public Room -->
         <a href="mastering.html" class="room-link">
             <div class="foyer-disc disc-mastering"></div>
             <h3 class="room-title">Invisible Mastering</h3>
             <p class="room-description">Audio Suite</p>
         </a>
 
-        <!-- ADR & Voiceover Room -->
-        <a onclick="secureRoom('adr.html')" class="room-link">
+        <a href="adr.html" class="room-link">
             <div class="foyer-disc disc-adr"></div>
             <h3 class="room-title">ADR & Voiceover</h3>
             <p class="room-description">Post Production</p>
         </a>
 
-        <!-- Memz & DeeAfro Room -->
-        <a onclick="secureRoom('memz-deeafro.html')" class="room-link">
+        <a href="memz-deeafro.html" class="room-link">
             <div class="foyer-disc disc-mnd"></div>
             <h3 class="room-title">Memz & DeeAfro</h3>
             <p class="room-description">Exclusive Releases</p>
         </a>
 
-        <!-- A&R Room -->
-        <a onclick="secureRoom('ar.html')" class="room-link">
+        <a href="ar.html" class="room-link">
             <div class="foyer-disc disc-ar"></div>
             <h3 class="room-title">A & R Room</h3>
             <p class="room-description">Talent & Development</p>
@@ -258,16 +253,6 @@
             <a href="studio.html" class="footer-sub-link">Studio Hire</a>
         </div>
     </div>
-
-    <!-- Security Gateway Script for Password Protection -->
-    <script>
-        function secureRoom(targetUrl) {
-            const accessPass = prompt("Enter Password to Enter Room:");
-            if (accessPass && accessPass.trim() !== "") {
-                window.location.href = targetUrl;
-            }
-        }
-    </script>
 
 </body>
 </html>
