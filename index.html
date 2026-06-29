@@ -8,7 +8,7 @@
         body {
             background-color: #ffffff !important;
             margin: 0;
-            padding: 60px 20px;
+            padding: 40px 20px 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -20,7 +20,7 @@
         /* Header Group Container */
         .header-group {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             width: 100%;
         }
         .main-title {
@@ -30,7 +30,7 @@
             text-transform: uppercase;
             letter-spacing: 4px;
             font-size: 2.2rem;
-            margin: 0 0 16px 0;
+            margin: 0 0 12px 0;
             line-height: 1.2;
         }
         .sub-title {
@@ -45,14 +45,12 @@
 
         /* RESPONSIVE LAYOUT WRAPPER */
         .foyer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px 30px;
+            max-width: 1300px;
             width: 100%;
-            max-width: 1400px;        
-            display: flex;
-            flex-direction: row;      
-            flex-wrap: wrap;          
-            justify-content: center;  
-            align-items: flex-start;
-            gap: 50px 40px;            
+            margin: 0 auto;
         }
 
         /* Room Link Wrapper */
@@ -62,9 +60,11 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            width: 300px;              
+            width: 100%;              
             transition: transform 0.2s ease;
             cursor: pointer;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .room-link:hover {
@@ -73,14 +73,15 @@
 
         /* Centered Disc Graphics */
         .foyer-disc {
-            width: 280px;
-            height: 280px;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             margin-bottom: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             overflow: hidden; 
             background-repeat: no-repeat;
             background-position: center center;
+            box-sizing: border-box;
         }
 
         /* Specific Background Assignments */
@@ -88,6 +89,7 @@
         .disc-silver { background-image: url("Logo/silver.jpeg"); background-size: 102% 102%; }
         .disc-platinum { background-image: url("Logo/platinum.jpeg"); background-size: 102% 102%; }
         .disc-bronze { background-image: url("Logo/bronze.jpeg"); background-size: 102% 102%; }
+        .disc-acoustic { background-image: url("Logo/Acoustic.jpeg"); background-size: 102% 102%; }
         .disc-granite { background-image: url("Logo/rock.jpeg"); background-size: 102% 102%; }
         .disc-concrete { background-image: url("Logo/concrete.jpeg"); background-size: 102% 102%; }
         .disc-studio { background-image: url("Logo/studio.jpeg"); background-size: 116% 116%; background-color: #000000; }
@@ -100,15 +102,16 @@
         .room-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 3px;
             margin: 0 0 8px 0;
+            line-height: 1.3;
         }
         .room-description {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -117,7 +120,7 @@
 
         /* Brand Footer Container & Links Styles */
         .brand-footer {
-            margin-top: 60px;
+            margin-top: 70px;
             text-align: center;
             width: 100%;
         }
@@ -155,15 +158,56 @@
             border-bottom-color: #000000;
         }
 
-        @media (max-width: 1250px) {
+        /* Tablet Responsive Rules (3 Columns) */
+        @media (max-width: 1100px) {
             .foyer-grid {
-                flex-direction: column; 
-                align-items: center;
-                max-width: 500px;       
-                gap: 50px;              
+                grid-template-columns: repeat(3, 1fr);
+                gap: 45px 25px;
             }
-            .room-link {
-                width: 100%;            
+            .foyer-disc {
+                width: 220px;
+                height: 220px;
+            }
+        }
+
+        /* Medium Tablet Rules (2 Columns) */
+        @media (max-width: 850px) {
+            .foyer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px 20px;
+            }
+            .main-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* iPhone View: 1 single column stacked layout */
+        @media (max-width: 600px) {
+            body {
+                padding: 40px 20px 60px 20px;
+            }
+            .header-group {
+                margin-bottom: 40px;
+            }
+            .main-title {
+                font-size: 1.7rem;
+                letter-spacing: 3px;
+            }
+            .sub-title {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+            }
+            .foyer-grid {
+                grid-template-columns: 1fr;
+                gap: 45px 0;
+            }
+            .foyer-disc {
+                width: 260px;
+                height: 260px;
+                margin-bottom: 15px;
+            }
+            .room-title {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -177,82 +221,75 @@
 
     <div class="foyer-grid">
 
+        <!-- 1. GOLD ROOM -->
         <a href="gold-room.html" class="room-link">
             <div class="foyer-disc disc-gold"></div>
             <h3 class="room-title">Gold Room</h3>
             <p class="room-description">Catalog</p>
         </a>
 
+        <!-- 2. SILVER ROOM -->
         <a href="silver-room.html" class="room-link">
             <div class="foyer-disc disc-silver"></div>
             <h3 class="room-title">Flave R Soul Groove</h3>
             <p class="room-description">Soul Music</p>
         </a>
 
+        <!-- 3. PLATINUM ROOM -->
         <a href="platinum-room.html" class="room-link">
             <div class="foyer-disc disc-platinum"></div>
             <h3 class="room-title">Platinum Room</h3>
             <p class="room-description">Dance Catalog</p>
         </a>
 
+        <!-- 4. BRONZE ROOM -->
         <a href="bronze-room.html" class="room-link">
             <div class="foyer-disc disc-bronze"></div>
             <h3 class="room-title">Bronze Room</h3>
             <p class="room-description">Spanish Catalog</p>
         </a>
 
+        <!-- 5. ACOUSTIC ROOM (NEW ADDITION) -->
+        <a href="acoustic.html" class="room-link">
+            <div class="foyer-disc disc-acoustic"></div>
+            <h3 class="room-title">Flave R Soul Acoustic</h3>
+            <p class="room-description">Stripped Down Mixes</p>
+        </a>
+
+        <!-- 6. GRANITE ROOM -->
         <a href="rock-room.html" class="room-link"> 
             <div class="foyer-disc disc-granite"></div>
             <h3 class="room-title">Granite Room</h3>
             <p class="room-description">Rock Catalog</p>
         </a>
 
+        <!-- 7. CONCRETE ROOM -->
         <a href="concrete-room.html" class="room-link">
             <div class="foyer-disc disc-concrete"></div>
             <h3 class="room-title">Concrete Room</h3>
             <p class="room-description">Urban Catalog</p>
         </a>
 
+        <!-- 8. STUDIO HIRE -->
         <a href="studio.html" class="room-link">
             <div class="foyer-disc disc-studio"></div>
             <h3 class="room-title">Studio Hire</h3>
             <p class="room-description">Producer Booking</p>
         </a>
 
+        <!-- 9. INVISIBLE MASTERING -->
         <a href="mastering.html" class="room-link">
             <div class="foyer-disc disc-mastering"></div>
             <h3 class="room-title">Invisible Mastering</h3>
             <p class="room-description">Audio Suite</p>
         </a>
 
+        <!-- 10. ADR & VOICEOVER -->
         <a href="adr.html" class="room-link">
             <div class="foyer-disc disc-adr"></div>
             <h3 class="room-title">ADR & Voiceover</h3>
             <p class="room-description">Post Production</p>
         </a>
 
+        <!-- 11. MEMZ & DEEAFRO -->
         <a href="mnd.html" class="room-link">
-            <div class="foyer-disc disc-mnd"></div>
-            <h3 class="room-title">Memz & DeeAfro</h3>
-            <p class="room-description">Exclusive Releases</p>
-        </a>
-
-        <a href="development.html" class="room-link">
-            <div class="foyer-disc disc-ar"></div>
-            <h3 class="room-title">A & R Room</h3>
-            <p class="room-description">Talent & Development</p>
-        </a>
-
-    </div>
-
-    <!-- Brand Footer Container -->
-    <div class="brand-footer">
-        <p class="footer-copyright">Flave R Soul Records © 2026</p>
-        <div class="footer-links-group">
-            <a href="mastering.html" class="footer-sub-link">Mastering Suite</a>
-            <a href="studio.html" class="footer-sub-link">Studio Hire</a>
-        </div>
-    </div>
-
-</body>
-</html>
