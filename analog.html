@@ -101,7 +101,7 @@
             letter-spacing: 4px;
         }
 
-        /* iPhone View: Single column stacked architecture with better mobile spacing */
+        /* iPhone View: Single column stacked architecture with scale fixes for slim rack units */
         @media (max-width: 600px) {
             body {
                 padding: 30px 20px 60px 20px;
@@ -111,17 +111,27 @@
                 gap: 50px 0;
                 margin-bottom: 50px;
             }
+            /* Allows flat/wide rack gear to scale up in width naturally */
             .image-box {
                 height: auto;
-                max-height: 150px;
+                min-height: 100px; 
+                max-height: 200px;
             }
-            .gear-card.pedal .image-box {
-                max-height: 100px;
+            .image-box img {
+                width: 90%; /* Forces narrow/flat rack units to occupy screen width */
+                height: auto;
+                max-height: 160px;
+            }
+            /* Keeps small stompboxes from stretching out too far */
+            .gear-card.pedal .image-box img {
+                width: auto;
+                max-height: 110px;
             }
             .gear-name {
                 font-size: 0.9rem;
                 letter-spacing: 1.5px;
                 min-height: auto;
+                margin-top: 5px;
             }
             .studio-button {
                 width: 80%; /* Makes button easier to press on smaller touch screens */
