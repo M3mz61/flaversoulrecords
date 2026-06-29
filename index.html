@@ -45,9 +45,9 @@
 
         /* RESPONSIVE LAYOUT WRAPPER */
         .foyer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 50px 30px;
+            display: grid !important;
+            grid-template-columns: repeat(4, 1fr) !important;
+            gap: 50px 30px !important;
             max-width: 1300px;
             width: 100%;
             margin: 0 auto;
@@ -161,8 +161,8 @@
         /* Tablet Responsive Rules (3 Columns) */
         @media (max-width: 1100px) {
             .foyer-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 45px 25px;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 45px 25px !important;
             }
             .foyer-disc {
                 width: 220px;
@@ -173,8 +173,8 @@
         /* Medium Tablet Rules (2 Columns) */
         @media (max-width: 850px) {
             .foyer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 40px 20px;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 40px 20px !important;
             }
             .main-title {
                 font-size: 2rem;
@@ -198,8 +198,8 @@
                 letter-spacing: 2px;
             }
             .foyer-grid {
-                grid-template-columns: 1fr;
-                gap: 45px 0;
+                grid-template-columns: 1fr !important;
+                gap: 45px 0 !important;
             }
             .foyer-disc {
                 width: 260px;
@@ -291,6 +291,3 @@
             <p class="room-description">Post Production</p>
         </a>
 
-        <!-- 11. MEMZ & DEEAFRO -->
-        <a href="mnd.html" class="room-link">
-            <div class="foyer-disc disc-mnd"></div>
