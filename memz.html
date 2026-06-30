@@ -16,7 +16,7 @@
             box-sizing: border-box;
         }
 
-        /* Flex row layout to keep both speakers side-by-side */
+        /* Symmetrical top speaker layout */
         .speaker-row {
             display: flex;
             justify-content: center;
@@ -34,7 +34,7 @@
             max-width: 140px;
         }
 
-        /* Minimal Studio Photo Gallery Column */
+        /* Master landscape image stack */
         .studio-gallery {
             display: flex;
             flex-direction: column;
@@ -52,6 +52,7 @@
             display: block;
         }
 
+        /* Navigation Matrix controls matching label typography */
         .foyer-button {
             display: inline-block;
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
@@ -75,7 +76,6 @@
             letter-spacing: 4px;
         }
 
-        /* Bottom Footer Routing Element */
         footer {
             margin-top: 20px;
             width: 100%;
@@ -96,15 +96,15 @@
         <img src="mnd/Spkr_Memz1.gif" alt="Right Speaker Component">
     </div>
 
-    <!-- Silent Studio Work Archive Gallery -->
+    <!-- Silent Studio Work Archive Gallery (Inverted Portrait Stack) -->
     <div class="studio-gallery">
-        <img src="mnd/memz01.jpeg" alt="Memz Studio Tracking Setup">
-        <img src="mnd/M2.jpeg" alt="Memz Engineering Console">
-        <img src="mnd/memzeuphonix.jpeg" alt="Flave R Soul sitting at the Euphonix system hardware rig">
+        <img src="mnd/memz01.jpeg" alt="Memz Studio Tracking Close-up Portrait">
+        <img src="mnd/M2.jpeg" alt="Flave R Soul engineering at the mixing console">
+        <img src="mnd/memzeuphonix.jpeg" alt="Flave R Soul tracking at the Euphonix system hardware rig">
         <img src="mnd/Memz Euph.jpg" alt="Memz sitting at the SSL G Series mixing console">
     </div>
 
-    <!-- Navigation Matrix Route Back to Hub and Foyer -->
+    <!-- Symmetrical Navigation Matrix Route -->
     <footer>
         <div class="footer-nav">
             <a href="mnd.html" class="foyer-button">Return to Memz & DeeAfro</a>
@@ -112,8 +112,10 @@
         </div>
     </footer>
 
-    <!-- Persistent Brand Watermark -->
-    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #999999; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: auto; margin-bottom: 20px;">Flave R Soul Records ©️ 2026</p>
+    <!-- Persistent Brand Watermark with Stealth Link Node -->
+    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #999999; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: auto; margin-bottom: 20px;">
+        Flave R Soul Records <a href="reality.html" style="color: #999999; text-decoration: none; cursor: default;">©️</a> 2026
+    </p>
 
 </body>
 </html>
