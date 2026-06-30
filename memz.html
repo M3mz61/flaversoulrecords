@@ -53,6 +53,7 @@
         }
 
         .foyer-button {
+            display: inline-block;
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
             font-size: 1rem;
@@ -67,12 +68,23 @@
             transition: all 0.3s ease;
             cursor: pointer;
             margin-bottom: 40px;
-            display: inline-block;
         }
         .foyer-button:hover {
             background-color: #000000;
             color: #ffffff;
             letter-spacing: 4px;
+        }
+
+        /* Bottom Footer Routing Element */
+        footer {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
     </style>
 </head>
@@ -92,8 +104,13 @@
         <img src="mnd/Memz Euph.jpg" alt="Memz sitting at the SSL G Series mixing console">
     </div>
 
-    <!-- Clean Navigation Return Link -->
-    <a href="mnd.html" class="foyer-button">Return to Studio</a>
+    <!-- Navigation Matrix Route Back to Hub and Foyer -->
+    <footer>
+        <div class="footer-nav">
+            <a href="mnd.html" class="foyer-button">Return to Memz & DeeAfro</a>
+            <a href="index.html" class="foyer-button">Return to Foyer</a>
+        </div>
+    </footer>
 
     <!-- Persistent Brand Watermark -->
     <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #999999; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: auto; margin-bottom: 20px;">Flave R Soul Records ©️ 2026</p>
