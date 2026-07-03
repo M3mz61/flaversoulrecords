@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acoustic Room — Flave R Soul Records</title>
+    <title>Flave R Soul Dance — Flave R Soul Records</title>
     <style>
         body {
             background-color: #ffffff !important;
             margin: 0;
-            padding: 40px 20px 60px 20px;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
+            color: #000000 !important;
         }
 
+        /* Header Group Container */
         .header-group {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            width: 100%;
         }
         .main-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            color: #000000;
+            color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 4px;
             font-size: 2.2rem;
@@ -33,156 +36,111 @@
         .sub-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: normal;
-            color: #555555;
+            color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: 1.2rem;
             margin: 0;
         }
 
+        /* Centered Disc Graphic */
         .showcase-disc {
             width: 280px;
             height: 280px;
-            background-image: url("Logo/Acoustic.jpeg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
             border-radius: 50%;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            overflow: hidden; 
+            background-image: url("Logo/platinum.jpeg");
+            background-size: 102% 102%;
+            background-repeat: no-repeat;
+            background-position: center center;
         }
 
-        audio {
-            margin-bottom: 40px;
-            width: 100%;
-            max-width: 400px;
-        }
-
+        /* Tracklist Layout Wrapper */
         .tracklist-container {
             width: 100%;
             max-width: 600px;
             display: flex;
             flex-direction: column;
             gap: 20px;
-            margin-bottom: 50px;
         }
-        
+
+        /* Track Card Item */
         .track-entry {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
             background-color: #fafafa;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
+            border: 1px solid #000000 !important;
+            border-radius: 4px;
+            padding: 24px;
             box-sizing: border-box;
+            text-align: left;
         }
-        .track-entry:hover {
-            border-color: #000000;
-            background-color: #ffffff;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transform: translateY(-2px);
-        }
+
         .track-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 6px;
-            gap: 15px;
+            margin-bottom: 10px;
         }
         .track-name {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
             font-size: 1.3rem;
-            color: #000000;
+            color: #000000 !important;
         }
         .track-version {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.8rem;
-            color: #777777;
+            color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s ease;
-            white-space: nowrap;
-        }
-        .track-entry:hover .track-version {
-            color: #000000;
-            border-color: #000000;
         }
         .track-artist {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.95rem;
             font-weight: 500;
-            color: #333333;
+            color: #000000 !important;
             margin-bottom: 8px;
         }
         .track-meta {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.75rem;
-            color: #999999;
+            color: #000000 !important;
             letter-spacing: 0.5px;
-            line-height: 1.3;
+            line-height: 1.4;
+            display: block;
+            margin-bottom: 20px;
         }
+
+        /* Player Integration Box */
         .embed-wrapper {
             width: 100%;
             margin-top: 15px;
         }
 
+        /* Premium Return Navigation Button */
         .foyer-button {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
             font-size: 1rem;
-            color: #000000;
+            color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 3px;
             text-decoration: none;
-            padding: 12px 30px;
-            border: 1px solid #000000;
+            padding: 10px 25px;
+            border: 1px solid #000000 !important;
             border-radius: 2px;
             background: transparent;
             transition: all 0.3s ease;
             cursor: pointer;
-            margin-bottom: 40px;
+            margin-top: 40px;
             display: inline-block;
             text-align: center;
-            -webkit-tap-highlight-color: transparent;
         }
         .foyer-button:hover {
             background-color: #000000;
-            color: #ffffff;
+            color: #ffffff !important;
             letter-spacing: 4px;
-        }
-
-        /* Mobile Layout Enhancements */
-        @media (max-width: 600px) {
-            body {
-                padding: 30px 15px 40px 15px;
-            }
-            .main-title {
-                font-size: 1.7rem;
-            }
-            .showcase-disc {
-                width: 240px;
-                height: 240px;
-            }
-            .track-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 4px;
-            }
-            .track-name {
-                font-size: 1.2rem;
-            }
-            .track-version {
-                white-space: normal;
-            }
-            .foyer-button {
-                width: 80%;
-                max-width: 280px;
-            }
         }
     </style>
 </head>
@@ -190,58 +148,72 @@
 
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">Acoustic Room — Stripped Down Mixes</h2>
+        <h2 class="sub-title">Flave R Soul Dance</h2>
     </div>
 
     <div class="showcase-disc"></div>
 
-    <!-- Update the src attribute when your primary acoustic showcase mp3 is ready -->
-    <audio controls>
-        <source src="Acoustic Showcase.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
     <div class="tracklist-container">
-        
-        <!-- Track 1: Live Now -->
+
+        <!-- Track 1: Radio Edition (Coming July 10) -->
         <div class="track-entry">
             <div class="track-header">
-                <span class="track-name">Black & White Pictures</span>
-                <span class="track-version">J45 Mix</span>
+                <span class="track-name">Living Without Your Love</span>
+                <span class="track-version">Radio Edition</span>
+            </div>
+            <div class="track-artist">Single by: Memz (Feat. Lizzie France)</div>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 10 July, 2026<br>ISRC: GXL3V2600001 • Copyright: ℗ 2026, Mehmet Osman</span>
+        </div>
+
+        <!-- Track 2: Terror Eyes (LIVE NOW) -->
+        <div class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Terror Eyes</span>
+                <span class="track-version">Single</span>
             </div>
             <div class="track-artist">Single by: Memz</div>
-            <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Acoustic • Copyright: ℗ 2026, Mehmet Osman</span>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 03 July, 2026<br>ISRC: GXL3V2600002 • Copyright: ℗ 2026, Mehmet Osman</span>
             <div class="embed-wrapper">
-                <iframe src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" style="border-radius: 8px;"></iframe>
+                <iframe src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" style="border-radius:8px;"></iframe>
             </div>
         </div>
 
-        <!-- Track 2 Placeholder -->
+        <!-- Track 3: Living Without Your Love - Extended Club Edition (LIVE NOW) -->
         <div class="track-entry">
             <div class="track-header">
-                <span class="track-name">Acoustic Song Two</span>
-                <span class="track-version">Unplugged Version</span>
+                <span class="track-name">Living Without Your Love</span>
+                <span class="track-version">Extended Club Edition</span>
             </div>
-            <div class="track-artist">Artist Name</div>
-            <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Acoustic</span>
+            <div class="track-artist">Single by: Memz (Feat. Lizzie France)</div>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 03 July, 2026<br>ISRC: GXL3V2600003 • Copyright: ℗ 2026, Mehmet Osman</span>
+            <div class="embed-wrapper">
+                <iframe src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" style="border-radius:8px;"></iframe>
+            </div>
         </div>
 
-        <!-- Track 3 Placeholder -->
+        <!-- Track 4: Set Me Free (Coming July 17) -->
         <div class="track-entry">
             <div class="track-header">
-                <span class="track-name">Acoustic Song Three</span>
-                <span class="track-version">Live Acoustic</span>
+                <span class="track-name">Set Me Free</span>
+                <span class="track-version">Processing Release</span>
             </div>
-            <div class="track-artist">Artist Name</div>
-            <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Acoustic</span>
+            <div class="track-artist">Single by: Memz</div>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 17 July, 2026<br>ISRC: GXL3V2600006 • Copyright: © 2026, Mehmet Osman</span>
+        </div>
+
+        <!-- Track 5: Can’t Fight The Feeling (Coming July 24) -->
+        <div class="track-entry">
+            <div class="track-header">
+                <span class="track-name">Can’t Fight The Feeling</span>
+                <span class="track-version">Processing Release</span>
+            </div>
+            <div class="track-artist">Single by: Memz</div>
+            <span class="track-meta">Genre: Electronic • Label: Flave R Soul Records • Release Date: 24 July, 2026<br>ISRC: GXL3V2600012 • Copyright: © 2026, Mehmet Osman</span>
         </div>
 
     </div>
 
-    <!-- Returns to the parent grid architecture -->
     <a href="index.html" class="foyer-button">Return to Foyer</a>
-
-    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #000000; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 10px; margin-bottom: 20px;">Flave R Soul Records &copy; 2026</p>
 
 </body>
 </html>
