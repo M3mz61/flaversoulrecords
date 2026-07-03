@@ -109,7 +109,6 @@
             margin-bottom: 18px;
         }
 
-        /* Responsive Wrapper for Minimal Inline Streaming Player */
         .player-wrapper {
             width: 100%;
             margin-top: 5px;
@@ -118,7 +117,7 @@
         .player-wrapper iframe {
             border: none;
             width: 100%;
-            height: 80px; /* Forces Spotify to lock strictly into the minimal compact audio-only bar layout */
+            height: 80px;
             background-color: transparent;
         }
 
@@ -188,7 +187,7 @@
 
     <div class="tracklist-container">
         
-        <!-- Track 1: Live Now with Native On-Site Streaming -->
+        <!-- Track 1: Live Now with Embedded Asset Stream -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">Black & White Pictures</span>
@@ -197,9 +196,8 @@
             <div class="track-artist">Single by: Memz</div>
             <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Acoustic • Copyright: ℗ 2026, Mehmet Osman</span>
             
-            <!-- Inline Mini Player Section -->
             <div class="player-wrapper">
-                <!-- Swapped to the native /embed/ endpoint with a strict 80px block height restriction -->
+                <!-- Configured using the custom album target id natively inside the viewport frame -->
                 <iframe src="https://spotify.com" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
@@ -228,7 +226,6 @@
 
     <a href="index.html" class="foyer-button">Return to Foyer</a>
 
-    <!-- Unaltered Easter Egg Architecture pointing straight to reality.html -->
     <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #000000; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 10px; margin-bottom: 20px;">
         Flave R Soul Records <a href="reality.html" style="color: inherit; text-decoration: none;">&copy;</a> 2026
     </p>
