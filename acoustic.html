@@ -109,16 +109,12 @@
             margin-bottom: 18px;
         }
 
-        .player-wrapper {
+        /* Clean Native Audio Component Control */
+        .native-audio-player {
             width: 100%;
-            margin-top: 5px;
-            overflow: hidden;
-        }
-        .player-wrapper iframe {
-            border: none;
-            width: 100%;
-            height: 80px;
-            background-color: transparent;
+            margin-top: 10px;
+            height: 40px;
+            outline: none;
         }
 
         .foyer-button {
@@ -187,7 +183,7 @@
 
     <div class="tracklist-container">
         
-        <!-- Track 1: Live Now with Embedded Asset Stream -->
+        <!-- Track 1: Live Now with Native On-Site Audio Stream -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">Black & White Pictures</span>
@@ -196,10 +192,11 @@
             <div class="track-artist">Single by: Memz</div>
             <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Acoustic • Copyright: ℗ 2026, Mehmet Osman</span>
             
-            <div class="player-wrapper">
-                <!-- Configured using the custom album target id natively inside the viewport frame -->
-                <iframe src="https://spotify.com" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
+            <!-- Clean HTML5 Player to Stream Your High-Fidelity Audio File directly on GitHub Pages -->
+            <audio controls class="native-audio-player">
+                <source src="Black_And_White_Pictures_Acoustic.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
 
         <!-- Track 2 Placeholder -->
