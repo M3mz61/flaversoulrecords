@@ -48,8 +48,14 @@
             background-repeat: no-repeat;
             background-position: center;
             border-radius: 50%;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        audio {
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 400px;
         }
 
         .tracklist-container {
@@ -64,14 +70,21 @@
         .track-entry {
             display: flex;
             flex-direction: column;
-            padding: 24px;
+            padding: 20px;
             border: 1px solid #e0e0e0;
-            border-radius: 0px;
+            border-radius: 4px;
             background-color: #fafafa;
+            text-decoration: none;
             color: inherit;
+            transition: all 0.3s ease;
             box-sizing: border-box;
         }
-        
+        .track-entry:hover {
+            border-color: #000000;
+            background-color: #ffffff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transform: translateY(-2px);
+        }
         .track-header {
             display: flex;
             justify-content: space-between;
@@ -91,7 +104,13 @@
             color: #777777;
             text-transform: uppercase;
             letter-spacing: 1px;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
             white-space: nowrap;
+        }
+        .track-entry:hover .track-version {
+            color: #000000;
+            border-color: #000000;
         }
         .track-artist {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -105,16 +124,7 @@
             font-size: 0.75rem;
             color: #999999;
             letter-spacing: 0.5px;
-            line-height: 1.4;
-            margin-bottom: 18px;
-        }
-
-        /* Clean Native Audio Component Control */
-        .native-audio-player {
-            width: 100%;
-            margin-top: 10px;
-            height: 40px;
-            outline: none;
+            line-height: 1.3;
         }
 
         .foyer-button {
@@ -142,6 +152,7 @@
             letter-spacing: 4px;
         }
 
+        /* Mobile Layout Enhancements */
         @media (max-width: 600px) {
             body {
                 padding: 30px 15px 40px 15px;
@@ -152,7 +163,6 @@
             .showcase-disc {
                 width: 240px;
                 height: 240px;
-                margin-bottom: 30px;
             }
             .track-header {
                 flex-direction: column;
@@ -181,9 +191,15 @@
 
     <div class="showcase-disc"></div>
 
+    <!-- Original showcase player restored cleanly right beneath the disc image -->
+    <audio controls>
+        <source src="Acoustic Showcase.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <div class="tracklist-container">
         
-        <!-- Track 1: Live Now with Native On-Site Audio Stream -->
+        <!-- Track 1: Original Layout Restored -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">Black & White Pictures</span>
@@ -191,12 +207,6 @@
             </div>
             <div class="track-artist">Single by: Memz</div>
             <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Acoustic • Copyright: ℗ 2026, Mehmet Osman</span>
-            
-            <!-- Clean HTML5 Player to Stream Your High-Fidelity Audio File directly on GitHub Pages -->
-            <audio controls class="native-audio-player">
-                <source src="Black_And_White_Pictures_Acoustic.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
         </div>
 
         <!-- Track 2 Placeholder -->
@@ -221,8 +231,10 @@
 
     </div>
 
+    <!-- Returns to the parent grid architecture -->
     <a href="index.html" class="foyer-button">Return to Foyer</a>
 
+    <!-- Footer copyright verified to target reality.html -->
     <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #000000; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 10px; margin-bottom: 20px;">
         Flave R Soul Records <a href="reality.html" style="color: inherit; text-decoration: none;">&copy;</a> 2026
     </p>
