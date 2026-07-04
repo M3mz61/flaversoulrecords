@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flave R Soul Granite — Flave R Soul Records</title>
+    <title>Granite Room — Flave R Soul Granite</title>
     <style>
         body {
             background-color: #ffffff !important;
             margin: 0;
-            padding: 60px 20px;
+            padding: 40px 20px 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
-            color: #000000 !important;
         }
 
-        /* Header Group Container */
         .header-group {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         .main-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            color: #000000 !important;
+            color: #000000;
             text-transform: uppercase;
             letter-spacing: 4px;
             font-size: 2.2rem;
@@ -35,27 +33,25 @@
         .sub-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: normal;
-            color: #000000 !important;
+            color: #555555;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: 1.2rem;
             margin: 0;
         }
 
-        /* Centered Graphic Element */
         .showcase-disc {
             width: 280px;
             height: 280px;
-            background-image: url("Logo/rock.jpeg"); 
+            background-image: url("Logo/Granite.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             border-radius: 50%;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
-        /* Tracklist Section */
         .tracklist-container {
             width: 100%;
             max-width: 600px;
@@ -64,155 +60,167 @@
             gap: 20px;
             margin-bottom: 50px;
         }
+        
         .track-entry {
             display: flex;
             flex-direction: column;
-            padding: 20px;
-            border: 1px solid #000000 !important;
-            border-radius: 4px;
+            padding: 24px;
+            border: 1px solid #e0e0e0;
+            border-radius: 0px;
             background-color: #fafafa;
+            color: inherit;
+            box-sizing: border-box;
         }
+        
         .track-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 6px;
+            gap: 15px;
         }
         .track-name {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
             font-size: 1.3rem;
-            color: #000000 !important;
+            color: #000000;
         }
         .track-version {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.8rem;
-            color: #000000 !important;
+            color: #777777;
             text-transform: uppercase;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
         .track-artist {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.95rem;
             font-weight: 500;
-            color: #000000 !important;
+            color: #333333;
             margin-bottom: 8px;
         }
         .track-meta {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             font-size: 0.75rem;
-            color: #000000 !important;
+            color: #999999;
             letter-spacing: 0.5px;
             line-height: 1.4;
         }
 
-        /* Premium Return Button */
         .foyer-button {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
             font-size: 1rem;
-            color: #000000 !important;
+            color: #000000;
             text-transform: uppercase;
             letter-spacing: 3px;
             text-decoration: none;
-            padding: 10px 25px;
-            border: 1px solid #000000 !important;
+            padding: 12px 30px;
+            border: 1px solid #000000;
             border-radius: 2px;
             background: transparent;
             transition: all 0.3s ease;
             cursor: pointer;
+            margin-bottom: 40px;
+            display: inline-block;
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
         }
         .foyer-button:hover {
             background-color: #000000;
-            color: #ffffff !important;
+            color: #ffffff;
             letter-spacing: 4px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 30px 15px 40px 15px;
+            }
+            .main-title {
+                font-size: 1.7rem;
+            }
+            .showcase-disc {
+                width: 240px;
+                height: 240px;
+                margin-bottom: 30px;
+            }
+            .track-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+            .track-name {
+                font-size: 1.2rem;
+            }
+            .track-version {
+                white-space: normal;
+            }
+            .foyer-button {
+                width: 80%;
+                max-width: 280px;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="header-group">
-        <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">Flave R Soul Granite — Catalog</h2>
+        <h1 class="main-title">Flave R Soul Granite</h1>
+        <h2 class="sub-title">Archival Rock, Energy & Heavy Transients</h2>
     </div>
 
     <div class="showcase-disc"></div>
 
     <div class="tracklist-container">
         
-        <!-- Track 1 -->
+        <!-- Track 1: Live Now -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">One Kiss</span>
-                <span class="track-version">Black Rose Edition</span>
+                <span class="track-version">Single</span>
             </div>
-            <div class="track-artist">Single by: Memz</div>
-            <span class="track-meta">Genre: Rock • Label: Flave R Soul Granite • Release Date: 04 July, 2026<br>UPC/EAN: 5064020484603 • Smartlink: https://ditto.fm • Copyright: © 2026, Mehmet Osman</span>
+            <div class="track-artist">Single by: Memz (Featuring Lee on electronic kit drum stems)</div>
+            <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Granite • Release Date: 04 July 2026<br>Copyright: ℗ 2026, Mehmet Osman</span>
         </div>
 
-        <!-- Track 2 -->
+        <!-- Track 2: July 11 Drop -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">Black & White Pictures</span>
-                <span class="track-version">Piano Edition</span>
+                <span class="track-version">Black Rose Granite Edition</span>
             </div>
             <div class="track-artist">Single by: Memz</div>
-            <span class="track-meta">Genre: Rock / Blues • Label: Flave R Soul Granite • Release Date: 31 July, 2026<br>Copyright: © 2026, Mehmet Osman</span>
+            <span class="track-meta">Genre: Rock • Label: Flave R Soul Granite • Release Date: 11 July 2026<br>Copyright: ℗ 2026, Mehmet Osman • Status: Confirmed & Ingesting</span>
         </div>
 
-        <!-- Track 3 -->
+        <!-- Track 3: August 12 Drop -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">My Vagabond Heart</span>
-                <span class="track-version">Processing Release</span>
+                <span class="track-version">Single</span>
             </div>
             <div class="track-artist">Single by: Memz</div>
-            <span class="track-meta">Genre: Rock • Label: Flave R Soul Granite • Release Date: 12 August, 2026<br>ISRC: GXL3V2600005 • Copyright: © 2026, Mehmet Osman</span>
+            <span class="track-meta">Genre: Rock • Label: Flave R Soul Granite • Release Date: 12 August 2026<br>Copyright: ℗ 2026, Mehmet Osman • Status: Confirmed & Ingesting</span>
         </div>
 
-        <!-- Track 4 -->
+        <!-- Track 4: September 15 Drop -->
         <div class="track-entry">
             <div class="track-header">
-                <span class="track-name">I'm Walking (You Just Keep Talking)</span>
-                <span class="track-version">Live</span>
+                <span class="track-name">Tell Me That I'm Cynical</span>
+                <span class="track-version">Single</span>
             </div>
             <div class="track-artist">Single by: Memz</div>
-            <span class="track-meta">Genre: Rock • Label: Flave R Soul Granite • Release Date: 11 September, 2026<br>ISRC: GXL3V2600023 • UPC/EAN: 5064020515659 • Smartlink: https://ditto.fm • Copyright: © 2026, Mehmet Osman</span>
-        </div>
-
-        <!-- Track 5 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">So Glad She's Gone</span>
-                <span class="track-version">Live</span>
-            </div>
-            <div class="track-artist">Single by: Memz</div>
-            <span class="track-meta">Genre: Rock • Label: Flave R Soul Granite • Release Date: 15 September, 2026<br>UPC/EAN: 5064020555952 • Smartlink: https://ditto.fm • Copyright: © 2026, Mehmet Osman</span>
-        </div>
-
-        <!-- Track 6 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Meatballs (Rockin’ and Rollin’)</span>
-                <span class="track-version">Live</span>
-            </div>
-            <div class="track-artist">Single by: Memz</div>
-            <span class="track-meta">Genre: Rock / Blues • Label: Flave R Soul Granite • Release Date: 23 September, 2026<br>UPC/EAN: 5064020567146 • Smartlink: https://ditto.fm • Copyright: © 2026, Mehmet Osman</span>
-        </div>
-
-        <!-- Track 7 -->
-        <div class="track-entry">
-            <div class="track-header">
-                <span class="track-name">Her Cauldron Of Love</span>
-                <span class="track-version">Processing Release</span>
-            </div>
-            <div class="track-artist">Single by: Memz</div>
-            <span class="track-meta">Genre: Rock / Blues • Label: Flave R Soul Granite • Release Date: 02 October, 2026<br>Copyright: © 2026, Mehmet Osman</span>
+            <span class="track-meta">Genre: Rock / Blues • Label: Flave R Soul Granite • Release Date: 15 September 2026<br>Copyright: ℗ 2026, Mehmet Osman • Status: Confirmed & Ingesting</span>
         </div>
 
     </div>
 
     <a href="index.html" class="foyer-button">Return to Foyer</a>
+
+    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #000000; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 10px; margin-bottom: 20px;">
+        Flave R Soul Records <a href="reality.html" style="color: inherit; text-decoration: none;">&copy;</a> 2026
+    </p>
 
 </body>
 </html>
