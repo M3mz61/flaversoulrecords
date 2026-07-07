@@ -3,286 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foyer — Flave R Soul Records</title>
+    <title>Flave R Soul Records — Official Entry</title>
     <style>
         body {
             background-color: #ffffff !important;
             margin: 0;
-            padding: 60px 20px;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-between;
             min-height: 100vh;
             box-sizing: border-box;
             color: #000000 !important;
         }
 
-        /* Header Group Container */
-        .header-group {
+        .top-spacer {
+            height: 40px;
+        }
+
+        .landing-main {
             text-align: center;
-            margin-bottom: 60px;
+            padding: 20px;
+            max-width: 400px;
             width: 100%;
-        }
-        .main-title {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            color: #000000 !important;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 2.2rem;
-            margin: 0 0 16px 0;
-            line-height: 1.2;
-        }
-        .sub-title {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: normal;
-            color: #000000 !important;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 1.2rem;
-            margin: 0;
-        }
-
-        /* RESPONSIVE LAYOUT WRAPPER: Forces exact 4-column rows on Mac/Desktop */
-        .foyer-grid {
-            width: 100%;
-            max-width: 1400px;        
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 50px 40px;            
-            margin: 0 auto;
-        }
-
-        /* Room Link Wrapper */
-        .room-link {
-            text-decoration: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
-            width: 100%;              
-            transition: transform 0.2s ease;
-            cursor: pointer;
-            box-sizing: border-box;
-        }
-        
-        .room-link:hover {
-            transform: translateY(-4px); 
+            justify-content: center;
+            flex-grow: 1;
         }
 
-        /* Centered Disc Graphics */
-        .foyer-disc {
-            width: 280px;
-            height: 280px;
+        /* Black and White Logo Insignia Box */
+        .brand-logo {
+            width: 260px;
+            height: 260px;
             border-radius: 50%;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-            overflow: hidden; 
+            background-image: url("Logo/FlaveRSoulLogo001.JPEG");
+            background-size: cover;
             background-repeat: no-repeat;
-            background-position: center center;
+            background-position: center;
+            border: 1px solid #000000 !important;
         }
 
-        /* Specific Background Assignments */
-        .disc-gold { background-image: url("Logo/gold.jpeg"); background-size: 102% 102%; }
-        .disc-silver { background-image: url("Logo/silver.jpeg"); background-size: 102% 102%; }
-        .disc-platinum { background-image: url("Logo/platinum.jpeg"); background-size: 102% 102%; }
-        .disc-bronze { background-image: url("Logo/bronze.jpeg"); background-size: 102% 102%; }
-        .disc-acoustic { background-image: url("Logo/Acoustic.jpeg"); background-size: 102% 102%; }
-        .disc-granite { background-image: url("Logo/rock.jpeg"); background-size: 102% 102%; }
-        .disc-concrete { background-image: url("Logo/concrete.jpeg"); background-size: 102% 102%; }
-        .disc-studio { background-image: url("Logo/studio.jpeg"); background-size: 116% 116%; background-color: #000000; }
-        .disc-mastering { background-image: url("Logo/goldonv Large.jpeg"); background-size: 102% 102%; }
-        .disc-adr { background-image: url("Logo/ADR.jpeg"); background-size: 102% 102%; }
-        .disc-mnd { background-image: url("Logo/Violet.jpeg"); background-size: 102% 102%; }
-        .disc-ar { background-image: url("Logo/Aqua.jpeg"); background-size: 102% 102%; }
-
-        /* Typography Styles */
-        .room-title {
+        .brand-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
-            font-size: 1.6rem;
             color: #000000 !important;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin: 0 0 8px 0;
-        }
-        .room-description {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.95rem;
-            color: #000000 !important;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 0;
+            letter-spacing: 5px;
+            font-size: 2.2rem;
+            margin: 0 0 45px 0;
+            line-height: 1.2;
         }
 
-        /* Brand Footer Container & Links Styles */
+        /* Premium Bodoni Portal Control Button */
+        .enter-button {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #000000 !important;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            padding: 12px 50px;
+            border: 1px solid #000000 !important;
+            border-radius: 2px;
+            background: transparent;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .enter-button:hover {
+            background-color: #000000;
+            color: #ffffff !important;
+            letter-spacing: 6px;
+        }
+
         .brand-footer {
-            margin-top: 60px;
+            padding-bottom: 30px;
             text-align: center;
             width: 100%;
         }
-        
         .footer-copyright {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-size: 0.85rem;
             color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin: 0 0 15px 0;
+            margin: 0;
         }
-        
         .secret-biography-anchor {
             color: #000000 !important;
             text-decoration: none;
             cursor: default;
         }
 
-        .footer-links-group {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px 25px;
-        }
-
-        .footer-sub-link {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-size: 0.8rem;
-            color: #000000 !important;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            padding-bottom: 2px;
-            transition: border-color 0.2s ease;
-        }
-
-        .footer-sub-link:hover {
-            border-bottom-color: #000000;
-        }
-
-        /* Tablet View: 2 Columns */
-        @media (max-width: 1200px) {
-            .foyer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 700px;
+        @media (max-width: 600px) {
+            .brand-logo {
+                width: 220px;
+                height: 220px;
+                margin-bottom: 30px;
             }
-        }
-
-        /* iPhone View: Overrides grid to make everything clean, stacked, and single-column */
-        @media (max-width: 650px) {
-            .foyer-grid {
-                grid-template-columns: 1fr;
-                max-width: 320px;
-                gap: 50px 0;
+            .brand-title {
+                font-size: 1.8rem;
+                margin-bottom: 35px;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="header-group">
-        <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">Main Foyer</h2>
+    <div class="top-spacer"></div>
+
+    <div class="landing-main">
+        <h1 class="brand-title">Flave R Soul<br>Records</h1>
+        <div class="brand-logo"></div>
+        <a href="foyer.html" class="enter-button">Enter</a>
     </div>
 
-    <div class="foyer-grid">
-
-        <!-- 1 -->
-        <a href="gold-room.html" class="room-link">
-            <div class="foyer-disc disc-gold"></div>
-            <h3 class="room-title">Gold Room</h3>
-            <p class="room-description">Catalog</p>
-        </a>
-
-        <!-- 2 -->
-        <a href="silver-room.html" class="room-link">
-            <div class="foyer-disc disc-silver"></div>
-            <h3 class="room-title">Flave R Soul Groove</h3>
-            <p class="room-description">Soul Music</p>
-        </a>
-
-        <!-- 3 -->
-        <a href="platinum-room.html" class="room-link">
-            <div class="foyer-disc disc-platinum"></div>
-            <h3 class="room-title">Platinum Room</h3>
-            <p class="room-description">Dance Catalog</p>
-        </a>
-
-        <!-- 4 -->
-        <a href="bronze-room.html" class="room-link">
-            <div class="foyer-disc disc-bronze"></div>
-            <h3 class="room-title">Flave R Soul Español</h3>
-            <p class="room-description">Spanish Catalog</p>
-        </a>
-
-        <!-- 5 -->
-        <a href="acoustic.html" class="room-link">
-            <div class="foyer-disc disc-acoustic"></div>
-            <h3 class="room-title">Flave R Soul Acoustic</h3>
-            <p class="room-description">Stripped Down Mixes</p>
-        </a>
-
-        <!-- 6 -->
-        <a href="rock-room.html" class="room-link"> 
-            <div class="foyer-disc disc-granite"></div>
-            <h3 class="room-title">Flave R Soul Granite</h3>
-            <p class="room-description">Rock Catalog</p>
-        </a>
-
-        <!-- 7 -->
-        <a href="concrete-room.html" class="room-link">
-            <div class="foyer-disc disc-concrete"></div>
-            <h3 class="room-title">Concrete Room</h3>
-            <p class="room-description">Urban Catalog</p>
-        </a>
-
-        <!-- 8 -->
-        <a href="studio.html" class="room-link">
-            <div class="foyer-disc disc-studio"></div>
-            <h3 class="room-title">Studio Hire</h3>
-            <p class="room-description">Producer Booking</p>
-        </a>
-
-        <!-- 9 -->
-        <a href="mastering.html" class="room-link">
-            <div class="foyer-disc disc-mastering"></div>
-            <h3 class="room-title">Invisible Mastering</h3>
-            <p class="room-description">Audio Suite</p>
-        </a>
-
-        <!-- 10 -->
-        <a href="adr.html" class="room-link">
-            <div class="foyer-disc disc-adr"></div>
-            <h3 class="room-title">ADR & Voiceover</h3>
-            <p class="room-description">Post Production</p>
-        </a>
-
-        <!-- 11 -->
-        <a href="mnd.html" class="room-link">
-            <div class="foyer-disc disc-mnd"></div>
-            <h3 class="room-title">Memz & DeeAfro</h3>
-            <p class="room-description">Exclusive Releases</p>
-        </a>
-
-        <!-- 12 -->
-        <a href="development.html" class="room-link">
-            <div class="foyer-disc disc-ar"></div>
-            <h3 class="room-title">A & R Room</h3>
-            <p class="room-description">Talent & Development</p>
-        </a>
-
-    </div>
-
-    <!-- Brand Footer Container -->
     <div class="brand-footer">
         <p class="footer-copyright">
             Flave R Soul Records <a href="zeitgeist.html" class="secret-biography-anchor">©</a> 2026
         </p>
-        <div class="footer-links-group">
-            <a href="mastering.html" class="footer-sub-link">Mastering Suite</a>
-            <a href="studio.html" class="footer-sub-link">Studio Hire</a>
-        </div>
     </div>
 
 </body>
