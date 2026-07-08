@@ -108,30 +108,17 @@
             color: #000000 !important;
             letter-spacing: 0.5px;
             line-height: 1.4;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
-        /* Clean Stream Target Link Controller */
-        .stream-link-button {
-            display: inline-block;
-            align-self: flex-start;
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            font-size: 0.85rem;
-            color: #000000 !important;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-decoration: none;
-            padding: 8px 20px;
-            border: 1px solid #000000 !important;
-            border-radius: 2px;
-            background: transparent;
+        /* Native high-contrast player alignment */
+        .audio-wrapper {
+            width: 100%;
             margin-top: 10px;
-            transition: all 0.2s ease;
         }
-        .stream-link-button:hover {
-            background-color: #000000 !important;
-            color: #ffffff !important;
+        .audio-wrapper audio {
+            width: 100%;
+            outline: none;
         }
 
         .foyer-button {
@@ -200,7 +187,7 @@
 
     <div class="tracklist-container">
         
-        <!-- Track 1: Live Now with Clean Stream Gateway -->
+        <!-- Track 1: Live Now with Sovereign Native Playback -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">One Kiss</span>
@@ -208,7 +195,14 @@
             </div>
             <div class="track-artist">Single by: Memz (Featuring Lee on electronic kit drum stems)</div>
             <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Granite • Release Date: 04 July 2026<br>Copyright: ℗ 2026, Mehmet Osman</span>
-            <a href="https://spotify.com" target="_blank" class="stream-link-button">Listen on Spotify</a>
+            
+            <!-- Sovereign Audio Node: Plays directly from your GitHub hosting repository -->
+            <div class="audio-wrapper">
+                <audio controls>
+                    <source src="one-kiss-sample.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </div>
 
         <!-- Track 2: July 11 Drop -->
