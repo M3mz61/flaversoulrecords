@@ -34,20 +34,6 @@
             flex-grow: 1;
         }
 
-        /* Black and White Logo Insignia Box */
-        .brand-logo {
-            width: 260px;
-            height: 260px;
-            border-radius: 50%;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-            background-image: url("Logo/FlaveRSoulLogo001.JPEG");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            border: 1px solid #000000 !important;
-        }
-
         .brand-title {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
             font-weight: bold;
@@ -59,28 +45,25 @@
             line-height: 1.2;
         }
 
-        /* Premium Bodoni Portal Control Button */
-        .enter-button {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: #000000 !important;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            text-decoration: none;
-            padding: 12px 50px;
+        /* Black and White Logo Link Box as the sole portal trigger */
+        .brand-logo-link {
+            display: block;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            background-image: url("Logo/FlaveRSoulLogo001.JPEG");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             border: 1px solid #000000 !important;
-            border-radius: 2px;
-            background: transparent;
-            transition: all 0.3s ease;
-            display: inline-block;
-            cursor: pointer;
             -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
-        .enter-button:hover {
-            background-color: #000000;
-            color: #ffffff !important;
-            letter-spacing: 6px;
+        .brand-logo-link:hover {
+            transform: scale(1.02);
         }
 
         .brand-footer {
@@ -90,20 +73,22 @@
         }
         .footer-copyright {
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
             font-size: 0.85rem;
             color: #000000 !important;
             text-transform: uppercase;
             letter-spacing: 3px;
             margin: 0;
         }
-        .secret-biography-anchor {
+        .decoy-legal-anchor {
             color: #000000 !important;
             text-decoration: none;
+            font-weight: bold;
             cursor: default;
         }
 
         @media (max-width: 600px) {
-            .brand-logo {
+            .brand-logo-link {
                 width: 220px;
                 height: 220px;
                 margin-bottom: 30px;
@@ -121,13 +106,13 @@
 
     <div class="landing-main">
         <h1 class="brand-title">Flave R Soul<br>Records</h1>
-        <div class="brand-logo"></div>
-        <a href="foyer.html" class="enter-button">Enter</a>
+        <!-- Central Logo acts directly as the navigation link block -->
+        <a href="foyer.html" class="brand-logo-link" aria-label="Enter Studio Foyer"></a>
     </div>
 
     <div class="brand-footer">
         <p class="footer-copyright">
-            Flave R Soul Records <a href="zeitgeist.html" class="secret-biography-anchor">©</a> 2026
+            Flave R Soul Records <a href="copyright.html" class="decoy-legal-anchor">©</a> 2026
         </p>
     </div>
 
