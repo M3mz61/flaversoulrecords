@@ -111,14 +111,10 @@
             margin-bottom: 15px;
         }
 
-        /* Native high-contrast player alignment */
-        .audio-wrapper {
+        /* Clean wrapper for the official Spotify streaming widget */
+        .spotify-embed-wrapper {
             width: 100%;
             margin-top: 10px;
-        }
-        .audio-wrapper audio {
-            width: 100%;
-            outline: none;
         }
 
         .foyer-button {
@@ -187,7 +183,7 @@
 
     <div class="tracklist-container">
         
-        <!-- Track 1: Live Now with Sovereign Native Playback -->
+        <!-- Track 1: One Kiss containing the official Spotify Streaming Link -->
         <div class="track-entry">
             <div class="track-header">
                 <span class="track-name">One Kiss</span>
@@ -196,12 +192,9 @@
             <div class="track-artist">Single by: Memz (Featuring Lee on electronic kit drum stems)</div>
             <span class="track-meta">Official Release Portfolio • Imprint: Flave R Soul Granite • Release Date: 04 July 2026<br>Copyright: ℗ 2026, Mehmet Osman</span>
             
-            <!-- Sovereign Audio Node: Plays directly from your GitHub hosting repository -->
-            <div class="audio-wrapper">
-                <audio controls>
-                    <source src="one-kiss-sample.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+            <!-- Standard Spotify Embed Code structured for maximum container alignment -->
+            <div class="spotify-embed-wrapper">
+                <iframe style="border-radius:0px" src="https://spotify.com" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
 
