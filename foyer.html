@@ -160,6 +160,23 @@
         .footer-sub-link:hover {
             border-bottom-color: #000000;
         }
+
+        /* Intermediate Layout: Changes layout to 2 columns strictly on tablets or small windows */
+        @media (max-width: 1024px) {
+            .foyer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
+            }
+        }
+
+        /* iPhone Portrait Mode: Forces single-column vertical stack */
+        @media (max-width: 480px) {
+            .foyer-grid {
+                grid-template-columns: 1fr;
+                max-width: 320px;
+                gap: 50px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -213,7 +230,7 @@
             <p class="room-description">Rock Catalog</p>
         </a>
 
-        <!-- 7 -->
+        <!-- 7: Renamed to match concrete aesthetic with raw description update -->
         <a href="concrete-room.html" class="room-link">
             <div class="foyer-disc disc-concrete"></div>
             <h3 class="room-title">Flave R Soul Concrete</h3>
