@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foyer — Flave R Soul Records</title>
+    <title>Room Template — Flave R Soul Records</title>
     <style>
         body {
             background-color: #ffffff !important;
@@ -43,81 +43,20 @@
             margin: 0;
         }
 
-        /* RESPONSIVE LAYOUT WRAPPER: Forces exact 4-column rows on Mac/Desktop */
-        .foyer-grid {
+        /* Standard Content Container for Rooms */
+        .room-content {
             width: 100%;
-            max-width: 1400px;        
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 50px 40px;            
+            max-width: 1400px;
             margin: 0 auto;
-        }
-
-        /* Room Link Wrapper */
-        .room-link {
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             text-align: center;
-            width: 100%;              
-            transition: transform 0.2s ease;
-            cursor: pointer;
-            box-sizing: border-box;
-        }
-        
-        .room-link:hover {
-            transform: translateY(-4px); 
-        }
-
-        /* Centered Disc Graphics */
-        .foyer-disc {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-            overflow: hidden; 
-            background-repeat: no-repeat;
-            background-position: center center;
-        }
-
-        /* Specific Background Assignments */
-        .disc-gold { background-image: url("Logo/gold.jpeg"); background-size: 102% 102%; }
-        .disc-silver { background-image: url("Logo/silver.jpeg"); background-size: 102% 102%; }
-        .disc-platinum { background-image: url("Logo/platinum.jpeg"); background-size: 102% 102%; }
-        .disc-bronze { background-image: url("Logo/bronze.jpeg"); background-size: 102% 102%; }
-        .disc-acoustic { background-image: url("Logo/Acoustic.jpeg"); background-size: 102% 102%; }
-        .disc-granite { background-image: url("Logo/rock.jpeg"); background-size: 102% 102%; }
-        .disc-concrete { background-image: url("Logo/concrete.jpeg"); background-size: 102% 102%; }
-        .disc-studio { background-image: url("Logo/studio.jpeg"); background-size: 116% 116%; background-color: #000000; }
-        .disc-mastering { background-image: url("Logo/goldonv Large.jpeg"); background-size: 102% 102%; }
-        .disc-adr { background-image: url("Logo/ADR.jpeg"); background-size: 102% 102%; }
-        .disc-mnd { background-image: url("Logo/Violet.jpeg"); background-size: 102% 102%; }
-        .disc-ar { background-image: url("Logo/Aqua.jpeg"); background-size: 102% 102%; }
-
-        /* Typography Styles */
-        .room-title {
-            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
-            font-weight: bold;
-            font-size: 1.6rem;
-            color: #000000 !important;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin: 0 0 8px 0;
-        }
-        .room-description {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 0.95rem;
             color: #000000 !important;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 0;
         }
 
         /* Brand Footer Container & Links Styles */
         .brand-footer {
-            margin-top: 60px;
+            margin-top: auto; /* Pushes footer to the bottom if content is short */
+            padding-top: 60px;
             text-align: center;
             width: 100%;
         }
@@ -134,7 +73,7 @@
         .secret-biography-anchor {
             color: #000000 !important;
             text-decoration: none;
-            cursor: default;
+            cursor: default; /* Blends seamlessly into normal text */
         }
 
         .footer-links-group {
@@ -160,128 +99,26 @@
         .footer-sub-link:hover {
             border-bottom-color: #000000;
         }
-
-        /* Tablet View: 2 Columns */
-        @media (max-width: 1200px) {
-            .foyer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 700px;
-            }
-        }
-
-        /* iPhone View: Overrides grid to make everything clean, stacked, and single-column */
-        @media (max-width: 650px) {
-            .foyer-grid {
-                grid-template-columns: 1fr;
-                max-width: 320px;
-                gap: 50px 0;
-            }
-        }
     </style>
 </head>
 <body>
 
     <div class="header-group">
         <h1 class="main-title">Flave R Soul Records</h1>
-        <h2 class="sub-title">Main Foyer</h2>
+        <h2 class="sub-title">Room Name</h2>
     </div>
 
-    <div class="foyer-grid">
-
-        <!-- 1 -->
-        <a href="gold-room.html" class="room-link">
-            <div class="foyer-disc disc-gold"></div>
-            <h3 class="room-title">Gold Room</h3>
-            <p class="room-description">Catalog</p>
-        </a>
-
-        <!-- 2 -->
-        <a href="silver-room.html" class="room-link">
-            <div class="foyer-disc disc-silver"></div>
-            <h3 class="room-title">Flave R Soul Groove</h3>
-            <p class="room-description">Soul Music</p>
-        </a>
-
-        
-        <a href="platinum-room.html" class="room-link">
-            <div class="foyer-disc disc-platinum"></div>
-            <h3 class="room-title">Flave R Soul Dance</h3>
-            <p class="room-description">Dance Catalog</p>
-        </a>
-
-        <!-- 4 -->
-        <a href="bronze-room.html" class="room-link">
-            <div class="foyer-disc disc-bronze"></div>
-            <h3 class="room-title">Flave R Soul Español</h3>
-            <p class="room-description">Spanish Catalog</p>
-        </a>
-
-        <!-- 5 -->
-        <a href="acoustic.html" class="room-link">
-            <div class="foyer-disc disc-acoustic"></div>
-            <h3 class="room-title">Flave R Soul Acoustic</h3>
-            <p class="room-description">Stripped Down Mixes</p>
-        </a>
-
-        <!-- 6 -->
-        <a href="rock-room.html" class="room-link"> 
-            <div class="foyer-disc disc-granite"></div>
-            <h3 class="room-title">Flave R Soul Granite</h3>
-            <p class="room-description">Rock Catalog</p>
-        </a>
-
-        <!-- 7: Renamed to match concrete aesthetic with raw description update -->
-        <a href="concrete-room.html" class="room-link">
-            <div class="foyer-disc disc-concrete"></div>
-            <h3 class="room-title">Flave R Soul Concrete</h3>
-            <p class="room-description">Urban Beats</p>
-        </a>
-
-        <!-- 8 -->
-        <a href="studio.html" class="room-link">
-            <div class="foyer-disc disc-studio"></div>
-            <h3 class="room-title">Studio Hire</h3>
-            <p class="room-description">Producer Booking</p>
-        </a>
-
-        <!-- 9 -->
-        <a href="mastering.html" class="room-link">
-            <div class="foyer-disc disc-mastering"></div>
-            <h3 class="room-title">Invisible Mastering</h3>
-            <p class="room-description">Audio Suite</p>
-        </a>
-
-        <!-- 10 -->
-        <a href="adr.html" class="room-link">
-            <div class="foyer-disc disc-adr"></div>
-            <h3 class="room-title">ADR & Voiceover</h3>
-            <p class="room-description">Post Production</p>
-        </a>
-
-        <!-- 11 -->
-        <a href="mnd.html" class="room-link">
-            <div class="foyer-disc disc-mnd"></div>
-            <h3 class="room-title">Memz & DeeAfro</h3>
-            <p class="room-description">Exclusive Releases</p>
-        </a>
-
-        <!-- 12 -->
-        <a href="development.html" class="room-link">
-            <div class="foyer-disc disc-ar"></div>
-            <h3 class="room-title">A & R Room</h3>
-            <p class="room-description">Talent & Development</p>
-        </a>
-
+    <div class="room-content">
+        <!-- Room specific text, tracklists, or elements go right here -->
     </div>
 
-    <!-- Brand Footer Container -->
+    <!-- Brand Footer Container with Unique Secret Anchor -->
     <div class="brand-footer">
         <p class="footer-copyright">
-            Flave R Soul Records <a href="zeitgeist.html" class="secret-biography-anchor">©</a> 2026
+            Flave R Soul Records <a href="secret-page-one.html" class="secret-biography-anchor">©</a> 2026
         </p>
         <div class="footer-links-group">
-            <a href="mastering.html" class="footer-sub-link">Mastering Suite</a>
-            <a href="studio.html" class="footer-sub-link">Studio Hire</a>
+            <a href="index.html" class="footer-sub-link">Return to Foyer</a>
         </div>
     </div>
 
