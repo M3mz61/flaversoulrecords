@@ -170,5 +170,12 @@
     <!-- Clear Framed Return Button to foyer.html -->
     <a href="foyer.html" class="foyer-button">Return to Foyer</a>
 
+    <!-- Security Script: Disables right-click and long-press menus on audio players -->
+    <script>
+        document.querySelectorAll('audio').forEach(player => {
+            player.addEventListener('contextmenu', e => e.preventDefault());
+        });
+    </script>
+
 </body>
 </html>
