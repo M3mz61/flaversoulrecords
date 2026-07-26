@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Sonic | Flave R Soul Records</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: "Bodoni 72", "Bodoni MT", Didot, "Playfair Display", serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        header {
+            margin-bottom: 40px;
+        }
+        .back-link {
+            color: #000000;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .artist-profile {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+        @media (min-width: 768px) {
+            .artist-profile {
+                grid-template-columns: 400px 1fr;
+            }
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 0 0 20px 0;
+            font-weight: normal;
+            line-height: 1;
+        }
+        .bio {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            text-align: justify;
+        }
+        /* Main Image Styling */
+        .main-image img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #000000;
+            display: block;
+            margin-bottom: 30px;
+        }
+        /* Gallery Grid for the Remaining 4 Images */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .image-gallery img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border: 1px solid #000000;
+            display: block;
+        }
+        /* Streaming Widgets Sections */
+        .releases-section {
+            margin-top: 60px;
+            border-top: 1px solid #000000;
+            padding-top: 40px;
+        }
+        .releases-section h3 {
+            font-size: 2rem;
+            font-weight: normal;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        .widget-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 600px) {
+            .widget-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .stream-box {
+            border: 1px solid #000000;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">← Flave R Soul Roster</a>
+        </header>
+
+        <main class="artist-profile">
+            <!-- Left Column: Image Portfolios (Main + Gallery) -->
+            <div class="visuals-column">
+                <div class="main-image">
+                    <!-- First main file with lowercase extension -->
+                    <img src="Artists/sonic.jpg" alt="DJ Sonic Main">
+                </div>
+                
+                <div class="image-gallery">
+                    <!-- Remaining 4 files matching uppercase extensions exactly -->
+                    <img src="Artists/sonic2.JPG" alt="DJ Sonic 2">
+                    <img src="Artists/sonic3.JPG" alt="DJ Sonic 3">
+                    <img src="Artists/sonic4.JPG" alt="DJ Sonic 4">
+                    <img src="Artists/sonic5.JPG" alt="DJ Sonic 5">
+                </div>
+            </div>
+
+            <!-- Right Column: Biography Content -->
+            <div class="profile-details">
+                <h1>DJ Sonic</h1>
+                
+                <div class="bio">
+                    <p>With roots tracing back to the mid-90s underground scene, DJ Sonic has spent decades mastering everything from Acid House, Hardcore, and Jungle, to UKG and Drum and Bass. This extensive genre fluidity gives him an innate understanding of the dancefloor, allowing him to read any crowd and seamlessly elevate the energy of any room.</p>
+                </div>
+
+                <!-- Streaming Box Embed Targets for Symphonic Delivery on July 31st -->
+                <div class="releases-section">
+                    <h3>Latest Releases</h3>
+                    <div class="widget-grid">
+                        <div class="stream-box">
+                            <p>Spotify Audio Player</p>
+                            <!-- Paste Symphonic Spotify iFrame player link here on July 31st -->
+                        </div>
+                        <div class="stream-box">
+                            <p>Apple Music Player</p>
+                            <!-- Paste Symphonic Apple Music iFrame player link here on July 31st -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
 
