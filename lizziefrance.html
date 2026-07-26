@@ -16,24 +16,9 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
         
-        /* Top Left Roster Navigation Alignment */
-        header {
-            margin-bottom: 30px;
-        }
-        .roster-link {
-            color: #000000;
-            text-decoration: none;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        /* Top Center Main Image Layout */
         .profile-layout {
             display: flex;
             flex-direction: column;
@@ -59,7 +44,6 @@
             text-align: center;
         }
         
-        /* Biography Block */
         .bio {
             font-size: 1.25rem;
             margin-bottom: 40px;
@@ -68,7 +52,6 @@
             width: 100%;
         }
 
-        /* 4 Remaining Gallery Images Row Below Text */
         .numbered-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -90,7 +73,7 @@
             display: block;
         }
 
-        /* Premium Navigation Actions */
+        /* White Buttons in a Dedicated Navigation Container */
         .premium-nav-container {
             display: flex;
             justify-content: center;
@@ -99,48 +82,45 @@
             border-top: 1px solid #000000;
             padding-top: 30px;
             width: 100%;
+            max-width: 650px;
         }
         .premium-btn {
             display: inline-block;
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #000000;
             text-decoration: none;
             padding: 12px 28px;
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            transition: background-color 0.2s ease, color 0.2s ease;
             border: 1px solid #000000;
             font-weight: bold;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
         .premium-btn:hover {
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #000000;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Top Navigation Header -->
-        <header>
-            <a href="artist.html" class="roster-link">← FLAVE R SOUL ROSTER</a>
-        </header>
-
         <main class="profile-layout">
             <!-- Top Center Main Image File -->
             <div class="main-image">
-                <img src="Artists/ljf.JPG" alt="Lizzie France Profile">
+                <img src="Artists/ljf.jpg" alt="Lizzie France Profile">
             </div>
 
+            <!-- Artist Name Header -->
             <h1>Lizzie France</h1>
             
-            <!-- Biography Details Placeholder -->
+            <!-- Biography Paragraph Placeholder -->
             <div class="bio">
-                <p>Elizabeth France is a London Based Vocalist with many releases within the underground house music scene, working with producer Memz most recently with her soulful vocals on the disco inspired 'Living Without Your Love' (Radio Edition & Club Edition Remix) reaching 17 in the Beatport Hype Dance/Pop Genre despite mis-categorisation her solid performance on that track must have an effect on the listeners.</p>
+                <p>Enter biography text for Lizzie France here. This section will highlight her unique contribution, vocal history, and upcoming releases under Flave R Soul Records.</p>
             </div>
 
-            <!-- Gallery Block Placed Directly Underneath Paragraph -->
+            <!-- Lower Grid Gallery Images -->
             <div class="numbered-gallery">
                 <img src="Artists/ljf2.JPG" alt="Lizzie France 2">
                 <img src="Artists/ljf3.JPG" alt="Lizzie France 3">
@@ -148,9 +128,9 @@
                 <img src="Artists/ljf5.JPG" alt="Lizzie France 5">
             </div>
 
-            <!-- Premium Navigation Actions -->
+            <!-- Premium Navigation Actions Container -->
             <div class="premium-nav-container">
-                <a href="artist.html" class="premium-btn">Artists Directory</a>
+                <a href="artists.html" class="premium-btn">Artists Directory</a>
                 <a href="foyer.html" class="premium-btn">Foyer Entry</a>
             </div>
         </main>
