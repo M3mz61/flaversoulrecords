@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memz & DeeAfro | Flave R Soul Records</title>
+    <title>Artists | Flave R Soul Records</title>
     <style>
         body {
             background-color: #ffffff;
@@ -14,86 +14,101 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 600px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
+        }
+        
+        /* Top Navigation Header */
+        header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .roster-title {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        /* 6 Artist Button Grid */
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px 30px;
+        }
+        @media (min-width: 480px) {
+            .artist-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 768px) {
+            .artist-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Card Button Elements */
+        .artist-card {
+            text-decoration: none;
+            color: #000000;
             display: flex;
             flex-direction: column;
-        }
-
-        /* Profile Image Layout Frame */
-        .main-image {
-            width: 100%;
-            margin-bottom: 30px;
-        }
-        .main-image img {
-            width: 100%;
-            height: auto;
-            border: 1px solid #000000;
-            display: block;
-        }
-        
-        /* Artist Name Heading */
-        h1 {
-            font-size: 3.8rem;
-            margin: 0 0 30px 0;
-            font-weight: normal;
-            line-height: 1;
+            align-items: center;
             text-align: center;
+            transition: transform 0.2s ease;
         }
-        
-        /* Biography Text Content Block */
-        .bio {
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-            text-align: justify;
-            color: #000000;
+        .artist-card:hover {
+            transform: scale(1.02);
         }
-
-        /* The 4 Gallery Images formatted into a crisp 2x2 mobile grid */
-        .numbered-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            width: 100%;
-            margin-bottom: 40px;
-        }
-        .numbered-gallery img {
+        .image-container {
             width: 100%;
             aspect-ratio: 1 / 1;
-            object-fit: cover;
             border: 1px solid #000000;
+            margin-bottom: 15px;
+            overflow: hidden;
+            background-color: #fafafa;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
         }
-
-        /* Horizontal rule divider */
-        hr {
-            border: 0;
-            border-top: 1px solid #000000;
-            width: 100%;
-            margin-bottom: 30px;
+        .artist-name {
+            font-size: 1.8rem;
+            margin: 0;
+            font-weight: normal;
+            line-height: 1.2;
         }
 
-        /* Clean White Navigation Layout featuring centered framed buttons side-by-side */
+        /* Fixed White Navigation Buttons with Black Text at Bottom */
         .premium-nav-container {
             display: flex;
             justify-content: center;
             gap: 15px;
             width: 100%;
-            margin-bottom: 20px;
+            margin-top: 50px;
+            border-top: 1px solid #000000;
+            padding-top: 30px;
         }
         .premium-btn {
             display: inline-block;
             background-color: #ffffff;
             color: #000000;
             text-decoration: none;
-            padding: 10px 0;
-            font-size: 0.95rem;
+            padding: 12px 0;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             border: 1px solid #000000;
-            width: 50%;
-            max-width: 220px;
+            width: 100%;
+            max-width: 280px;
             text-align: center;
             font-weight: bold;
         }
@@ -102,35 +117,67 @@
 <body>
 
     <div class="container">
+        <!-- Top Navigation Header with black button removed -->
+        <header>
+            <h1 class="roster-title">Flave R Soul Roster</h1>
+        </header>
+
         <main>
-            <!-- Top Main Image Placement (Change src to your preferred main image file name) -->
-            <div class="main-image">
-                <img src="Artists/bkg.png" alt="Memz & DeeAfro Profile">
+            <div class="artist-grid">
+                
+                <!-- 1) Lizzie France -->
+                <a href="lizziefrance.html" class="artist-card">
+                    <div class="image-container">
+                        <img src="Artists/art.JPG" alt="Lizzie France">
+                    </div>
+                    <h2 class="artist-name">Lizzie France</h2>
+                </a>
+
+                <!-- 2) Memz & DeeAfro -->
+                <a href="memzdeeafro.html" class="artist-card">
+                    <div class="image-container">
+                        <img src="Artists/bkg.png" alt="Memz & DeeAfro">
+                    </div>
+                    <h2 class="artist-name">Memz & DeeAfro</h2>
+                </a>
+
+                <!-- 3) DJ Sonic -->
+                <a href="djsonic.html" class="artist-card">
+                    <div class="image-container">
+                        <img src="Artists/art2.JPG" alt="DJ Sonic">
+                    </div>
+                    <h2 class="artist-name">DJ Sonic</h2>
+                </a>
+
+                <!-- 4) Juan Manuel Gonzalez -->
+                <a href="juanmanuelgonzalez.html" class="artist-card">
+                    <div class="image-container">
+                        <img src="Artists/art3.JPG" alt="Juan Manuel Gonzalez">
+                    </div>
+                    <h2 class="artist-name">Juan Manuel Gonzalez</h2>
+                </a>
+
+                <!-- 5) Memz -->
+                <a href="memz.html" class="artist-card">
+                    <div class="image-container">
+                        <img src="Artists/art4.JPG" alt="Memz">
+                    </div>
+                    <h2 class="artist-name">Memz</h2>
+                </a>
+
+                <!-- 6) DeeAfro -->
+                <a href="deeafro.html" class="artist-card">
+                    <div class="image-container">
+                        <img src="Artists/art5.JPG" alt="DeeAfro">
+                    </div>
+                    <h2 class="artist-name">DeeAfro</h2>
+                </a>
+
             </div>
 
-            <!-- Artist Header Name -->
-            <h1>Memz & DeeAfro</h1>
-            
-            <!-- Biography Text Block Placeholder -->
-            <div class="bio">
-                <p>Enter biography text for Memz & DeeAfro here. This section will detail their collaborative releases, music styles, and production history under Flave R Soul Records.</p>
-            </div>
-
-            <!-- The 4 Gallery Images (Change src files to match your exact camera roll uploads) -->
-            <div class="numbered-gallery">
-                <img src="Artists/mda2.JPG" alt="Memz & DeeAfro 2">
-                <img src="Artists/mda3.JPG" alt="Memz & DeeAfro 3">
-                <img src="Artists/mda4.JPG" alt="Memz & DeeAfro 4">
-                <img src="Artists/mda5.JPG" alt="Memz & DeeAfro 5">
-            </div>
-
-            <!-- Horizontal Break Line -->
-            <hr>
-
-            <!-- Custom Side-by-Side Framed White Buttons -->
+            <!-- Corrected White Buttons with Black Text at the Bottom -->
             <div class="premium-nav-container">
-                <a href="artists.html" class="premium-btn">Artists Roster</a>
-                <a href="foyer.html" class="premium-btn">Foyer Entry</a>
+                <a href="foyer.html" class="premium-btn">Return to Foyer</a>
             </div>
         </main>
     </div>
