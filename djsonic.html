@@ -14,147 +14,147 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 20px;
         }
+        
+        /* Your Existing Top Left Roster Navigation Alignment */
         header {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
-        .back-link {
+        .roster-link {
             color: #000000;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: bold;
+            display: inline-block;
         }
-        .back-link:hover {
-            text-decoration: underline;
+
+        /* Top Center Main Image Layout matching your screenshot */
+        .profile-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .artist-profile {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 50px;
+        .main-image {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
         }
-        @media (min-width: 768px) {
-            .artist-profile {
-                grid-template-columns: 400px 1fr;
-            }
-        }
-        h1 {
-            font-size: 4rem;
-            margin: 0 0 20px 0;
-            font-weight: normal;
-            line-height: 1;
-        }
-        .bio {
-            font-size: 1.3rem;
-            margin-bottom: 50px;
-            text-align: justify;
-        }
-        /* Main Image Styling */
         .main-image img {
             width: 100%;
             height: auto;
             border: 1px solid #000000;
             display: block;
-            margin-bottom: 30px;
         }
-        /* Gallery Grid for the Remaining 4 Images */
-        .image-gallery {
+        
+        h1 {
+            font-size: 3.5rem;
+            margin: 0 0 20px 0;
+            font-weight: normal;
+            line-height: 1;
+            text-align: center;
+        }
+        
+        /* Your Text Biography Block */
+        .bio {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            text-align: justify;
+            max-width: 650px;
+            width: 100%;
+        }
+
+        /* 4 Numbered Images Row Positioned Below Text Paragraph */
+        .numbered-gallery {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
-            margin-top: 30px;
+            width: 100%;
+            max-width: 650px;
+            margin: 30px auto;
         }
-        .image-gallery img {
+        @media (min-width: 480px) {
+            .numbered-gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .numbered-gallery img {
             width: 100%;
             aspect-ratio: 1 / 1;
             object-fit: cover;
             border: 1px solid #000000;
             display: block;
         }
-        /* Streaming Widgets Sections */
-        .releases-section {
-            margin-top: 60px;
+
+        /* Premium Navigation Buttons (Placed below the layout sections) */
+        .premium-nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 50px;
             border-top: 1px solid #000000;
-            padding-top: 40px;
+            padding-top: 30px;
+            width: 100%;
         }
-        .releases-section h3 {
-            font-size: 2rem;
-            font-weight: normal;
-            margin-top: 0;
-            margin-bottom: 30px;
-        }
-        .widget-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        @media (min-width: 600px) {
-            .widget-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        .stream-box {
+        .premium-btn {
+            display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background-color 0.2s ease, color 0.2s ease;
             border: 1px solid #000000;
-            padding: 30px;
-            text-align: center;
-            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .premium-btn:hover {
+            background-color: #ffffff;
+            color: #000000;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <!-- Top Navigation Header matching your phone's current typography layout -->
         <header>
-            <a href="index.html" class="back-link">← Flave R Soul Roster</a>
+            <a href="artist.html" class="roster-link">← FLAVE R SOUL ROSTER</a>
         </header>
 
-        <main class="artist-profile">
-            <!-- Left Column: Image Portfolios (Main + Gallery) -->
-            <div class="visuals-column">
-                <div class="main-image">
-                    <!-- First main file with lowercase extension -->
-                    <img src="Artists/sonic.jpg" alt="DJ Sonic Main">
-                </div>
-                
-                <div class="image-gallery">
-                    <!-- Remaining 4 files matching uppercase extensions exactly -->
-                    <img src="Artists/sonic2.JPG" alt="DJ Sonic 2">
-                    <img src="Artists/sonic3.JPG" alt="DJ Sonic 3">
-                    <img src="Artists/sonic4.JPG" alt="DJ Sonic 4">
-                    <img src="Artists/sonic5.JPG" alt="DJ Sonic 5">
-                </div>
+        <main class="profile-layout">
+            <!-- Top Center Main Image File -->
+            <div class="main-image">
+                <img src="Artists/sonic.jpg" alt="DJ Sonic Profile">
             </div>
 
-            <!-- Right Column: Biography Content -->
-            <div class="profile-details">
-                <h1>DJ Sonic</h1>
-                
-                <div class="bio">
-                    <p>With roots tracing back to the mid-90s underground scene, DJ Sonic has spent decades mastering everything from Acid House, Hardcore, and Jungle, to UKG and Drum and Bass. This extensive genre fluidity gives him an innate understanding of the dancefloor, allowing him to read any crowd and seamlessly elevate the energy of any room.</p>
-                </div>
+            <h1>DJ Sonic</h1>
+            
+            <!-- Biography Details and Bottom Gallery Stack -->
+            <div class="bio">
+                <p>With roots tracing back to the mid-90s underground scene, DJ Sonic has spent decades mastering everything from Acid House, Hardcore, and Jungle, to UKG and Drum and Bass. This extensive genre fluidity gives him an innate understanding of the dancefloor, allowing him to read any crowd and seamlessly elevate the energy of any room.</p>
+            </div>
 
-                <!-- Streaming Box Embed Targets for Symphonic Delivery on July 31st -->
-                <div class="releases-section">
-                    <h3>Latest Releases</h3>
-                    <div class="widget-grid">
-                        <div class="stream-box">
-                            <p>Spotify Audio Player</p>
-                            <!-- Paste Symphonic Spotify iFrame player link here on July 31st -->
-                        </div>
-                        <div class="stream-box">
-                            <p>Apple Music Player</p>
-                            <!-- Paste Symphonic Apple Music iFrame player link here on July 31st -->
-                        </div>
-                    </div>
-                </div>
+            <!-- Gallery Block Placed Directly Underneath Paragraph -->
+            <div class="numbered-gallery">
+                <img src="Artists/sonic2.JPG" alt="DJ Sonic 2">
+                <img src="Artists/sonic3.JPG" alt="DJ Sonic 3">
+                <img src="Artists/sonic4.JPG" alt="DJ Sonic 4">
+                <img src="Artists/sonic5.JPG" alt="DJ Sonic 5">
+            </div>
+
+            <!-- Premium Navigation Actions -->
+            <div class="premium-nav-container">
+                <a href="artist.html" class="premium-btn">Artists Directory</a>
+                <a href="foyer.html" class="premium-btn">Foyer Entry</a>
             </div>
         </main>
     </div>
 
 </body>
 </html>
-
