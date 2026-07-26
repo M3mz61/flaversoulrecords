@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizzie France | Flave R Soul Records</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: "Bodoni 72", "Bodoni MT", Didot, "Playfair Display", serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Top Left Roster Navigation Alignment */
+        header {
+            margin-bottom: 30px;
+        }
+        .roster-link {
+            color: #000000;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Top Center Main Image Layout */
+        .profile-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+        .main-image img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #000000;
+            display: block;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin: 0 0 20px 0;
+            font-weight: normal;
+            line-height: 1;
+            text-align: center;
+        }
+        
+        /* Biography Block */
+        .bio {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            text-align: justify;
+            max-width: 650px;
+            width: 100%;
+        }
+
+        /* 4 Remaining Gallery Images Row Below Text */
+        .numbered-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 100%;
+            max-width: 650px;
+            margin: 30px auto;
+        }
+        @media (min-width: 480px) {
+            .numbered-gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        .numbered-gallery img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border: 1px solid #000000;
+            display: block;
+        }
+
+        /* Premium Navigation Actions */
+        .premium-nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 50px;
+            border-top: 1px solid #000000;
+            padding-top: 30px;
+            width: 100%;
+        }
+        .premium-btn {
+            display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            border: 1px solid #000000;
+            font-weight: bold;
+        }
+        .premium-btn:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Top Navigation Header -->
+        <header>
+            <a href="artist.html" class="roster-link">← FLAVE R SOUL ROSTER</a>
+        </header>
+
+        <main class="profile-layout">
+            <!-- Top Center Main Image File -->
+            <div class="main-image">
+                <img src="Artists/ljf.jpg" alt="Lizzie France Profile">
+            </div>
+
+            <h1>Lizzie France</h1>
+            
+            <!-- Biography Details Placeholder -->
+            <div class="bio">
+                <p>Enter biography text for Lizzie France here. This section will highlight her unique contribution, vocal history, and upcoming releases under Flave R Soul Records.</p>
+            </div>
+
+            <!-- Gallery Block Placed Directly Underneath Paragraph -->
+            <div class="numbered-gallery">
+                <img src="Artists/ljf2.JPG" alt="Lizzie France 2">
+                <img src="Artists/ljf3.JPG" alt="Lizzie France 3">
+                <img src="Artists/ljf4.JPG" alt="Lizzie France 4">
+                <img src="Artists/ljf5.JPG" alt="Lizzie France 5">
+            </div>
+
+            <!-- Premium Navigation Actions -->
+            <div class="premium-nav-container">
+                <a href="artist.html" class="premium-btn">Artists Directory</a>
+                <a href="foyer.html" class="premium-btn">Foyer Entry</a>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
