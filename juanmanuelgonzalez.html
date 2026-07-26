@@ -153,5 +153,12 @@
         </main>
     </div>
 
+    <!-- Security Script: Disables right-click and long-press menus on audio players -->
+    <script>
+        document.querySelectorAll('audio').forEach(player => {
+            player.addEventListener('contextmenu', e => e.preventDefault());
+        });
+    </script>
+
 </body>
 </html>
