@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symphonic Catalog — Flave R Soul Records</title>
+    <style>
+        body {
+            background-color: #ffffff !important;
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
 
+        .header-group {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .main-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2.2rem;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+        .sub-title {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: normal;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .catalog-container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .catalog-entry {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 1px solid #000000;
+            border-radius: 2px;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .catalog-entry:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .catalog-entry:hover .catalog-name,
+        .catalog-entry:hover .catalog-desc {
+            color: #ffffff !important;
+        }
+
+        .catalog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .catalog-name {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #000000;
+        }
+        .catalog-year {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.8rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .catalog-desc {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .foyer-button {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 1px solid #000000;
+            border-radius: 2px;
+            background: transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+        .foyer-button:hover {
+            background-color: #000000;
+            color: #ffffff;
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-group">
+        <h1 class="main-title">Flave R Soul Records</h1>
+        <h2 class="sub-title">Symphonic Catalog Index</h2>
+    </div>
+
+    <div class="catalog-container">
+        
+        <!-- Entry 1 -->
+        <a href="symphonic-page-1.html" class="catalog-entry">
+            <div class="catalog-header">
+                <span class="catalog-name">Volume I: Orchestral Sessions</span>
+                <span class="catalog-year">2024</span>
+            </div>
+            <div class="catalog-desc">Complete symphonic recordings and arrangements.</div>
+        </a>
+
+        <!-- Entry 2 -->
+        <a href="symphonic-page-2.html" class="catalog-entry">
+            <div class="catalog-header">
+                <span class="catalog-name">Volume II: Live Concertos</span>
+                <span class="catalog-year">2025</span>
+            </div>
+            <div class="catalog-desc">Live performance documentation and symphonic suites.</div>
+        </a>
+
+        <!-- Entry 3 -->
+        <a href="symphonic-page-3.html" class="catalog-entry">
+            <div class="catalog-header">
+                <span class="catalog-name">Volume III: Legacy Works</span>
+                <span class="catalog-year">2026</span>
+            </div>
+            <div class="catalog-desc">Remastered symphonic pieces and digital score releases.</div>
+        </a>
+
+    </div>
+
+    <a href="foyer.html" class="foyer-button">Return to Foyer</a>
+
+    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #000000; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 10px; margin-bottom: 20px;">Flave R Soul Records ©️ 2026</p>
+
+</body>
+</html>
