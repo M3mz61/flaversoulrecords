@@ -45,7 +45,7 @@
         .showcase-disc {
             width: 280px;
             height: 280px;
-            background-image: url("Logo/opal.png"); /* Pulls your premium opal insignia background */
+            background-image: url("Logo/opal.png");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -54,7 +54,7 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
 
-        /* Booking Matrix Layout Wrapper */
+        /* Booking Matrix & Hardware Showcase Layout Wrapper */
         .matrix-container {
             width: 100%;
             max-width: 600px;
@@ -72,6 +72,22 @@
             border-radius: 4px;
             background-color: #fafafa;
             box-sizing: border-box;
+        }
+
+        /* Clickable Hardware Node Cards */
+        a.matrix-entry {
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        a.matrix-entry:hover {
+            background-color: #000000;
+            color: #ffffff !important;
+        }
+        a.matrix-entry:hover .rate-name,
+        a.matrix-entry:hover .rate-price,
+        a.matrix-entry:hover .rate-description {
+            color: #ffffff !important;
         }
         
         .matrix-header {
@@ -105,6 +121,20 @@
             letter-spacing: 1px;
             margin: 0;
             line-height: 1.4;
+        }
+
+        /* Section dividers */
+        .section-label {
+            font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #000000 !important;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 10px 0 5px 0;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
         }
 
         /* Single Center Portfolio Portal Button */
@@ -160,6 +190,7 @@
 
     <div class="showcase-disc"></div>
 
+    <!-- Booking Rates Matrix -->
     <div class="matrix-container">
         
         <!-- Rate Node 1 -->
@@ -191,6 +222,49 @@
 
     </div>
 
+    <h3 class="section-label">Studio Architecture & Gear</h3>
+
+    <!-- Hardware & Equipment Exploration Matrix -->
+    <div class="matrix-container" style="margin-top: 10px;">
+
+        <!-- Hardware Node: Analogue -->
+        <a href="analogue.html" class="matrix-entry">
+            <div class="matrix-header">
+                <span class="rate-name">Analogue Signal Path</span>
+                <span class="rate-price">&rarr;</span>
+            </div>
+            <p class="rate-description">OUTBOARD GEAR, SUMMING & CONSOLES</p>
+        </a>
+
+        <!-- Hardware Node: Guitar -->
+        <a href="guitar.html" class="matrix-entry">
+            <div class="matrix-header">
+                <span class="rate-name">Guitars & Amps</span>
+                <span class="rate-price">&rarr;</span>
+            </div>
+            <p class="rate-description">STRINGED INSTRUMENTS & TUBE AMPLIFICATION</p>
+        </a>
+
+        <!-- Hardware Node: Mic & Amp -->
+        <a href="micamp.html" class="matrix-entry">
+            <div class="matrix-header">
+                <span class="rate-name">Microphones & Preamps</span>
+                <span class="rate-price">&rarr;</span>
+            </div>
+            <p class="rate-description">VINTAGE CONDENSERS & PRISTINE GAIN STAGES</p>
+        </a>
+
+        <!-- Hardware Node: Mac -->
+        <a href="mac.html" class="matrix-entry">
+            <div class="matrix-header">
+                <span class="rate-name">Core Processing Rig</span>
+                <span class="rate-price">&rarr;</span>
+            </div>
+            <p class="rate-description">HIGH-PERFORMANCE DAW WORKSTATION & CONVERTERS</p>
+        </a>
+
+    </div>
+
     <!-- Returns cleanly to the parent matrix foyer without self-referencing loops -->
     <a href="foyer.html" class="portal-button">Return to Foyer</a>
 
@@ -198,4 +272,3 @@
 
 </body>
 </html>
- 
