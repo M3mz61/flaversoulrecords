@@ -19,12 +19,11 @@
             color: #000000 !important;
         }
 
-        /* Symmetrical top speaker layout */
+        /* Fixed Symmetrical top speaker layout */
         .speaker-row {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Strictly forces left and right separation */
             align-items: center;
-            gap: 20px;
             margin-top: 20px;
             margin-bottom: 20px;
             width: 100%;
@@ -32,18 +31,17 @@
         }
 
         .speaker-row a {
-            width: 45%;
+            width: 140px; /* Locks structural width to match original design */
             display: block;
         }
 
         .speaker-row img {
             width: 100%;
             height: auto;
-            max-width: 140px;
             display: block;
         }
 
-        /* Unified Media & Gallery Container (Ensures strict uniform alignment width) */
+        /* Unified Media & Gallery Container */
         .content-container {
             display: flex;
             flex-direction: column;
@@ -69,13 +67,12 @@
         /* Embed wrapper matching the exact width of the image stack */
         .embed-wrapper {
             width: 100%;
-            display: flex;
-            justify-content: center;
         }
 
         .embed-wrapper iframe {
             width: 100% !important;
             border: none;
+            display: block;
         }
 
         /* Navigation Matrix controls matching label typography */
