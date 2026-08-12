@@ -10,7 +10,7 @@
         body {
             background-color: #ffffff !important;
             margin: 0;
-            padding: 0 20px 60px 20px;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -19,29 +19,30 @@
             color: #000000 !important;
         }
 
-        /* Isolated Top Speaker Console Container */
-        .top-console-bar {
-            width: 100%;
-            max-width: 500px;
+        /* Independent Container for Studio Monitor Layout balance */
+        .speaker-stage {
             display: flex;
-            justify-content: space-between; /* Forces absolute left and right stereo symmetry */
+            justify-content: space-between; /* Securely balances one left, one right */
             align-items: center;
-            padding: 40px 0 20px 0;
+            width: 100%;
+            max-width: 500px; /* Locks flush to match the exact content width below */
+            margin-bottom: 20px;
             box-sizing: border-box;
         }
 
-        .top-console-bar a {
+        .speaker-stage a {
+            width: 45%;
             display: block;
-            width: 140px;
         }
 
-        .top-console-bar img {
+        .speaker-stage img {
             width: 100%;
             height: auto;
+            max-width: 140px;
             display: block;
         }
 
-        /* Unified Media & Gallery Container (Untouched Original Spec) */
+        /* Unified Media & Gallery Container (Original Specifications) */
         .content-container {
             display: flex;
             flex-direction: column;
@@ -62,18 +63,6 @@
             height: auto;
             border: 1px solid #000000;
             display: block;
-        }
-
-        /* Embed wrapper matching the exact width of the image stack */
-        .embed-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .embed-wrapper iframe {
-            width: 100% !important;
-            border: none;
         }
 
         /* Navigation Matrix controls matching label typography */
@@ -129,8 +118,8 @@
 </head>
 <body>
 
-    <!-- Isolated Top Console Container Block -->
-    <div class="top-console-bar">
+    <!-- Symmetrical Speakers Isolated Container Block -->
+    <div class="speaker-stage">
         <a href="https://flaversoulrecords.com" target="_blank" rel="noopener noreferrer">
             <img src="mnd/Spkr_Memz1.gif" alt="Left Speaker Component">
         </a>
@@ -139,28 +128,20 @@
         </a>
     </div>
 
-    <!-- Unified Stack Container (Aligns Embeds & Images to the exact same width) -->
+    <!-- Unified Stack Container (Original Layout Re-anchored) -->
     <div class="content-container">
 
-        <!-- Spotify Embed (Positioned First) -->
-        <div class="embed-wrapper">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://spotify.com" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
+        <!-- Spotify Embed -->
+        <iframe data-testid="embed-iframe" style="border-radius:12px; width: 100%;" src="https://spotify.com" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-        <!-- Traxsource Embed (Positioned Second) -->
-        <div class="embed-wrapper">
-            <iframe height="240" scrolling="no" src="https://traxsource.com"></iframe>
-        </div>
+        <!-- Traxsource Embed -->
+        <iframe style="width: 100%;" height="240" scrolling="no" src="https://traxsource.com"></iframe>
 
         <!-- YouTube Embed 1 -->
-        <div class="embed-wrapper">
-            <iframe height="281" src="https://youtube.com" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+        <iframe style="width: 100%;" height="281" src="https://youtube.com" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <!-- YouTube Embed 2 -->
-        <div class="embed-wrapper">
-            <iframe height="281" src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+        <iframe style="width: 100%;" height="281" src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
         <!-- Studio Archive Gallery Items -->
         <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">
