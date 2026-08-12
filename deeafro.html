@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <script data-goatcounter="https://memz.goatcounter.com/count"
+    <script data-goatcounter="https://memz.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +17,11 @@
             background-color: #ffffff;
             color: #000000;
             font-family: "Bodoni 72", "Bodoni MT", "Didot", "Playfair Display", serif;
-            text-align: center; /* Centers all content text to match the Main Foyer layout */
+            text-align: center;
             padding: 80px 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
@@ -46,7 +46,7 @@
         .bio-p {
             font-size: 1.15rem;
             line-height: 1.6;
-            max-width: 650px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
@@ -71,7 +71,7 @@
         .body-text {
             font-size: 1.1rem;
             line-height: 1.6;
-            max-width: 650px;
+            max-width: 600px;
             margin: 0 auto 20px auto;
         }
 
@@ -81,6 +81,7 @@
             display: inline-block;
             text-align: left;
             max-width: 600px;
+            width: 100%;
             margin: 20px auto;
         }
         .track-list li {
@@ -89,21 +90,42 @@
             line-height: 1.4;
         }
 
-        /* Landscape/Horizontal Image Stack Layout */
-        .landscape-gallery {
+        /* Strict Uniform Width Stack for All Media & Images */
+        .uniform-stack {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 25px;
             width: 100%;
             max-width: 600px;
-            margin: 30px auto 0 auto;
+            margin: 30px auto;
         }
-        .landscape-gallery img {
+
+        .uniform-stack img,
+        .uniform-stack .embed-container {
             width: 100%;
+            max-width: 600px;
+        }
+
+        .uniform-stack img {
             height: auto;
             border: 1px solid #000000;
             display: block;
+        }
+
+        /* Standalone Embed Container for Elements Outside the Gallery */
+        .embed-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .embed-container iframe,
+        .uniform-stack iframe {
+            width: 100%;
+            border: none;
         }
 
         /* Vertical Image Container Layout */
@@ -116,7 +138,7 @@
             margin: 30px auto 0 auto;
         }
 
-        /* Box Navigation Link Element matching the Memz "RETURN TO STUDIO" look */
+        /* Box Navigation Link Element */
         .foyer-button {
             display: inline-block;
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
@@ -163,10 +185,16 @@
             <p class="body-text">A deep, energetic blend of rhythm and bass. Solo releases and live sets drift between heavy bass grooves, driving tech-house rhythms, and deep club vibes.</p>
             <p class="section-desc" style="font-size: 0.8rem; margin-top: 15px;">Deep House • Tech House • Bass House • Underground Mixes</p>
         </section>
-<iframe frameborder="0" width="100%" height="240" scrolling="no" src="https://embed.traxsource.com/player/artist/48990"></iframe>
+
+        <!-- Standalone Players aligned to 600px max-width -->
         <div class="embed-container">
-   <iframe src="https://embed.beatport.com/?id=2097873&type=release" width="100%" height="181" frameborder="0" scrolling="no" style="max-width:600px;"></iframe>
-</div>
+            <iframe frameborder="0" height="240" scrolling="no" src="https://embed.traxsource.com/player/artist/48990"></iframe>
+        </div>
+        
+        <div class="embed-container">
+            <iframe src="https://embed.beatport.com/?id=2097873&type=release" height="181" frameborder="0" scrolling="no"></iframe>
+        </div>
+
         <!-- Catalog Text Section -->
         <section>
             <h2>Featured Solo Discography</h2>
@@ -175,20 +203,28 @@
             <ul class="track-list">
                 <li><strong>"The Flight"</strong> – Long-form club tension mix.</li>
                 <li><strong>"MeeSo Crazy" (Original Mix)</strong> – Tech bassline club focus.</li>
-                <iframe src="https://embed.beatport.com/?id=4601248&type=track" width="100%" height="162" frameborder="0" scrolling="no" style="max-width:600px;"></iframe>
+                <div class="embed-container" style="margin: 10px auto;">
+                    <iframe src="https://embed.beatport.com/?id=4601248&type=track" height="162" frameborder="0" scrolling="no"></iframe>
+                </div>
                 <li><strong>"Desire" & "Get Up"</strong> – High-tempo underground playlist editions.</li>
                 <li><strong>"Deep Vibes" & "White Lines Bass Face"</strong> – Extended technical mixes.</li>
                 <li><strong>Solo EPs</strong> – Featuring Pick It Up EP and Listen.</li>
             </ul>
         </section>
-<iframe src="https://embed.beatport.com/?id=9920409&type=track" width="100%" height="162" frameborder="0" scrolling="no" style="max-width:600px;"></iframe>
-        <!-- Horizontal/Landscape Visual Gallery Archive -->
+
+        <div class="embed-container">
+            <iframe src="https://embed.beatport.com/?id=9920409&type=track" height="162" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <!-- Strict Uniform Width Stack for Gallery & Embedded Player -->
         <section>
             <h2>Live & Press Gallery</h2>
             <p class="section-desc">Visual Archive</p>
-            <div class="landscape-gallery">
+            <div class="uniform-stack">
                 <img src="mnd/D1.jpeg" alt="DeeAfro Live Club Set Landscape View">
-                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/36KIWXvyhAwKrMM1qNLogi?utm_source=generator&si=bb5c66323eb7455d" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <div class="embed-container" style="margin: 0; width: 100%;">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/36KIWXvyhAwKrMM1qNLogi?utm_source=generator&si=bb5c66323eb7455d" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
                 <img src="mnd/D2.jpeg" alt="DeeAfro Promotional Studio Landscape View">
             </div>
         </section>
@@ -199,9 +235,8 @@
             <p class="section-desc">Availability</p>
             <p class="body-text">Available for Club Bookings, Festival Lineups, Radio Guest Mixes, and Showcase Sets. Delivering multi-hour live radio shows packed with exclusive promos and unreleased cuts.</p>
             
-            <!-- Vertical Imagery variant placed symmetrically here -->
             <img class="vertical-display" src="mnd/D1V.jpeg" alt="DeeAfro Profile Vertical Press Variant">
-            <br>
+            <br><br>
             <a href="mailto:info@flaversoulrecords.com" class="foyer-button">Book Session</a>
         </section>
 
