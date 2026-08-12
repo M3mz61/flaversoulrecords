@@ -10,7 +10,7 @@
         body {
             background-color: #ffffff !important;
             margin: 0;
-            padding: 60px 20px;
+            padding: 0 20px 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -19,29 +19,29 @@
             color: #000000 !important;
         }
 
-        /* Fixed Symmetrical top speaker layout */
-        .speaker-row {
-            display: flex;
-            justify-content: space-between; /* Strictly forces left and right separation */
-            align-items: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
+        /* Isolated Top Speaker Console Container */
+        .top-console-bar {
             width: 100%;
             max-width: 500px;
+            display: flex;
+            justify-content: space-between; /* Forces absolute left and right stereo symmetry */
+            align-items: center;
+            padding: 40px 0 20px 0;
+            box-sizing: border-box;
         }
 
-        .speaker-row a {
-            width: 140px; /* Locks structural width to match original design */
+        .top-console-bar a {
             display: block;
+            width: 140px;
         }
 
-        .speaker-row img {
+        .top-console-bar img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        /* Unified Media & Gallery Container */
+        /* Unified Media & Gallery Container (Untouched Original Spec) */
         .content-container {
             display: flex;
             flex-direction: column;
@@ -67,12 +67,13 @@
         /* Embed wrapper matching the exact width of the image stack */
         .embed-wrapper {
             width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         .embed-wrapper iframe {
             width: 100% !important;
             border: none;
-            display: block;
         }
 
         /* Navigation Matrix controls matching label typography */
@@ -128,8 +129,8 @@
 </head>
 <body>
 
-    <!-- Symmetrical Pumping Speakers Layout -->
-    <div class="speaker-row">
+    <!-- Isolated Top Console Container Block -->
+    <div class="top-console-bar">
         <a href="https://flaversoulrecords.com" target="_blank" rel="noopener noreferrer">
             <img src="mnd/Spkr_Memz1.gif" alt="Left Speaker Component">
         </a>
