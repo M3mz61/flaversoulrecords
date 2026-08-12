@@ -19,39 +19,30 @@
             color: #000000 !important;
         }
 
-        /* Fixed Symmetrical Studio Monitor Array Layout */
+        /* Fixed Symmetrical Top Monitor Layout */
         .speaker-row {
             display: flex;
-            justify-content: space-between; /* Spreads components symmetrically to the edges */
+            justify-content: space-between;
             align-items: center;
-            margin-top: 20px;
-            margin-bottom: 35px;
             width: 100%;
-            max-width: 500px; /* Sits perfectly flush with the media stack below */
+            max-width: 500px;
+            margin-top: 20px;
+            margin-bottom: 30px;
             box-sizing: border-box;
-            padding: 0 10px; /* Slight inside breathing room */
         }
 
         .speaker-row a {
+            width: 140px;
             display: block;
-            width: 140px; /* Locks the exact structural grid width */
-            height: 140px;
-            -webkit-tap-highlight-color: transparent;
-            transition: transform 0.3s ease;
-        }
-
-        .speaker-row a:hover {
-            transform: scale(1.03); /* Subtle interactive response */
         }
 
         .speaker-row img {
             width: 100%;
-            height: 100%;
+            height: auto;
             display: block;
-            object-fit: contain;
         }
 
-        /* Unified Media & Gallery Container (Ensures strict uniform alignment width) */
+        /* Unified Media & Gallery Container (Original Specifications Restored) */
         .content-container {
             display: flex;
             flex-direction: column;
@@ -65,11 +56,6 @@
         .content-container a {
             width: 100%;
             display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .content-container a:hover {
-            transform: scale(1.01);
         }
 
         .content-container img {
@@ -77,23 +63,19 @@
             height: auto;
             border: 1px solid #000000;
             display: block;
-            box-sizing: border-box;
         }
 
-        /* Embed wrapper matching the exact width of the image stack */
+        /* Embed Wrapper Standard Parameters */
         .embed-wrapper {
             width: 100%;
-            display: flex;
-            justify-content: center;
         }
 
         .embed-wrapper iframe {
-            width: 100% !important;
+            width: 100%;
             border: none;
-            display: block;
         }
 
-        /* Navigation Matrix controls matching label typography */
+        /* Navigation Matrix Layout Elements */
         .foyer-button {
             display: inline-block;
             font-family: "Bodoni 72", "Bodoni MT", "Didot", serif;
@@ -103,7 +85,7 @@
             text-transform: uppercase;
             letter-spacing: 3px;
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 10px 25px;
             border: 1px solid #000000;
             border-radius: 2px;
             background: transparent;
@@ -148,23 +130,23 @@
 
     <!-- Symmetrical Pumping Speakers Layout -->
     <div class="speaker-row">
-        <a href="https://flaversoulrecords.com" target="_blank" rel="noopener noreferrer" aria-label="Left Studio Monitor Output">
+        <a href="https://flaversoulrecords.com" target="_blank" rel="noopener noreferrer">
             <img src="mnd/Spkr_Memz1.gif" alt="Left Speaker Component">
         </a>
-        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" aria-label="Right Studio Monitor Output">
+        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">
             <img src="mnd/Spkr_Memz1.gif" alt="Right Speaker Component">
         </a>
     </div>
 
-    <!-- Unified Stack Container (Aligns Embeds & Images to the exact same width) -->
+    <!-- Unified Stack Container (Restored Alignment Matrix) -->
     <div class="content-container">
 
-        <!-- Spotify Embed (Positioned First) -->
+        <!-- Spotify Embed -->
         <div class="embed-wrapper">
             <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://spotify.com" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
-        <!-- Traxsource Embed (Positioned Second) -->
+        <!-- Traxsource Embed -->
         <div class="embed-wrapper">
             <iframe height="240" scrolling="no" src="https://traxsource.com"></iframe>
         </div>
@@ -181,7 +163,7 @@
 
         <!-- Studio Archive Gallery Items -->
         <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">
-            <img src="mnd/memz01.jpeg" alt="Memz Close-up Portrait from the Polluted Records Launch Promotional Photo Shoot">
+            <img src="mnd/memz01.jpeg" alt="Memz Close-up Portrait">
         </a>
         <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">
             <img src="mnd/M2.jpeg" alt="Flave R Soul engineering at the mixing console">
