@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script data-goatcounter="https://memz.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://memz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADR & Voiceover — Flave R Soul</title>
@@ -73,6 +72,7 @@
             margin: 0 auto 40px auto;
             max-width: 400px;
             font-family: "Bodoni 72", serif;
+            padding: 0;
         }
 
         .narrative-list li {
@@ -101,6 +101,7 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
+
         .foyer-button:hover {
             background-color: #000000;
             color: #ffffff;
@@ -110,7 +111,12 @@
         footer {
             margin-top: auto;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
+
         .footer-nav {
             display: flex;
             flex-direction: column;
@@ -120,6 +126,7 @@
             max-width: 320px;
             margin: 0 auto;
         }
+
         .footer-nav .foyer-button {
             display: block;
             width: 100%;
@@ -128,16 +135,44 @@
             white-space: nowrap;
             font-size: 0.9rem;
         }
+
+        /* Persistent Brand Watermark */
+        .brand-watermark {
+            font-family: 'Bodoni 72', serif;
+            font-size: 0.8rem;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        .brand-watermark a {
+            color: #000000;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        .soundbetter-badge {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .soundbetter-badge img {
+            max-width: 130px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Symmetrical Audio Components (Placeholder graphic tags) -->
+    <!-- Symmetrical Audio Components -->
     <div class="hardware-row">
         <img src="mnd/Spkr_Memz1.gif" alt="Left Monitor Component">
         <img src="mnd/Spkr_Memz1.gif" alt="Right Monitor Component">
     </div>
 
+    <!-- Main Project Focus Display Block -->
     <div class="project-showcase">
         <h1>ADR & Voiceover</h1>
         <p class="subtitle">Post Production Archive</p>
@@ -151,17 +186,22 @@
         <li><strong>Episode 04</strong> — Classical Narrative Spatial Audio Engineering</li>
     </ul>
 
-    <!-- Symmetrical Navigation Matrix Route -->
+    <!-- Symmetrical Navigation Matrix Route & Footer Elements -->
     <footer>
         <div class="footer-nav">
             <a href="foyer.html" class="foyer-button">Return to Foyer</a>
         </div>
+
+        <div class="soundbetter-badge">
+            <a href="https://soundbetter.com/profiles/729739-memz" rel="noopener noreferrer" target="_blank" title="Memz profile on SoundBetter">
+                <img alt="Memz, Mastering Engineer on SoundBetter" src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg">
+            </a>
+        </div>
+
+        <p class="brand-watermark">
+            Flave R Soul Records <a href="reality.html">©️</a> 2026
+        </p>
     </footer>
 
-    <!-- Persistent Brand Watermark with Pure Black Styling and Stealth Link Node -->
-    <p style="font-family: 'Bodoni 72', serif; font-size: 0.8rem; color: #000000; text-transform: uppercase; letter-spacing: 3px; text-align: center; margin-top: 60px; margin-bottom: 20px;">
-        Flave R Soul Records <a href="reality.html" style="color: #000000; text-decoration: none; cursor: default;">©️</a> 2026
-    </p>
-<a href="https://soundbetter.com/profiles/729739-memz" rel="noopener noreferrer" target="_blank" title="Memz profile on SoundBetter" ><img alt="Memz, Mastering Engineer on SoundBetter" src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg" style="max-width: 130px;" /></a>
 </body>
 </html>
