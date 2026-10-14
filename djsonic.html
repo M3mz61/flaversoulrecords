@@ -52,33 +52,7 @@
             color: #000000;
         }
 
-        /* Standardized top players layout */
-        .top-players {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 30px;
-            width: 100%;
-        }
-
-        /* Uniform container for iframe blocks to kill platform design differences */
-        .player-wrapper {
-            width: 100%;
-            border: 1px solid #000000;
-            box-sizing: border-box;
-            background: #000000;
-            display: block;
-            line-height: 0;
-        }
-        .player-wrapper iframe {
-            width: 100% !important;
-            display: block;
-            margin: 0;
-            padding: 0;
-            border: 0 !important;
-        }
-
-        /* The 4 Gallery items formatted into a clean, uniform 2x2 grid */
+        /* The 4 Gallery Images formatted into a crisp 2x2 mobile grid */
         .numbered-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -86,16 +60,12 @@
             width: 100%;
             margin-bottom: 40px;
         }
-        .numbered-gallery img, 
-        .numbered-gallery .grid-embed {
+        .numbered-gallery img {
             width: 100%;
             aspect-ratio: 1 / 1;
             object-fit: cover;
             border: 1px solid #000000;
-            box-sizing: border-box;
             display: block;
-            margin: 0;
-            padding: 0;
         }
 
         /* Horizontal rule divider matching your screen structure precisely */
@@ -146,30 +116,23 @@
             <!-- Biography Text Block -->
             <div class="bio">
                 <p>With roots deep in the mid-90s UK underground scene, DJ Sonic has spent decades driving the airwaves and dancefloors. As the operator of Evolution Radio UK, his crate-digging and genre fluidity span the definitive lineage of British electronic music heritage—from Acid House, Hardcore, and Jungle, to UKG and Drum & Bass. No trends, no corporate filler, just pure underground rotation.</p>
-                
-                <!-- Clean, unified top players cluster -->
-                <div class="top-players">
-                    <div class="player-wrapper" style="border-radius: 10px;">
-                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" height="175" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://apple.com"></iframe>
-                    </div>
-                    <div class="player-wrapper">
-                        <iframe height="300" scrolling="no" allow="autoplay; encrypted-media" src="https://soundcloud.com"></iframe>
-                    </div>
-                </div>
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://apple.com"></iframe>
+                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://soundcloud.com"></iframe>
+                <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com" title="DJ Sonic (Evolution Radio UK)" target="_blank" style="color: #cccccc; text-decoration: none;">DJ Sonic (Evolution Radio UK)</a> · <a href="https://soundcloud.com/bad-reputation-radio-edition" title="Bad Reputation (Radio Edition)" target="_blank" style="color: #cccccc; text-decoration: none;">Bad Reputation (Radio Edition)</a></div>            
             </div>
             
-            <!-- The 4 Sub-items completely standardized in a sharp 2x2 grid block -->
+            <!-- The 4 Sub-images and embedded players completely restored with native height rules -->
             <div class="numbered-gallery">
                 <img src="Artists/sonic2.JPG" alt="DJ Sonic 2">
                 <img src="Artists/sonic3.JPG" alt="DJ Sonic 3">
                 
-                <iframe class="grid-embed" src="https://beatport.com" scrolling="no"></iframe>
+                <iframe src="https://beatport.com" width="100%" height="331px" frameborder="0" scrolling="no" style="max-width:600px;"></iframe>
                 
                 <img src="Artists/sonic4.JPG" alt="DJ Sonic 4">
                 <img src="Artists/sonic5.JPG" alt="DJ Sonic 5">
                 
-                <iframe class="grid-embed" id="volumo-iframe-album-1794410" src="https://volumo.com"></iframe>
-                <iframe class="grid-embed" scrolling="no" src="https://traxsource.com"></iframe>
+                <iframe id="volumo-iframe-album-1794410" src="https://volumo.com" style="border:0;border-radius:12px;width:100%;height:331px"></iframe>
+                <iframe frameborder="0" width="100%" height="331" scrolling="no" src="https://traxsource.com"></iframe>
             </div>
 
             <!-- Horizontal Break Line -->
