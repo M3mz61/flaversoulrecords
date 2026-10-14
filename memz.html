@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script data-goatcounter="https://memz.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://goatcounter.com" async src="//gc.zgo.at/count.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memz Room — Flave R Soul</title>
@@ -10,7 +9,7 @@
         body {
             background-color: #ffffff !important;
             margin: 0;
-            padding: 60px 20px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -29,6 +28,7 @@
             margin-bottom: 20px;
             width: 100%;
             max-width: 500px;
+            box-sizing: border-box;
         }
 
         .speaker-row a {
@@ -41,6 +41,7 @@
             height: auto;
             max-width: 140px;
             display: block;
+            margin: 0 auto;
         }
 
         /* Unified Media & Gallery Container (Ensures strict uniform alignment width) */
@@ -48,10 +49,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px;
+            gap: 25px;
             width: 100%;
             max-width: 500px;
             margin-bottom: 40px;
+            box-sizing: border-box;
         }
 
         .content-container a {
@@ -64,18 +66,24 @@
             height: auto;
             border: 1px solid #000000;
             display: block;
+            box-sizing: border-box;
         }
 
-        /* Embed wrapper matching the exact width of the image stack */
+        /* Embed wrapper ensuring all iframes adhere strictly to container boundaries */
         .embed-wrapper {
             width: 100%;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            box-sizing: border-box;
         }
 
         .embed-wrapper iframe {
             width: 100% !important;
+            max-width: 100% !important;
             border: none;
+            display: block;
+            box-sizing: border-box;
         }
 
         /* Navigation Matrix controls matching label typography */
@@ -88,13 +96,14 @@
             text-transform: uppercase;
             letter-spacing: 3px;
             text-decoration: none;
-            padding: 10px 25px;
+            padding: 12px 25px;
             border: 1px solid #000000;
             border-radius: 2px;
             background: transparent;
             transition: all 0.3s ease;
             cursor: pointer;
-            margin-bottom: 40px;
+            margin-bottom: 15px;
+            text-align: center;
         }
         
         .foyer-button:hover {
@@ -133,7 +142,7 @@
 
     <!-- Symmetrical Pumping Speakers Layout -->
     <div class="speaker-row">
-        <a href="https://www.flaversoulrecords.com/Audio/symphonic.html" target="_blank" rel="noopener noreferrer">
+        <a href="https://flaversoulrecords.com" target="_blank" rel="noopener noreferrer">
             <img src="mnd/Spkr_Memz1.gif" alt="Left Speaker Component">
         </a>
         <a href="https://open.spotify.com/artist/4Tzjm2VTnR51AlJZsZOxSd?si=-LMdY6MBQXG3ZYw9GWXMDA&utm_source=copy-link" target="_blank" rel="noopener noreferrer">
@@ -144,26 +153,29 @@
     <!-- Unified Stack Container (Aligns Embeds & Images to the exact same width) -->
     <div class="content-container">
 
-        <!-- Spotify Embed (Positioned First) -->
+        <!-- Spotify Artist & Traxsource Artist Embed Block -->
         <div class="embed-wrapper">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/4Tzjm2VTnR51AlJZsZOxSd?utm_source=generator&si=d144b7e284f747d4" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-       <iframe frameborder="0" width="100%" height="240" scrolling="no" src="https://embed.traxsource.com/player/artist/125113"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:12px;" src="https://spotify.com" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe frameborder="0" height="240" scrolling="no" src="https://embed.traxsource.com/player/artist/125113"></iframe>
         </div>
 
-        <!-- Traxsource Embed (Positioned Second) -->
+        <!-- Traxsource Label & Spotify Album Embed Block -->
         <div class="embed-wrapper">
-            <iframe height="240" scrolling="no" src="https://embed.traxsource.com/player/label/78611"></iframe>
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/4CWMrwo8jNWUY7TqVbRXEl?utm_source=generator&si=9d5e38fcac4b42cd" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe frameborder="0" height="240" scrolling="no" src="https://embed.traxsource.com/player/label/78611"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:12px;" src="https://open.spotify.com/embed/album/4CWMrwo8jNWUY7TqVbRXEl?utm_source=generator&si=9d5e38fcac4b42cd" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
-<div/>
-    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/gb/song/meeso-crazy-radio-edit/6799250493"></iframe>
-<div/>
-    <!-- YouTube Embed 1 -->
+
+        <!-- Apple Music Track Banner Embed Block -->
+        <div class="embed-wrapper">
+            <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="border-radius:10px; overflow:hidden;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/gb/song/meeso-crazy-radio-edit/6799250493"></iframe>
+        </div>
+
+        <!-- YouTube Video 1 Embed Block -->
         <div class="embed-wrapper">
             <iframe height="281" src="https://www.youtube.com/embed/wnntjfreZpI?si=YS7EimXQCboXtza0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
-        <!-- YouTube Embed 2 -->
+        <!-- YouTube Video 2 Embed Block -->
         <div class="embed-wrapper">
             <iframe height="281" src="https://www.youtube.com/embed/sBJ_W-PLV8w?si=fxqLAvnrP0CaRoU9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
@@ -181,7 +193,11 @@
         <a href="https://open.spotify.com/artist/4Tzjm2VTnR51AlJZsZOxSd?si=-LMdY6MBQXG3ZYw9GWXMDA&utm_source=copy-link" target="_blank" rel="noopener noreferrer">
             <img src="mnd/Memz Euph.jpg" alt="Memz sitting at the SSL G Series mixing console">
         </a>
-<a href="https://soundbetter.com/profiles/729739-memz" rel="noopener noreferrer" target="_blank" title="Memz profile on SoundBetter" ><img alt="Memz, Mastering Engineer on SoundBetter" src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg" style="max-width: 130px;" /></a>
+        
+        <!-- SoundBetter Verification Badge -->
+        <a href="https://soundbetter.com/profiles/729739-memz" rel="noopener noreferrer" target="_blank" title="Memz profile on SoundBetter">
+            <img alt="Memz, Mastering Engineer on SoundBetter" src="https://d2p6ecj15pyavq.cloudfront.net/assets/SoundBetterBadge-c84cb3e75c4267f5bee41f7f617a81d9.svg" style="max-width: 130px; border:none;" />
+        </a>
     </div>
 
     <!-- Symmetrical Navigation Matrix Route -->
