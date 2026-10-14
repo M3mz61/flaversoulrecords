@@ -23,15 +23,21 @@
             flex-direction: column;
         }
 
-        /* Profile Image Layout Frame */
+        /* Profile Image Layout Frame - Border Removed and Link Setup */
         .main-image {
             width: 100%;
             margin-bottom: 30px;
         }
+        .main-image a {
+            display: block;
+            text-decoration: none;
+            border: 0 !important;
+            outline: none;
+        }
         .main-image img {
             width: 100%;
             height: auto;
-            border: 1px solid #000000;
+            border: 0 !important; /* Stripped the black outline completely */
             display: block;
         }
         
@@ -105,9 +111,11 @@
 
     <div class="container">
         <main>
-            <!-- Top Main Image Placement -->
+            <!-- Top Main Image Link Setup to Evolution Radio UK -->
             <div class="main-image">
-                <img src="Artists/sonic.jpg" alt="DJ Sonic Profile">
+                <a href="https://evolutionradio.uk" target="_blank" title="Listen Live on Evolution Radio UK">
+                    <img src="Artists/sonic.jpg" alt="DJ Sonic Profile">
+                </a>
             </div>
 
             <!-- Artist Header Name -->
