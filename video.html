@@ -27,18 +27,28 @@
         header {
             margin-bottom: 50px;
             border-bottom: 1px solid #000000;
-            padding-bottom: 20px;
+            padding-bottom: 25px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
-        .video-room-title {
-            font-size: 2.2rem;
+        .main-brand-title {
+            font-size: 2.4rem;
             text-transform: uppercase;
             letter-spacing: 4px;
-            margin: 0;
+            margin: 0 0 10px 0;
             font-weight: bold;
-            text-align: center;
+            line-height: 1.2;
+        }
+        .sub-room-title {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0;
+            font-weight: normal;
+            color: #555555;
             line-height: 1.2;
         }
 
@@ -132,9 +142,10 @@
 <body>
 
     <div class="container">
-        <!-- Top Navigation Header -->
+        <!-- Top Navigation Header with Main Title and Sub-title -->
         <header>
-            <h1 class="video-room-title">Flave R Soul Video Room</h1>
+            <h1 class="main-brand-title">Flave R Soul Records</h1>
+            <div class="sub-room-title">Video Room</div>
         </header>
 
         <main>
@@ -158,11 +169,13 @@
                 <!-- Video Item 2 -->
                 <div class="video-item">
                     <div class="video-wrapper">
-                       <iframe width="560" height="315" 
+                       <iframe 
                                src="https://www.youtube.com/embed/sBJ_W-PLV8w?si=k8sMFCWcH0IgnfFM" 
-                               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                               title="YouTube video player" 
+                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                referrerpolicy="strict-origin-when-cross-origin" 
-                               allowfullscreen></iframe>
+                               allowfullscreen>
+                       </iframe>
                     </div>
                     <h2 class="video-title">White Boy Blues</h2>
                 </div>
@@ -170,11 +183,13 @@
                 <!-- Video Item 3 -->
                 <div class="video-item">
                     <div class="video-wrapper">
-                       <iframe width="560" height="315" 
+                       <iframe 
                                src="https://www.youtube.com/embed/lq8WbNNMzzo?si=WJ3XElqkdPhAjgNi" 
-                               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                               title="YouTube video player" 
+                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                referrerpolicy="strict-origin-when-cross-origin" 
-                               allowfullscreen></iframe>
+                               allowfullscreen>
+                       </iframe>
                     </div>
                     <h2 class="video-title">So Glad She's Gone</h2>
                 </div>
@@ -182,11 +197,13 @@
                 <!-- Video Item 4 -->
                 <div class="video-item">
                     <div class="video-wrapper">
-                       <iframe width="560" height="315" 
+                       <iframe 
                                src="https://www.youtube.com/embed/QdmXOo-FjJk?si=hSNxfvtMqh8uNn68" 
-                               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                               title="YouTube video player" 
+                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                referrerpolicy="strict-origin-when-cross-origin" 
-                               allowfullscreen></iframe>
+                               allowfullscreen>
+                       </iframe>
                     </div>
                     <h2 class="video-title">Black & White Pictures (Slow Piano Edition)</h2>
                 </div>
