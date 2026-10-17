@@ -162,26 +162,44 @@
             <!-- Artist Header Name -->
             <h1>DJ Sonic</h1>
             
- <!-- Biography Text Block -->
-<div class="bio">
-    <p>With roots tracing back to the mid-90s underground scene, DJ Sonic has spent decades mastering everything from Acid House, Hardcore, and Jungle, to UKG and Drum and Bass. This extensive genre fluidity gives him an innate understanding of the dancefloor, allowing him to read any crowd and seamlessly elevate the energy of any room.</p>
+<!-- Biography Text Block -->
+<div class="bio" style="font-family: 'Bodoni 72', 'Didot', 'Bodoni MT', serif; color: #000000; background-color: #ffffff;">
+    <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">With roots tracing back to the mid-90s underground scene, DJ Sonic has spent decades mastering everything from Acid House, Hardcore, and Jungle, to UKG and Drum and Bass. This extensive genre fluidity gives him an innate understanding of the dancefloor, allowing him to read any crowd and seamlessly elevate the energy of any room.</p>
     
-    <!-- Dynamic Full-Control Mixcloud Station Profile Player -->
-    <div style="width: 100%; margin-bottom: 25px;">
+    <!-- 1. FULL CONTROLS MIXCLOUD ARCHIVE (Sized to naturally reveal the tracklist queue) -->
+    <div style="width: 100%; margin: 0 auto 35px auto; border: 1px solid #000000; overflow: hidden; background-color: #ffffff;">
         <iframe 
             width="100%" 
             height="400" 
             src="https://mixcloud.com" 
             frameborder="0" 
-            allow="autoplay; encrypted-media; fullscreen; picture-in-picture" 
-            style="border-radius: 12px; display: block;">
+            allow="autoplay; encrypted-media; fullscreen"
+            style="display: block;">
         </iframe>
     </div>
 
-    <!-- YouTube Responsive Wrapper Remains Untouched Below -->
-    <div class="video-responsive" style="margin-bottom: 25px;">
-        <iframe width="560" height="315" src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- 2. ISOLATED YOUTUBE VIDEOSERIES PLAYER (Responsive grid breakout container fix) -->
+    <div class="video-responsive" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 35px; border: 1px solid #000000;">
+        <iframe 
+            src="https://youtube.com" 
+            title="YouTube video player" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
     </div>
+    
+    <!-- 3. COMPACT REPLAY AUDIO STRIP -->
+    <div style="width: 100%; margin-bottom: 35px; border: 1px solid #000000;">
+        <iframe width="100%" height="60" src="https://mixcloud.com" frameborder="0" allow="encrypted-media; fullscreen; autoplay;" style="display: block;"></iframe>
+    </div>
+
+    <!-- 4. APPLE MUSIC EMBED -->
+    <div style="width: 100%; margin-bottom: 35px;">
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%; max-width:660px; overflow:hidden; border: 1px solid #000000; margin: 0 auto; display: block;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://apple.com"></iframe>
+    </div>
+
 
 
     <!-- Mixcloud Mini Profile Widget for Catch-up Audio -->
